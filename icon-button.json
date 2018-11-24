@@ -1,0 +1,34 @@
+{
+  "componentList": [
+    {
+      "name": "LyIconButton",
+      "selector": "button[ly-icon-button], a[ly-icon-button], span[ly-icon-button]",
+      "inputs": null,
+      "exportAs": "lyIconButton",
+      "children": "classes: any\niconButtonService: LyIconButtonService"
+    }
+  ],
+  "directiveList": [],
+  "classList": [],
+  "variableList": [
+    {
+      "name": "LyIconButtonMixinBase",
+      "children": "const LyIconButtonMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinDisabled(\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(\n                mixinDisableRipple(LyIconButtonBase))))))))))"
+    },
+    {
+      "name": "STYLE_PRIORITY",
+      "children": "const STYLE_PRIORITY = -2"
+    },
+    {
+      "name": "STYLE_PRIORITY",
+      "children": "const STYLE_PRIORITY = -2"
+    }
+  ],
+  "ngModuleList": [
+    {
+      "name": "LyIconButtonModule",
+      "children": "import { LyIconButtonModule } from '@alyle/ui/icon-button'"
+    }
+  ],
+  "injectableList": []
+}

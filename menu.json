@@ -1,0 +1,43 @@
+{
+  "componentList": [
+    {
+      "name": "LyMenu",
+      "selector": "ly-menu",
+      "inputs": null,
+      "exportAs": "lyMenu",
+      "children": "@HostBinding() menuEnter: any\n@HostBinding() menuLeave2: any\n@Input() ref: LyMenuTriggerFor\nendAnimation(e: any): void"
+    }
+  ],
+  "directiveList": [
+    {
+      "name": "LyMenuItem",
+      "selector": "[ly-menu-item]",
+      "inputs": null,
+      "exportAs": null,
+      "children": ""
+    },
+    {
+      "name": "LyMenuTriggerFor",
+      "selector": "[lyMenuTriggerFor]",
+      "inputs": null,
+      "exportAs": null,
+      "children": "@Input() lyMenuTriggerFor: TemplateRef\ndestroy(): void\ndetach(): void\ntargetPosition(): void"
+    }
+  ],
+  "variableList": [
+    {
+      "name": "STYLE_PRIORITY",
+      "children": "const STYLE_PRIORITY = -1"
+    },
+    {
+      "name": "menuItemStyles",
+      "children": "const menuItemStyles: any = ({\n  display: 'block',\n  minHeight: '48px',\n  borderRadius: 0,\n  width: '100%'\n})"
+    }
+  ],
+  "ngModuleList": [
+    {
+      "name": "LyMenuModule",
+      "children": "import { LyMenuModule } from '@alyle/ui/menu'"
+    }
+  ]
+}

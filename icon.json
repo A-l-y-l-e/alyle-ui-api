@@ -1,0 +1,44 @@
+{
+  "componentList": [],
+  "directiveList": [
+    {
+      "name": "LyIcon",
+      "selector": "ly-icon",
+      "inputs": null,
+      "exportAs": null,
+      "children": "@Input() fontIcon: string\n@Input() fontSet: string\n@Input() icon: string\n/** deprecated */\n@Input() src: string"
+    }
+  ],
+  "classList": [],
+  "variableList": [
+    {
+      "name": "LyIconMixinBase",
+      "children": "const LyIconMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinOutlined(\n          mixinElevation(\n            mixinShadowColor(LyIconBase))))))))"
+    },
+    {
+      "name": "STYLE_PRIORITY",
+      "children": "const STYLE_PRIORITY = -2"
+    },
+    {
+      "name": "STYLE_PRIORITY",
+      "children": "const STYLE_PRIORITY = -2"
+    }
+  ],
+  "ngModuleList": [
+    {
+      "name": "LyIconModule",
+      "children": "import { LyIconModule } from '@alyle/ui/icon'"
+    }
+  ],
+  "injectableList": [],
+  "interfaceList": [
+    {
+      "name": "FontClassOptions",
+      "children": "interface FontClassOptions {\n  /** Class name */\n  class: string,\n  key: string,\n  /** Frefix class */\n  prefix: string\n}"
+    },
+    {
+      "name": "SvgIcon",
+      "children": "interface SvgIcon {\n  obs: Observable,\n  svg: SVGElement\n}"
+    }
+  ]
+}

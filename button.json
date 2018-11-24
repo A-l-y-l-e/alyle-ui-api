@@ -1,0 +1,37 @@
+{
+  "componentList": [
+    {
+      "name": "LyButton",
+      "selector": "[ly-button]",
+      "inputs": null,
+      "exportAs": null,
+      "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void"
+    }
+  ],
+  "directiveList": [],
+  "classList": [],
+  "variableList": [
+    {
+      "name": "DEFAULT_DISABLE_RIPPLE",
+      "children": "const DEFAULT_DISABLE_RIPPLE: false = false"
+    },
+    {
+      "name": "DEFAULT_SIZE",
+      "children": "const DEFAULT_SIZE: 'medium' = \"medium\""
+    },
+    {
+      "name": "LyButtonMixinBase",
+      "children": "const LyButtonMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinDisabled(\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(\n                mixinDisableRipple(LyButtonBase))))))))))"
+    },
+    {
+      "name": "STYLE_PRIORITY",
+      "children": "const STYLE_PRIORITY = -2"
+    }
+  ],
+  "ngModuleList": [
+    {
+      "name": "LyButtonModule",
+      "children": "import { LyButtonModule } from '@alyle/ui/button'"
+    }
+  ]
+}
