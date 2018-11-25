@@ -16,21 +16,17 @@
     }
   ],
   "directiveList": [],
-  "classList": [],
   "ngModuleList": [
     {
       "name": "LyRadioModule",
       "children": "import { LyRadioModule } from '@alyle/ui/radio'"
     }
   ],
+  "classList": [],
   "variableList": [
     {
       "name": "DEFAULT_DISABLE_RIPPLE",
       "children": "const DEFAULT_DISABLE_RIPPLE: false = false"
-    },
-    {
-      "name": "LyRadioMixinBase",
-      "children": "const LyRadioMixinBase: any = mixinDisableRipple(mixinColor(LyRadioBase))"
     },
     {
       "name": "STYLE_PRIORITY",

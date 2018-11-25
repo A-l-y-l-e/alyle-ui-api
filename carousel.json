@@ -17,12 +17,6 @@
       "children": "@Input() srcImg: any"
     }
   ],
-  "enumerationList": [
-    {
-      "name": "CarouselMode",
-      "children": "enum CarouselMode {\n  /** full */\n  default,\n  inline\n}"
-    }
-  ],
   "variableList": [
     {
       "name": "STYLE_PRIORITY",

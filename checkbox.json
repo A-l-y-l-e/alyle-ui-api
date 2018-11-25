@@ -20,10 +20,6 @@
       "children": "const DEFAULT_WITH_COLOR: 'accent' = \"accent\""
     },
     {
-      "name": "LyCheckboxMixinBase",
-      "children": "const LyCheckboxMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        (\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(\n                mixinDisableRipple(LyCheckboxBase))))))))))"
-    },
-    {
       "name": "STYLE_PRIORITY",
       "children": "const STYLE_PRIORITY = -2"
     }

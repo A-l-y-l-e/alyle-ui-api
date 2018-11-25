@@ -9,12 +9,7 @@
       "children": "@Input() fontIcon: string\n@Input() fontSet: string\n@Input() icon: string\n/** deprecated */\n@Input() src: string"
     }
   ],
-  "classList": [],
   "variableList": [
-    {
-      "name": "LyIconMixinBase",
-      "children": "const LyIconMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinOutlined(\n          mixinElevation(\n            mixinShadowColor(LyIconBase))))))))"
-    },
     {
       "name": "STYLE_PRIORITY",
       "children": "const STYLE_PRIORITY = -2"

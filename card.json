@@ -30,15 +30,10 @@
       "children": "@Input() bgImg: string\n/** Aspect ratio */\n@Input() ratio: string"
     }
   ],
-  "classList": [],
   "variableList": [
     {
       "name": "DEFAULT_ASPECT_RATIO",
       "children": "const DEFAULT_ASPECT_RATIO: '16:9' = \"16:9\""
-    },
-    {
-      "name": "LyCardMixinBase",
-      "children": "const LyCardMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinDisabled(\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(\n                mixinDisableRipple(LyCardBase))))))))))"
     },
     {
       "name": "STYLE_PRIORITY",

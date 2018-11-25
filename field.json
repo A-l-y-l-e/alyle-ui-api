@@ -52,7 +52,6 @@
       "children": ""
     }
   ],
-  "classList": [],
   "variableList": [
     {
       "name": "DEFAULT_APPEARANCE",
@@ -61,10 +60,6 @@
     {
       "name": "DEFAULT_WITH_COLOR",
       "children": "const DEFAULT_WITH_COLOR: 'primary' = \"primary\""
-    },
-    {
-      "name": "LyFieldMixinBase",
-      "children": "const LyFieldMixinBase: any = mixinColor(LyFieldBase)"
     },
     {
       "name": "STYLE_PRIORITY",

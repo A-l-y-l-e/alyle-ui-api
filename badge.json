@@ -9,7 +9,6 @@
       "children": "/** The content for the badge */\n@Input() content: any\n/** The color of the badge */\n@Input() lyBadgeBg: string\n/** The position for the badge */\n@Input() position: string"
     }
   ],
-  "classList": [],
   "variableList": [
     {
       "name": "DEFAULT_BG",
@@ -18,10 +17,6 @@
     {
       "name": "DEFAULT_POSITION",
       "children": "const DEFAULT_POSITION: 'startTop' = \"startTop\""
-    },
-    {
-      "name": "LyBadgeMixinBase",
-      "children": "const LyBadgeMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinDisabled(\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(LyBadgeBase)))))))))"
     },
     {
       "name": "STYLE_PRIORITY",

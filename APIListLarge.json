@@ -10,7 +10,6 @@
         "children": "/** The content for the badge */\n@Input() content: any\n/** The color of the badge */\n@Input() lyBadgeBg: string\n/** The position for the badge */\n@Input() position: string"
       }
     ],
-    "classList": [],
     "variableList": [
       {
         "name": "DEFAULT_BG",
@@ -19,10 +18,6 @@
       {
         "name": "DEFAULT_POSITION",
         "children": "const DEFAULT_POSITION: 'startTop' = \"startTop\""
-      },
-      {
-        "name": "LyBadgeMixinBase",
-        "children": "const LyBadgeMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinDisabled(\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(LyBadgeBase)))))))))"
       },
       {
         "name": "STYLE_PRIORITY",
@@ -47,7 +42,6 @@
       }
     ],
     "directiveList": [],
-    "classList": [],
     "variableList": [
       {
         "name": "DEFAULT_DISABLE_RIPPLE",
@@ -56,10 +50,6 @@
       {
         "name": "DEFAULT_SIZE",
         "children": "const DEFAULT_SIZE: 'medium' = \"medium\""
-      },
-      {
-        "name": "LyButtonMixinBase",
-        "children": "const LyButtonMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinDisabled(\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(\n                mixinDisableRipple(LyButtonBase))))))))))"
       },
       {
         "name": "STYLE_PRIORITY",
@@ -105,15 +95,10 @@
         "children": "@Input() bgImg: string\n/** Aspect ratio */\n@Input() ratio: string"
       }
     ],
-    "classList": [],
     "variableList": [
       {
         "name": "DEFAULT_ASPECT_RATIO",
         "children": "const DEFAULT_ASPECT_RATIO: '16:9' = \"16:9\""
-      },
-      {
-        "name": "LyCardMixinBase",
-        "children": "const LyCardMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinDisabled(\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(\n                mixinDisableRipple(LyCardBase))))))))))"
       },
       {
         "name": "STYLE_PRIORITY",
@@ -144,12 +129,6 @@
         "inputs": null,
         "exportAs": null,
         "children": "@Input() srcImg: any"
-      }
-    ],
-    "enumerationList": [
-      {
-        "name": "CarouselMode",
-        "children": "enum CarouselMode {\n  /** full */\n  default,\n  inline\n}"
       }
     ],
     "variableList": [
@@ -185,10 +164,6 @@
       {
         "name": "DEFAULT_WITH_COLOR",
         "children": "const DEFAULT_WITH_COLOR: 'accent' = \"accent\""
-      },
-      {
-        "name": "LyCheckboxMixinBase",
-        "children": "const LyCheckboxMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        (\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(\n                mixinDisableRipple(LyCheckboxBase))))))))))"
       },
       {
         "name": "STYLE_PRIORITY",
@@ -311,7 +286,6 @@
         "children": ""
       }
     ],
-    "classList": [],
     "variableList": [
       {
         "name": "DEFAULT_APPEARANCE",
@@ -320,10 +294,6 @@
       {
         "name": "DEFAULT_WITH_COLOR",
         "children": "const DEFAULT_WITH_COLOR: 'primary' = \"primary\""
-      },
-      {
-        "name": "LyFieldMixinBase",
-        "children": "const LyFieldMixinBase: any = mixinColor(LyFieldBase)"
       },
       {
         "name": "STYLE_PRIORITY",
@@ -413,12 +383,7 @@
         "children": "@Input() fontIcon: string\n@Input() fontSet: string\n@Input() icon: string\n/** deprecated */\n@Input() src: string"
       }
     ],
-    "classList": [],
     "variableList": [
-      {
-        "name": "LyIconMixinBase",
-        "children": "const LyIconMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinOutlined(\n          mixinElevation(\n            mixinShadowColor(LyIconBase))))))))"
-      },
       {
         "name": "STYLE_PRIORITY",
         "children": "const STYLE_PRIORITY = -2"
@@ -507,21 +472,17 @@
       }
     ],
     "directiveList": [],
-    "classList": [],
     "ngModuleList": [
       {
         "name": "LyRadioModule",
         "children": "import { LyRadioModule } from '@alyle/ui/radio'"
       }
     ],
+    "classList": [],
     "variableList": [
       {
         "name": "DEFAULT_DISABLE_RIPPLE",
         "children": "const DEFAULT_DISABLE_RIPPLE: false = false"
-      },
-      {
-        "name": "LyRadioMixinBase",
-        "children": "const LyRadioMixinBase: any = mixinDisableRipple(mixinColor(LyRadioBase))"
       },
       {
         "name": "STYLE_PRIORITY",
@@ -947,11 +908,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE: '2018-11-24T06:47:32.416Z' = \"2018-11-24T06:47:32.416Z\""
+        "children": "const AUI_LAST_UPDATE: '2018-11-25T08:22:15.903Z' = \"2018-11-25T08:22:15.903Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION: '1.8.6' = \"1.8.6\""
+        "children": "const AUI_VERSION: '1.8.7-nightly.20181125-jowm7zoh' = \"1.8.7-nightly.20181125-jowm7zoh\""
       }
     ],
     "functionList": [],
@@ -1071,19 +1032,10 @@
       }
     ],
     "injectableList": [],
-    "classList": [],
     "variableList": [
       {
         "name": "DEFAULT_DISABLE_RIPPLE",
         "children": "const DEFAULT_DISABLE_RIPPLE: false = false"
-      },
-      {
-        "name": "LyTabLabelMixinBase",
-        "children": "const LyTabLabelMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinDisabled(\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(\n                mixinDisableRipple(LyTabLabelBase))))))))))"
-      },
-      {
-        "name": "LyTabsMixinBase",
-        "children": "const LyTabsMixinBase: any = mixinBg(mixinFlat(mixinColor(LyTabsBase)))"
       }
     ],
     "ngModuleList": [
@@ -1155,7 +1107,6 @@
         "children": "@Input() position: position"
       }
     ],
-    "classList": [],
     "variableList": [
       {
         "name": "DEFAULT_BG",
@@ -1164,10 +1115,6 @@
       {
         "name": "DEFAULT_POSITION",
         "children": "const DEFAULT_POSITION: 'fixed' = \"fixed\""
-      },
-      {
-        "name": "LyToolbarMixinBase",
-        "children": "const LyToolbarMixinBase: any = mixinStyleUpdater(\n  mixinBg(\n    mixinFlat(\n      mixinColor(\n        mixinRaised(\n          mixinDisabled(\n            mixinOutlined(\n              mixinElevation(\n                mixinShadowColor(LyToolbarBase)))))))))"
       },
       {
         "name": "STYLE_PRIORITY",

@@ -32,19 +32,10 @@
     }
   ],
   "injectableList": [],
-  "classList": [],
   "variableList": [
     {
       "name": "DEFAULT_DISABLE_RIPPLE",
       "children": "const DEFAULT_DISABLE_RIPPLE: false = false"
-    },
-    {
-      "name": "LyTabLabelMixinBase",
-      "children": "const LyTabLabelMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinDisabled(\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(\n                mixinDisableRipple(LyTabLabelBase))))))))))"
-    },
-    {
-      "name": "LyTabsMixinBase",
-      "children": "const LyTabsMixinBase: any = mixinBg(mixinFlat(mixinColor(LyTabsBase)))"
     }
   ],
   "ngModuleList": [
