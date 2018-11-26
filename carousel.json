@@ -5,7 +5,7 @@
       "selector": "ly-carousel",
       "inputs": null,
       "exportAs": null,
-      "children": "classes: any\n@Input() interval: number\n@ContentChildren() lyItems: QueryList\n@Input() mode: CarouselMode\nnullImg: string\nselectedElement: HTMLElement\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() slideEvent: boolean\nnext(notResetInterval?: boolean): void\nonDrag(e: any): void\nonDragEnd(e: any): void\nonDragStart(e: any): void\nprev(): void\nselect(val: number, notResetInterval?: boolean): void\nstop(): void"
+      "children": "@Input() interval: number\n@ContentChildren() lyItems: QueryList\n@Input() mode: CarouselMode\nnullImg: string\nselectedElement: HTMLElement\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() touch: boolean\nnext(notResetInterval?: boolean): void\nprev(): void\nselect(val: number, notResetInterval?: boolean): void\nstop(): void"
     }
   ],
   "directiveList": [

@@ -130,6 +130,10 @@
         "type": "Variable"
       },
       {
+        "name": "chroma",
+        "type": "Variable"
+      },
+      {
         "name": "LyCarouselModule",
         "type": "NgModule"
       }
@@ -712,14 +716,6 @@
       {
         "name": "mixinShadowColor",
         "type": "Function"
-      },
-      {
-        "name": "DomService",
-        "type": "Injectable"
-      },
-      {
-        "name": "LxDomModule",
-        "type": "NgModule"
       },
       {
         "name": "ElementObserver",

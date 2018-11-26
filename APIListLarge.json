@@ -119,7 +119,7 @@
         "selector": "ly-carousel",
         "inputs": null,
         "exportAs": null,
-        "children": "classes: any\n@Input() interval: number\n@ContentChildren() lyItems: QueryList\n@Input() mode: CarouselMode\nnullImg: string\nselectedElement: HTMLElement\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() slideEvent: boolean\nnext(notResetInterval?: boolean): void\nonDrag(e: any): void\nonDragEnd(e: any): void\nonDragStart(e: any): void\nprev(): void\nselect(val: number, notResetInterval?: boolean): void\nstop(): void"
+        "children": "@Input() interval: number\n@ContentChildren() lyItems: QueryList\n@Input() mode: CarouselMode\nnullImg: string\nselectedElement: HTMLElement\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() touch: boolean\nnext(notResetInterval?: boolean): void\nprev(): void\nselect(val: number, notResetInterval?: boolean): void\nstop(): void"
       }
     ],
     "directiveList": [
@@ -836,7 +836,7 @@
       },
       {
         "name": "HAMMER_GESTURES_EVENTS",
-        "children": "const HAMMER_GESTURES_EVENTS: any = [\n  'slide',\n  'slidestart',\n  'slideend',\n  'slideright',\n  'slideleft'\n]"
+        "children": "const HAMMER_GESTURES_EVENTS: any = [\n  'slide',\n  'slidestart',\n  'slideend',\n  'slideright',\n  'slideleft',\n  'slidecancel'\n]"
       },
       {
         "name": "LY_HAMMER_OPTIONS",
@@ -908,11 +908,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE: '2018-11-25T08:22:15.903Z' = \"2018-11-25T08:22:15.903Z\""
+        "children": "const AUI_LAST_UPDATE: '2018-11-26T08:21:55.816Z' = \"2018-11-26T08:21:55.816Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION: '1.8.7-nightly.20181125-jowm7zoh' = \"1.8.7-nightly.20181125-jowm7zoh\""
+        "children": "const AUI_VERSION: '1.8.7-nightly.20181126-joy1neui' = \"1.8.7-nightly.20181126-joy1neui\""
       }
     ],
     "functionList": [],
@@ -948,10 +948,6 @@
     ],
     "injectableList": [],
     "ngModuleList": [
-      {
-        "name": "LxDomModule",
-        "children": "import { LxDomModule } from '@alyle/ui'"
-      },
       {
         "name": "LyOverlayModule",
         "children": "import { LyOverlayModule } from '@alyle/ui'"
