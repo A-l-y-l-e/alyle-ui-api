@@ -157,7 +157,7 @@
     },
     {
       "name": "ThemeConfig",
-      "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  \n  colorShadow: string,\n  direction: Dir,\n  disabled: string,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
+      "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  \n  colorShadow: string,\n  direction: Dir,\n  disabled: string,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
     },
     {
       "name": "StyleMap5",
@@ -178,6 +178,10 @@
     {
       "name": "SnackBarVariables",
       "children": "interface SnackBarVariables {\n  root: StyleContainer\n}"
+    },
+    {
+      "name": "TooltipVariables",
+      "children": "interface TooltipVariables {\n  root: StyleContainer\n}"
     },
     {
       "name": "TypographyTypeVariables",
@@ -291,11 +295,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE: '2018-11-27T08:23:51.070Z' = \"2018-11-27T08:23:51.070Z\""
+      "children": "const AUI_LAST_UPDATE: '2018-11-27T08:31:46.930Z' = \"2018-11-27T08:31:46.930Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION: '1.8.7-nightly.20181127-jozh5qg0' = \"1.8.7-nightly.20181127-jozh5qg0\""
+      "children": "const AUI_VERSION: '1.8.7-nightly.20181127-jozhfxmc' = \"1.8.7-nightly.20181127-jozhfxmc\""
     }
   ],
   "functionList": [],

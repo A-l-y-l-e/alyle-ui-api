@@ -1,0 +1,24 @@
+{
+  "componentList": [],
+  "directiveList": [
+    {
+      "name": "LyTooltip",
+      "selector": "[lyTooltip]",
+      "inputs": null,
+      "exportAs": "lyTooltip",
+      "children": "classes: any\n@Input() lyTooltipHideDelay: number\n@Input() lyTooltipShowDelay: number\n@Input() tooltip: any\nhide(delay?: number): void\nshow(delay?: number): void\ntoggle(): void"
+    }
+  ],
+  "variableList": [
+    {
+      "name": "STYLE_PRIORITY",
+      "children": "const STYLE_PRIORITY = -2"
+    }
+  ],
+  "ngModuleList": [
+    {
+      "name": "LyTooltipModule",
+      "children": "import { LyTooltipModule } from '@alyle/ui/tooltip'"
+    }
+  ]
+}

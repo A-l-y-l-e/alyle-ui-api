@@ -1198,6 +1198,10 @@
         "type": "Interface"
       },
       {
+        "name": "TooltipVariables",
+        "type": "Interface"
+      },
+      {
         "name": "TypographyTypeVariables",
         "type": "Interface"
       },
@@ -1387,6 +1391,22 @@
       },
       {
         "name": "LyToolbarModule",
+        "type": "NgModule"
+      }
+    ]
+  },
+  "tooltip": {
+    "children": [
+      {
+        "name": "LyTooltip",
+        "type": "Directive"
+      },
+      {
+        "name": "STYLE_PRIORITY",
+        "type": "Variable"
+      },
+      {
+        "name": "LyTooltipModule",
         "type": "NgModule"
       }
     ]

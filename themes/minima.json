@@ -44,7 +44,7 @@
   "interfaceList": [
     {
       "name": "IMinimaTheme",
-      "children": "interface IMinimaTheme {\n  animations: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  disabled: string,\n  divider: string,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  typography: any,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getDirection,\n  pxToRem,\n  accent: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  drawer: object,\n  primary: object,\n  /** Components variables */\n  radio: object,\n  snackBar: object,\n  text: object,\n  warn: object\n}"
+      "children": "interface IMinimaTheme {\n  animations: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  disabled: string,\n  divider: string,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  typography: any,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getDirection,\n  pxToRem,\n  accent: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  drawer: object,\n  primary: object,\n  /** Components variables */\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  warn: object\n}"
     }
   ],
   "objectLiteralList": []
