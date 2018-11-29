@@ -920,11 +920,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE: '2018-11-29T08:24:17.047Z' = \"2018-11-29T08:24:17.047Z\""
+        "children": "const AUI_LAST_UPDATE: '2018-11-29T08:43:44.759Z' = \"2018-11-29T08:43:44.759Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION: '1.8.8-nightly.20181129-jp2c1ztl' = \"1.8.8-nightly.20181129-jp2c1ztl\""
+        "children": "const AUI_VERSION: '1.8.8' = \"1.8.8\""
       }
     ],
     "functionList": [],

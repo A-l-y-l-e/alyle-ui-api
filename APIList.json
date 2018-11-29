@@ -1106,7 +1106,7 @@
         "type": "Interface"
       },
       {
-        "name": "IClasses",
+        "name": "OnlyClasses",
         "type": "Type alias"
       },
       {
