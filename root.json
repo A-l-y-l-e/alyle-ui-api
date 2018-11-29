@@ -274,10 +274,6 @@
       "children": "const LY_THEME_NAME: InjectionToken = new InjectionToken<string>('ly.theme.name')"
     },
     {
-      "name": "IS_DEV_OR_SERVER",
-      "children": "const IS_DEV_OR_SERVER: boolean = isDevMode() || !Platform.isBrowser"
-    },
-    {
       "name": "REF_REG_EXP",
       "children": "const REF_REG_EXP: RegExp = /\\{([\\w-]+)\\}/g"
     },
@@ -303,11 +299,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE: '2018-11-29T08:43:44.759Z' = \"2018-11-29T08:43:44.759Z\""
+      "children": "const AUI_LAST_UPDATE: '2018-11-29T21:42:06.752Z' = \"2018-11-29T21:42:06.752Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION: '1.8.8' = \"1.8.8\""
+      "children": "const AUI_VERSION: '1.8.9' = \"1.8.9\""
     }
   ],
   "functionList": [],
