@@ -161,7 +161,7 @@
     },
     {
       "name": "StyleMap5",
-      "children": "interface StyleMap5 {\n  /** global theme */\n  classes: any | string,\n  /** requireUpdate */\n  classesWithTheme: any,\n  css: any | string,\n  priority: number,\n  requireUpdate: boolean,\n  styles: StylesFn2 | Styles2,\n  type: TypeStyle\n}"
+      "children": "interface StyleMap5 {\n  /** global theme */\n  classes: any | string,\n  /** requireUpdate */\n  classesWithTheme: any,\n  css: any | string,\n  id: string,\n  priority: number,\n  requireUpdate: boolean,\n  styles: StylesFn2 | Styles2,\n  type: TypeStyle\n}"
     },
     {
       "name": "ButtonVariables",
@@ -270,8 +270,8 @@
       "children": "const LY_THEME_NAME: InjectionToken = new InjectionToken<string>('ly.theme.name')"
     },
     {
-      "name": "CLASSES_MAP",
-      "children": "const CLASSES_MAP: any"
+      "name": "IS_DEV_OR_SERVER",
+      "children": "const IS_DEV_OR_SERVER: boolean = isDevMode() || !Platform.isBrowser"
     },
     {
       "name": "REF_REG_EXP",
@@ -290,16 +290,20 @@
       "children": "const STYLE_MAP5: Map = new Map()"
     },
     {
+      "name": "THEME_MAP",
+      "children": "const THEME_MAP: Map = new Map<string, {\n  base: string\n  change: string | null\n}>()"
+    },
+    {
       "name": "UndefinedValue",
       "children": "const UndefinedValue: Undefined = new Undefined()"
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE: '2018-11-28T08:23:50.999Z' = \"2018-11-28T08:23:50.999Z\""
+      "children": "const AUI_LAST_UPDATE: '2018-11-29T06:32:20.725Z' = \"2018-11-29T06:32:20.725Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION: '1.8.8-nightly.20181128-jp0wll23' = \"1.8.8-nightly.20181128-jp0wll23\""
+      "children": "const AUI_VERSION: '1.8.8-nightly.20181129-jp2821h3' = \"1.8.8-nightly.20181129-jp2821h3\""
     }
   ],
   "functionList": [],

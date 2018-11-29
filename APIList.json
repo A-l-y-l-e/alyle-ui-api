@@ -1114,7 +1114,7 @@
         "type": "Type alias"
       },
       {
-        "name": "CLASSES_MAP",
+        "name": "IS_DEV_OR_SERVER",
         "type": "Variable"
       },
       {
@@ -1131,6 +1131,10 @@
       },
       {
         "name": "STYLE_MAP5",
+        "type": "Variable"
+      },
+      {
+        "name": "THEME_MAP",
         "type": "Variable"
       },
       {
