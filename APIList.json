@@ -914,6 +914,18 @@
         "type": "Variable"
       },
       {
+        "name": "XPosition",
+        "type": "Enumeration"
+      },
+      {
+        "name": "YPosition",
+        "type": "Enumeration"
+      },
+      {
+        "name": "Placement",
+        "type": "Type alias"
+      },
+      {
         "name": "Ripple",
         "type": "Class"
       },
@@ -1094,6 +1106,10 @@
         "type": "Injectable"
       },
       {
+        "name": "Keyframes",
+        "type": "Interface"
+      },
+      {
         "name": "StyleContainer",
         "type": "Interface"
       },
@@ -1138,11 +1154,23 @@
         "type": "Variable"
       },
       {
+        "name": "nextKeyFrameId",
+        "type": "Variable"
+      },
+      {
         "name": "capitalizeFirstLetter",
         "type": "Function"
       },
       {
+        "name": "convertToStyleValue",
+        "type": "Function"
+      },
+      {
         "name": "createNextClassId",
+        "type": "Function"
+      },
+      {
+        "name": "createNextKeyframeId",
         "type": "Function"
       },
       {
@@ -1151,6 +1179,10 @@
       },
       {
         "name": "groupStyleToString",
+        "type": "Function"
+      },
+      {
+        "name": "keyframesToString",
         "type": "Function"
       },
       {
