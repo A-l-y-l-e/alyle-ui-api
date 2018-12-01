@@ -418,6 +418,14 @@
         "type": "Directive"
       },
       {
+        "name": "DEFAULT_PLACEMENT",
+        "type": "Variable"
+      },
+      {
+        "name": "DEFAULT_XPOSITION",
+        "type": "Variable"
+      },
+      {
         "name": "STYLE_PRIORITY",
         "type": "Variable"
       },

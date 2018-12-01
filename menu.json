@@ -5,7 +5,7 @@
       "selector": "ly-menu",
       "inputs": null,
       "exportAs": "lyMenu",
-      "children": "@HostBinding() menuEnter: any\n@HostBinding() menuLeave2: any\n@Input() ref: LyMenuTriggerFor\nendAnimation(e: any): void"
+      "children": "@HostBinding() menuLeave2: any\n/** Position where the menu will be placed. */\n@Input() placement: Placement\n@Input() ref: LyMenuTriggerFor\n/** The x-axis position of the menu. */\n@Input() xPosition: XPosition\n/** The y-axis position of the menu. */\n@Input() yPosition: YPosition\nendAnimation(e: any): void"
     }
   ],
   "directiveList": [
@@ -21,10 +21,18 @@
       "selector": "[lyMenuTriggerFor]",
       "inputs": null,
       "exportAs": null,
-      "children": "@Input() lyMenuTriggerFor: TemplateRef\ndestroy(): void\ndetach(): void\ntargetPosition(): void"
+      "children": "@Input() lyMenuTriggerFor: TemplateRef\ndestroy(): void\ndetach(): void"
     }
   ],
   "variableList": [
+    {
+      "name": "DEFAULT_PLACEMENT",
+      "children": "const DEFAULT_PLACEMENT: below = YPosition.below"
+    },
+    {
+      "name": "DEFAULT_XPOSITION",
+      "children": "const DEFAULT_XPOSITION: after = XPosition.after"
+    },
     {
       "name": "STYLE_PRIORITY",
       "children": "const STYLE_PRIORITY = -1"
