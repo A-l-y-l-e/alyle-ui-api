@@ -5,7 +5,7 @@
       "selector": "ly-tab",
       "inputs": null,
       "exportAs": null,
-      "children": "index: number\nloaded: boolean\n@ViewChild() tabIndicator: ElementRef\n@ViewChild() templateRef: TemplateRef\n@ContentChild() templateRefLazy: TemplateRef\nonClick(): void"
+      "children": "index: number\n@ViewChild() tabIndicator: ElementRef\n@ViewChild() templateRef: TemplateRef\n@ContentChild() templateRefLazy: TemplateRef\nonClick(): void"
     },
     {
       "name": "LyTabs",

@@ -338,40 +338,6 @@
       }
     ]
   },
-  "icon-button": {
-    "componentList": [
-      {
-        "name": "LyIconButton",
-        "selector": "button[ly-icon-button], a[ly-icon-button], span[ly-icon-button]",
-        "inputs": null,
-        "exportAs": "lyIconButton",
-        "children": "classes: any\niconButtonService: LyIconButtonService"
-      }
-    ],
-    "directiveList": [],
-    "classList": [],
-    "variableList": [
-      {
-        "name": "LyIconButtonMixinBase",
-        "children": "const LyIconButtonMixinBase: any = mixinStyleUpdater(\nmixinBg(\n  mixinFlat(\n    mixinColor(\n      mixinRaised(\n        mixinDisabled(\n          mixinOutlined(\n            mixinElevation(\n              mixinShadowColor(\n                mixinDisableRipple(LyIconButtonBase))))))))))"
-      },
-      {
-        "name": "STYLE_PRIORITY",
-        "children": "const STYLE_PRIORITY = -2"
-      },
-      {
-        "name": "STYLE_PRIORITY",
-        "children": "const STYLE_PRIORITY = -2"
-      }
-    ],
-    "ngModuleList": [
-      {
-        "name": "LyIconButtonModule",
-        "children": "import { LyIconButtonModule } from '@alyle/ui/icon-button'"
-      }
-    ],
-    "injectableList": []
-  },
   "icon": {
     "componentList": [],
     "directiveList": [
@@ -449,10 +415,6 @@
       {
         "name": "STYLE_PRIORITY",
         "children": "const STYLE_PRIORITY = -1"
-      },
-      {
-        "name": "menuItemStyles",
-        "children": "const menuItemStyles: any = ({\n  display: 'block',\n  minHeight: '48px',\n  borderRadius: 0,\n  width: '100%'\n})"
       }
     ],
     "ngModuleList": [
@@ -924,11 +886,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE: '2018-12-01T08:23:22.291Z' = \"2018-12-01T08:23:22.291Z\""
+        "children": "const AUI_LAST_UPDATE: '2018-12-02T08:23:49.596Z' = \"2018-12-02T08:23:49.596Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION: '1.9.1-nightly.20181201-jp56wiwl' = \"1.9.1-nightly.20181201-jp56wiwl\""
+        "children": "const AUI_VERSION: '1.9.1-nightly.20181202-jp6mcyn2' = \"1.9.1-nightly.20181202-jp6mcyn2\""
       }
     ],
     "functionList": [],
@@ -1029,7 +991,7 @@
         "selector": "ly-tab",
         "inputs": null,
         "exportAs": null,
-        "children": "index: number\nloaded: boolean\n@ViewChild() tabIndicator: ElementRef\n@ViewChild() templateRef: TemplateRef\n@ContentChild() templateRefLazy: TemplateRef\nonClick(): void"
+        "children": "index: number\n@ViewChild() tabIndicator: ElementRef\n@ViewChild() templateRef: TemplateRef\n@ContentChild() templateRefLazy: TemplateRef\nonClick(): void"
       },
       {
         "name": "LyTabs",

@@ -36,10 +36,6 @@
     {
       "name": "STYLE_PRIORITY",
       "children": "const STYLE_PRIORITY = -1"
-    },
-    {
-      "name": "menuItemStyles",
-      "children": "const menuItemStyles: any = ({\n  display: 'block',\n  minHeight: '48px',\n  borderRadius: 0,\n  width: '100%'\n})"
     }
   ],
   "ngModuleList": [

@@ -66,6 +66,10 @@
         "type": "Variable"
       },
       {
+        "name": "Size",
+        "type": "Object literal"
+      },
+      {
         "name": "LyButtonModule",
         "type": "NgModule"
       }
@@ -328,38 +332,6 @@
       {
         "name": "LyGridModule",
         "type": "NgModule"
-      }
-    ]
-  },
-  "icon-button": {
-    "children": [
-      {
-        "name": "LyIconButton",
-        "type": "Component"
-      },
-      {
-        "name": "LyIconButtonBase",
-        "type": "Class"
-      },
-      {
-        "name": "LyIconButtonMixinBase",
-        "type": "Variable"
-      },
-      {
-        "name": "STYLE_PRIORITY",
-        "type": "Variable"
-      },
-      {
-        "name": "LyIconButtonModule",
-        "type": "NgModule"
-      },
-      {
-        "name": "LyIconButtonService",
-        "type": "Injectable"
-      },
-      {
-        "name": "STYLE_PRIORITY",
-        "type": "Variable"
       }
     ]
   },
@@ -772,6 +744,10 @@
       {
         "name": "LyOverlayModule",
         "type": "NgModule"
+      },
+      {
+        "name": "ResizeService",
+        "type": "Injectable"
       },
       {
         "name": "FocusStatus",
