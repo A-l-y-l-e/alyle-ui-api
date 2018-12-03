@@ -1,0 +1,32 @@
+{
+  "componentList": [],
+  "directiveList": [
+    {
+      "name": "LyAvatar",
+      "selector": "ly-avatar",
+      "inputs": null,
+      "exportAs": null,
+      "children": "classes: any\n@Input() size: number"
+    }
+  ],
+  "variableList": [
+    {
+      "name": "DEFAULT_BG",
+      "children": "const DEFAULT_BG: 'background:base' = \"background:base\""
+    },
+    {
+      "name": "DEFAULT_SIZE",
+      "children": "const DEFAULT_SIZE = 40"
+    },
+    {
+      "name": "STYLE_PRIORITY",
+      "children": "const STYLE_PRIORITY = -2"
+    }
+  ],
+  "ngModuleList": [
+    {
+      "name": "LyAvatarModule",
+      "children": "import { LyAvatarModule } from '@alyle/ui/avatar'"
+    }
+  ]
+}

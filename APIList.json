@@ -1,4 +1,36 @@
 {
+  "avatar": {
+    "children": [
+      {
+        "name": "LyAvatar",
+        "type": "Directive"
+      },
+      {
+        "name": "LyAvatarBase",
+        "type": "Class"
+      },
+      {
+        "name": "DEFAULT_BG",
+        "type": "Variable"
+      },
+      {
+        "name": "DEFAULT_SIZE",
+        "type": "Variable"
+      },
+      {
+        "name": "LyAvatarMixinBase",
+        "type": "Variable"
+      },
+      {
+        "name": "STYLE_PRIORITY",
+        "type": "Variable"
+      },
+      {
+        "name": "LyAvatarModule",
+        "type": "NgModule"
+      }
+    ]
+  },
   "badge": {
     "children": [
       {

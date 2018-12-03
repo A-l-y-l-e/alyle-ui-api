@@ -1,4 +1,36 @@
 {
+  "avatar": {
+    "componentList": [],
+    "directiveList": [
+      {
+        "name": "LyAvatar",
+        "selector": "ly-avatar",
+        "inputs": null,
+        "exportAs": null,
+        "children": "classes: any\n@Input() size: number"
+      }
+    ],
+    "variableList": [
+      {
+        "name": "DEFAULT_BG",
+        "children": "const DEFAULT_BG: 'background:base' = \"background:base\""
+      },
+      {
+        "name": "DEFAULT_SIZE",
+        "children": "const DEFAULT_SIZE = 40"
+      },
+      {
+        "name": "STYLE_PRIORITY",
+        "children": "const STYLE_PRIORITY = -2"
+      }
+    ],
+    "ngModuleList": [
+      {
+        "name": "LyAvatarModule",
+        "children": "import { LyAvatarModule } from '@alyle/ui/avatar'"
+      }
+    ]
+  },
   "badge": {
     "componentList": [],
     "directiveList": [
@@ -886,11 +918,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE: '2018-12-03T03:50:19.347Z' = \"2018-12-03T03:50:19.347Z\""
+        "children": "const AUI_LAST_UPDATE: '2018-12-03T08:27:18.555Z' = \"2018-12-03T08:27:18.555Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION: '1.9.1' = \"1.9.1\""
+        "children": "const AUI_VERSION: '1.9.2-nightly.20181203-jp81xajh' = \"1.9.2-nightly.20181203-jp81xajh\""
       }
     ],
     "functionList": [],
