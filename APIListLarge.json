@@ -549,7 +549,7 @@
         "selector": "ng-template[ly-snack-bar]",
         "inputs": null,
         "exportAs": "lySnackBar",
-        "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: number\n@Input() horizontalPosition: any\n@Input() verticalPosition: any\ndismiss(): void\nopen(): void"
+        "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: number\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\ndismiss(): void\nopen(): void"
       }
     ],
     "interfaceList": [
@@ -561,11 +561,11 @@
     "variableList": [
       {
         "name": "DEFAULT_HORIZONTAL_POSITION",
-        "children": "const DEFAULT_HORIZONTAL_POSITION: 'end' = \"end\""
+        "children": "const DEFAULT_HORIZONTAL_POSITION: after = XPosition.after"
       },
       {
         "name": "DEFAULT_VERTICAL_POSITION",
-        "children": "const DEFAULT_VERTICAL_POSITION: 'bottom' = \"bottom\""
+        "children": "const DEFAULT_VERTICAL_POSITION: below = YPosition.below"
       },
       {
         "name": "STYLE_PRIORITY",
@@ -886,11 +886,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE: '2018-12-02T08:23:49.596Z' = \"2018-12-02T08:23:49.596Z\""
+        "children": "const AUI_LAST_UPDATE: '2018-12-03T03:50:19.347Z' = \"2018-12-03T03:50:19.347Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION: '1.9.1-nightly.20181202-jp6mcyn2' = \"1.9.1-nightly.20181202-jp6mcyn2\""
+        "children": "const AUI_VERSION: '1.9.1' = \"1.9.1\""
       }
     ],
     "functionList": [],
