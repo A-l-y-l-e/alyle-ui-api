@@ -6,7 +6,7 @@
       "selector": "ly-avatar",
       "inputs": null,
       "exportAs": null,
-      "children": "classes: any\n@Input() size: number"
+      "children": "@Input() size: number"
     }
   ],
   "variableList": [
