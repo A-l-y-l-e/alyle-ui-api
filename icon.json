@@ -4,9 +4,15 @@
     {
       "name": "LyIcon",
       "selector": "ly-icon",
-      "inputs": null,
-      "exportAs": null,
-      "children": "@Input() fontIcon: string\n@Input() fontSet: string\n@Input() icon: string\n/** deprecated */\n@Input() src: string"
+      "inputs": [
+        "bg",
+        "color",
+        "raised",
+        "outlined",
+        "elevation",
+        "shadowColor"
+      ],
+      "children": "@Input() fontIcon: string\n@Input() fontSet: string\n@Input() icon: string"
     }
   ],
   "variableList": [

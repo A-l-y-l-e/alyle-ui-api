@@ -4,15 +4,11 @@
     {
       "name": "ThemeMinimaDark",
       "selector": "[ly-theme-minima-dark]",
-      "inputs": null,
-      "exportAs": null,
       "children": ""
     },
     {
       "name": "ThemeMinimaLight",
       "selector": "[ly-theme-minima-light]",
-      "inputs": null,
-      "exportAs": null,
       "children": ""
     }
   ],
@@ -20,19 +16,19 @@
   "variableList": [
     {
       "name": "contrast",
-      "children": "const contrast: '#fff' = \"#fff\""
+      "children": "const contrast = \"#fff\""
     },
     {
       "name": "shadow",
-      "children": "const shadow: 'rgba(0, 0, 0, 1)' = \"rgba(0, 0, 0, 1)\""
+      "children": "const shadow = \"rgba(0, 0, 0, 1)\""
     },
     {
       "name": "contrast",
-      "children": "const contrast: '#fff' = \"#fff\""
+      "children": "const contrast = \"#fff\""
     },
     {
       "name": "shadow",
-      "children": "const shadow: '#333' = \"#333\""
+      "children": "const shadow = \"#333\""
     }
   ],
   "ngModuleList": [

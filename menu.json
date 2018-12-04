@@ -3,7 +3,6 @@
     {
       "name": "LyMenu",
       "selector": "ly-menu",
-      "inputs": null,
       "exportAs": "lyMenu",
       "children": "@HostBinding() menuLeave2: any\n/** Position where the menu will be placed. */\n@Input() placement: Placement\n@Input() ref: LyMenuTriggerFor\n/** The x-axis position of the menu. */\n@Input() xPosition: XPosition\n/** The y-axis position of the menu. */\n@Input() yPosition: YPosition\nendAnimation(e: any): void"
     }
@@ -12,26 +11,26 @@
     {
       "name": "LyMenuItem",
       "selector": "[ly-menu-item]",
-      "inputs": null,
-      "exportAs": null,
       "children": ""
     },
     {
       "name": "LyMenuTriggerFor",
       "selector": "[lyMenuTriggerFor]",
-      "inputs": null,
-      "exportAs": null,
       "children": "@Input() lyMenuTriggerFor: TemplateRef\ndestroy(): void\ndetach(): void"
     }
   ],
   "variableList": [
     {
+      "name": "ANIMATIONS",
+      "children": "const ANIMATIONS = [\n  trigger('menuEnter', [\n    transition('void => in', [\n      animate('125ms cubic-bezier(0, 0, 0.2, 1)', keyframes([\n        style({\n          opacity: 0,\n          transform: 'scale(0.8)'\n        }),\n        style({\n          opacity: 1,\n          transform: 'scale(1)'\n        })\n      ]))\n    ]),\n  ]),\n  trigger('menuLeave', [\n    transition('* => void', animate('150ms linear', style({ opacity: 0 })))\n  ])\n]"
+    },
+    {
       "name": "DEFAULT_PLACEMENT",
-      "children": "const DEFAULT_PLACEMENT: below = YPosition.below"
+      "children": "const DEFAULT_PLACEMENT = YPosition.below"
     },
     {
       "name": "DEFAULT_XPOSITION",
-      "children": "const DEFAULT_XPOSITION: after = XPosition.after"
+      "children": "const DEFAULT_XPOSITION = XPosition.after"
     },
     {
       "name": "STYLE_PRIORITY",

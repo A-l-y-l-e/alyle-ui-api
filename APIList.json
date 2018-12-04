@@ -346,6 +346,10 @@
         "type": "Type alias"
       },
       {
+        "name": "COL_VALUES",
+        "type": "Variable"
+      },
+      {
         "name": "STYLE_PRIORITY",
         "type": "Variable"
       },
@@ -420,6 +424,10 @@
       {
         "name": "LyMenuTriggerFor",
         "type": "Directive"
+      },
+      {
+        "name": "ANIMATIONS",
+        "type": "Variable"
       },
       {
         "name": "DEFAULT_PLACEMENT",
@@ -511,6 +519,10 @@
       },
       {
         "name": "ImgCropperEvent",
+        "type": "Interface"
+      },
+      {
+        "name": "ImgOutput",
         "type": "Interface"
       },
       {
@@ -698,14 +710,6 @@
         "type": "Function"
       },
       {
-        "name": "CanFlat",
-        "type": "Interface"
-      },
-      {
-        "name": "mixinFlat",
-        "type": "Function"
-      },
-      {
         "name": "CanOutlined",
         "type": "Interface"
       },
@@ -790,20 +794,12 @@
         "type": "Injectable"
       },
       {
-        "name": "LyFocusStateDeprecated",
-        "type": "Directive"
-      },
-      {
         "name": "FocusState",
         "type": "Interface"
       },
       {
         "name": "FocusStateInfo",
         "type": "Interface"
-      },
-      {
-        "name": "LyFocusStateModule",
-        "type": "NgModule"
       },
       {
         "name": "HammerInput",
@@ -1146,15 +1142,11 @@
         "type": "Type alias"
       },
       {
+        "name": "BOTTOM",
+        "type": "Variable"
+      },
+      {
         "name": "REF_REG_EXP",
-        "type": "Variable"
-      },
-      {
-        "name": "STYLE_KEYS_DIRECTIONS_MAP",
-        "type": "Variable"
-      },
-      {
-        "name": "STYLE_KEYS_MAP",
         "type": "Variable"
       },
       {
@@ -1166,6 +1158,10 @@
         "type": "Variable"
       },
       {
+        "name": "TOP",
+        "type": "Variable"
+      },
+      {
         "name": "nextClassId",
         "type": "Variable"
       },
@@ -1174,11 +1170,23 @@
         "type": "Variable"
       },
       {
+        "name": "YPositionCache",
+        "type": "Function"
+      },
+      {
         "name": "capitalizeFirstLetter",
         "type": "Function"
       },
       {
         "name": "convertToStyleValue",
+        "type": "Function"
+      },
+      {
+        "name": "converterToCssKeyAndStyle",
+        "type": "Function"
+      },
+      {
+        "name": "converterToCssKeyAndStyleCache",
         "type": "Function"
       },
       {
@@ -1218,15 +1226,23 @@
         "type": "Function"
       },
       {
-        "name": "toHyphenCaseCache",
-        "type": "Function"
-      },
-      {
         "name": "toMedia",
         "type": "Function"
       },
       {
+        "name": "warnDeprecatedKeyStyle",
+        "type": "Function"
+      },
+      {
+        "name": "STYLE_KEYS_MAP",
+        "type": "Object literal"
+      },
+      {
         "name": "defaultStyles",
+        "type": "Object literal"
+      },
+      {
+        "name": "ignoreCSSKEY",
         "type": "Object literal"
       },
       {

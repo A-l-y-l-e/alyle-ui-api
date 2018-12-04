@@ -3,14 +3,15 @@
     {
       "name": "LyTab",
       "selector": "ly-tab",
-      "inputs": null,
-      "exportAs": null,
       "children": "index: number\n@ViewChild() tabIndicator: ElementRef\n@ViewChild() templateRef: TemplateRef\n@ContentChild() templateRefLazy: TemplateRef\nonClick(): void"
     },
     {
       "name": "LyTabs",
       "selector": "ly-tabs",
-      "inputs": null,
+      "inputs": [
+        "bg",
+        "color"
+      ],
       "exportAs": "lyTabs",
       "children": "classes: any\n@Input() native: boolean\n@Output() selectedIndexChange: EventEmitter\n@Input() selectedIndexOnChange: any\n@ViewChild() tabContents: ElementRef\n@ViewChild() tabsIndicator: ElementRef\n@ContentChildren() tabsList: QueryList\n@Input() withBg: string\n@Input() selectedIndex: number\n@Input() withColor: string\nloadTemplate(tab: LyTab, index: number): void\nmarkForCheck(): void"
     }
@@ -19,15 +20,11 @@
     {
       "name": "LyTabContent",
       "selector": "[ly-tab-content]",
-      "inputs": null,
-      "exportAs": null,
       "children": "template: TemplateRef"
     },
     {
       "name": "LyTabLabel",
       "selector": "ly-tab-label, [ly-tab-label]",
-      "inputs": null,
-      "exportAs": null,
       "children": ""
     }
   ],
@@ -35,7 +32,7 @@
   "variableList": [
     {
       "name": "DEFAULT_DISABLE_RIPPLE",
-      "children": "const DEFAULT_DISABLE_RIPPLE: false = false"
+      "children": "const DEFAULT_DISABLE_RIPPLE = false"
     }
   ],
   "ngModuleList": [

@@ -4,7 +4,6 @@
     {
       "name": "LySnackBar",
       "selector": "ng-template[ly-snack-bar]",
-      "inputs": null,
       "exportAs": "lySnackBar",
       "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: number\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\ndismiss(): void\nopen(): void"
     }
@@ -18,11 +17,11 @@
   "variableList": [
     {
       "name": "DEFAULT_HORIZONTAL_POSITION",
-      "children": "const DEFAULT_HORIZONTAL_POSITION: after = XPosition.after"
+      "children": "const DEFAULT_HORIZONTAL_POSITION = XPosition.after"
     },
     {
       "name": "DEFAULT_VERTICAL_POSITION",
-      "children": "const DEFAULT_VERTICAL_POSITION: below = YPosition.below"
+      "children": "const DEFAULT_VERTICAL_POSITION = YPosition.below"
     },
     {
       "name": "STYLE_PRIORITY",

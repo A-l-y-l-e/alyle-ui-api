@@ -3,8 +3,16 @@
     {
       "name": "LyButton",
       "selector": "[ly-button]",
-      "inputs": null,
-      "exportAs": null,
+      "inputs": [
+        "bg",
+        "color",
+        "raised",
+        "disabled",
+        "outlined",
+        "elevation",
+        "shadowColor",
+        "disableRipple"
+      ],
       "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void"
     }
   ],
@@ -12,11 +20,11 @@
   "variableList": [
     {
       "name": "DEFAULT_DISABLE_RIPPLE",
-      "children": "const DEFAULT_DISABLE_RIPPLE: false = false"
+      "children": "const DEFAULT_DISABLE_RIPPLE = false"
     },
     {
       "name": "DEFAULT_SIZE",
-      "children": "const DEFAULT_SIZE: 'medium' = \"medium\""
+      "children": "const DEFAULT_SIZE = \"medium\""
     },
     {
       "name": "STYLE_PRIORITY",

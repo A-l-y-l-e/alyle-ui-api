@@ -4,8 +4,6 @@
     {
       "name": "LyTypography",
       "selector": "[lyTyp]",
-      "inputs": null,
-      "exportAs": null,
       "children": "@Input() gutter: boolean\n@Input() gutterBottom: boolean\n@Input() gutterTop: boolean\n@Input() lyTyp: string"
     }
   ],

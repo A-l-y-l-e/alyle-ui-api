@@ -4,15 +4,21 @@
     {
       "name": "LyAvatar",
       "selector": "ly-avatar",
-      "inputs": null,
-      "exportAs": null,
+      "inputs": [
+        "bg",
+        "color",
+        "raised",
+        "outlined",
+        "elevation",
+        "shadowColor"
+      ],
       "children": "@Input() size: number"
     }
   ],
   "variableList": [
     {
       "name": "DEFAULT_BG",
-      "children": "const DEFAULT_BG: 'background:base' = \"background:base\""
+      "children": "const DEFAULT_BG = \"background:base\""
     },
     {
       "name": "DEFAULT_SIZE",

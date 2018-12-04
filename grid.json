@@ -4,16 +4,22 @@
     {
       "name": "LyGrid",
       "selector": "ly-grid[container]",
-      "inputs": null,
-      "exportAs": null,
-      "children": "/** Defines the justify-content style property. */\n@Input() direction: Direction\n/** Defines the justify-content style property. */\n@Input() justify: Justify\n/** Defines the space between the component with the `item` attribute. */\n@Input() spacing: any\nspacingClass: string"
+      "children": "/** Defines the justify-content style property. */\n@Input() direction: Direction\n/** Defines the justify-content style property. */\n@Input() justify: Justify\n/** Defines the space between the component with the `item` attribute. */\n@Input() spacing: any"
     },
     {
       "name": "LyGridItem",
       "selector": "ly-grid[item]",
-      "inputs": null,
-      "exportAs": null,
       "children": "/** Defines the number of grids */\n@Input() col: any\n/** Defines the order style property. */\n@Input() order: any"
+    }
+  ],
+  "typeAliasList": [
+    {
+      "name": "Direction",
+      "children": "type Direction = 'row' | 'rowReverse' | 'column' | 'columnReverse'"
+    },
+    {
+      "name": "Justify",
+      "children": "type Justify = 'start' | 'center' | 'end' | 'between' | 'around' | 'evenly'"
     }
   ],
   "variableList": [
