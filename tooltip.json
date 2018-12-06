@@ -5,10 +5,14 @@
       "name": "LyTooltip",
       "selector": "[lyTooltip]",
       "exportAs": "lyTooltip",
-      "children": "classes: any\n@Input() lyTooltipHideDelay: number\n@Input() lyTooltipShowDelay: number\n@Input('lyTooltip') tooltip: any\nhide(delay?: number): void\nshow(delay?: number): void\ntoggle(): void"
+      "children": "@Input() lyTooltipHideDelay: number\n@Input() lyTooltipShowDelay: number\n@Input() placement: Placement\n@Input() xPosition: XPosition\n@Input() yPosition: YPosition\n@Input('lyTooltip') tooltip: any\nhide(delay?: number): void\nshow(delay?: number): void\ntoggle(): void"
     }
   ],
   "variableList": [
+    {
+      "name": "DEFAULT_PLACEMENT",
+      "children": "const DEFAULT_PLACEMENT = YPosition.below"
+    },
     {
       "name": "STYLE_PRIORITY",
       "children": "const STYLE_PRIORITY = -2"

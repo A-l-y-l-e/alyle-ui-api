@@ -98,10 +98,6 @@
         "type": "Variable"
       },
       {
-        "name": "Size",
-        "type": "Object literal"
-      },
-      {
         "name": "LyButtonModule",
         "type": "NgModule"
       }
@@ -938,6 +934,10 @@
         "type": "Type alias"
       },
       {
+        "name": "getPosition",
+        "type": "Function"
+      },
+      {
         "name": "Ripple",
         "type": "Class"
       },
@@ -1464,6 +1464,10 @@
       {
         "name": "LyTooltip",
         "type": "Directive"
+      },
+      {
+        "name": "DEFAULT_PLACEMENT",
+        "type": "Variable"
       },
       {
         "name": "STYLE_PRIORITY",
