@@ -95,6 +95,12 @@
       }
     ],
     "directiveList": [],
+    "typeAliasList": [
+      {
+        "name": "LyButtonSize",
+        "children": "type LyButtonSize = 'small' | 'medium' | 'large'"
+      }
+    ],
     "variableList": [
       {
         "name": "DEFAULT_DISABLE_RIPPLE",
@@ -362,15 +368,19 @@
       {
         "name": "LyGrid",
         "selector": "ly-grid[container]",
-        "children": "/** Defines the justify-content style property. */\n@Input() direction: Direction\n/** Defines the justify-content style property. */\n@Input() justify: Justify\n/** Defines the space between the component with the `item` attribute. */\n@Input() spacing: any"
+        "children": "/**\n * Defines the `align-items` style property.\n * Support breakpoints\n */\n@Input() alignItems: any\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() direction: Direction\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() justify: Justify\n/**\n * Defines the space between the component with the `item` attribute.\n * Support breakpoints\n */\n@Input() spacing: any"
       },
       {
         "name": "LyGridItem",
         "selector": "ly-grid[item]",
-        "children": "/** Defines the number of grids */\n@Input() col: any\n/** Defines the order style property. */\n@Input() order: any"
+        "children": "/**\n * Defines the number of grids\n * Support breakpoints\n */\n@Input() col: any\n/**\n * Defines the order style property.\n * Support breakpoints\n */\n@Input() order: any"
       }
     ],
     "typeAliasList": [
+      {
+        "name": "AlignItems",
+        "children": "type AlignItems = 'start' | 'center' | 'end' | 'stretch' | 'baseline'"
+      },
       {
         "name": "Direction",
         "children": "type Direction = 'row' | 'rowReverse' | 'column' | 'columnReverse'"
@@ -937,11 +947,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2018-12-07T08:25:19.514Z\""
+        "children": "const AUI_LAST_UPDATE = \"2018-12-07T22:31:55.342Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"1.9.4-nightly.20181207-jpdrm5cr\""
+        "children": "const AUI_VERSION = \"1.9.4\""
       }
     ],
     "functionList": [],

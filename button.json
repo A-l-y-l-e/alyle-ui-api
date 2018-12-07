@@ -17,6 +17,12 @@
     }
   ],
   "directiveList": [],
+  "typeAliasList": [
+    {
+      "name": "LyButtonSize",
+      "children": "type LyButtonSize = 'small' | 'medium' | 'large'"
+    }
+  ],
   "variableList": [
     {
       "name": "DEFAULT_DISABLE_RIPPLE",

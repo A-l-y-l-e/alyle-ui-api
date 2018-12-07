@@ -334,6 +334,10 @@
         "type": "Directive"
       },
       {
+        "name": "AlignItems",
+        "type": "Type alias"
+      },
+      {
         "name": "Direction",
         "type": "Type alias"
       },
