@@ -1418,10 +1418,6 @@
         "type": "Object literal"
       },
       {
-        "name": "typography",
-        "type": "Object literal"
-      },
-      {
         "name": "zIndex",
         "type": "Object literal"
       }

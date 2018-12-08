@@ -180,7 +180,7 @@
     },
     {
       "name": "TypographyTypeVariables",
-      "children": "interface TypographyTypeVariables {\n  fontFamily: string,\n  fontSize: number,\n  fontWeight: number,\n  gutterBottom: number,\n  gutterTop: number,\n  letterSpacing: number,\n  textTransform: string\n}"
+      "children": "interface TypographyTypeVariables {\n  fontFamily: string,\n  fontSize: string,\n  fontWeight: number,\n  gutterBottom: number,\n  gutterTop: number,\n  letterSpacing: string,\n  textTransform: string\n}"
     },
     {
       "name": "TypographyVariables",
@@ -290,11 +290,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2018-12-07T22:31:55.342Z\""
+      "children": "const AUI_LAST_UPDATE = \"2018-12-08T08:23:15.200Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"1.9.4\""
+      "children": "const AUI_VERSION = \"1.9.5-nightly.20181208-jpf6zc3l\""
     }
   ],
   "functionList": [],

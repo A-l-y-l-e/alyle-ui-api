@@ -837,7 +837,7 @@
       },
       {
         "name": "TypographyTypeVariables",
-        "children": "interface TypographyTypeVariables {\n  fontFamily: string,\n  fontSize: number,\n  fontWeight: number,\n  gutterBottom: number,\n  gutterTop: number,\n  letterSpacing: number,\n  textTransform: string\n}"
+        "children": "interface TypographyTypeVariables {\n  fontFamily: string,\n  fontSize: string,\n  fontWeight: number,\n  gutterBottom: number,\n  gutterTop: number,\n  letterSpacing: string,\n  textTransform: string\n}"
       },
       {
         "name": "TypographyVariables",
@@ -947,11 +947,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2018-12-07T22:31:55.342Z\""
+        "children": "const AUI_LAST_UPDATE = \"2018-12-08T08:23:15.200Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"1.9.4\""
+        "children": "const AUI_VERSION = \"1.9.5-nightly.20181208-jpf6zc3l\""
       }
     ],
     "functionList": [],
@@ -1127,7 +1127,7 @@
     "interfaceList": [
       {
         "name": "IMinimaTheme",
-        "children": "interface IMinimaTheme {\n  animations: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  disabled: string,\n  divider: string,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  typography: any,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getDirection,\n  pxToRem,\n  accent: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  drawer: object,\n  primary: object,\n  /** Components variables */\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  warn: object\n}"
+        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  disabled: string,\n  divider: string,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getDirection,\n  pxToRem,\n  accent: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  drawer: object,\n  primary: object,\n  /** Components variables */\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
       }
     ],
     "objectLiteralList": []
