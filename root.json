@@ -290,11 +290,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2018-12-08T08:23:15.200Z\""
+      "children": "const AUI_LAST_UPDATE = \"2018-12-09T08:23:09.442Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"1.9.5-nightly.20181208-jpf6zc3l\""
+      "children": "const AUI_VERSION = \"1.9.5-nightly.20181209-jpgmf2bo\""
     }
   ],
   "functionList": [],
