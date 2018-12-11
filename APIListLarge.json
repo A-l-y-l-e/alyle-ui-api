@@ -79,8 +79,23 @@
   "button": {
     "componentList": [
       {
+        "name": "LyAnchor",
+        "selector": "a[ly-button]",
+        "inputs": [
+          "bg",
+          "color",
+          "raised",
+          "disabled",
+          "outlined",
+          "elevation",
+          "shadowColor",
+          "disableRipple"
+        ],
+        "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void"
+      },
+      {
         "name": "LyButton",
-        "selector": "[ly-button]",
+        "selector": "button[ly-button]",
         "inputs": [
           "bg",
           "color",
@@ -206,16 +221,10 @@
         "name": "LyCheckbox",
         "selector": "ly-checkbox",
         "inputs": [
-          "bg",
-          "color",
-          "raised",
-          "outlined",
-          "elevation",
-          "shadowColor",
           "disableRipple"
         ],
         "exportAs": "lyCheckbox",
-        "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: boolean\n@Input() disabled: boolean\n@Input() required: boolean\n@Input() withColor: string\nregisterOnChange(fn: any): void\nregisterOnTouched(fn: any): void\nsetDisabledState(isDisabled: boolean): void\ntoggle(): void\nwriteValue(value: any): void"
+        "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: boolean\n@Input() color: string\n@Input() disabled: boolean\n@Input() required: boolean\nregisterOnChange(fn: any): void\nregisterOnTouched(fn: any): void\nsetDisabledState(isDisabled: boolean): void\ntoggle(): void\nwriteValue(value: any): void"
       }
     ],
     "directiveList": [],
@@ -302,23 +311,20 @@
       {
         "name": "LyField",
         "selector": "ly-field",
-        "inputs": [
-          "color"
-        ],
-        "children": "/** The field appearance style. */\n@Input() appearance: string\n/** Whether the label is floating. */\n@Input() floatingLabel: boolean\n/** Deprecated, instead use `[color], theme color for the component. */\n@Input() withColor: string"
+        "children": "/** The field appearance style. */\n@Input() appearance: string\n/** Theme color for the component. */\n@Input() color: string\n/** Whether the label is floating. */\n@Input() floatingLabel: boolean"
       }
     ],
     "directiveList": [
       {
+        "name": "LyInputNative",
+        "selector": "input[lyInput], textarea[lyInput]",
+        "exportAs": "lyInput",
+        "children": "focused: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\nfocus(): void"
+      },
+      {
         "name": "LyHint",
         "selector": "ly-field > ly-hint",
         "children": ""
-      },
-      {
-        "name": "LyInputNative",
-        "selector": "ly-field > input, ly-field > textarea",
-        "exportAs": "lyInput",
-        "children": "focused: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\nfocus(): void"
       },
       {
         "name": "LyLabel",
@@ -671,7 +677,7 @@
       },
       {
         "name": "LyPaper",
-        "selector": "ly-paper, [ly-paper]",
+        "selector": "ly-paper, [ly-paper], [ly-text]",
         "inputs": [
           "bg",
           "flat",
@@ -682,7 +688,7 @@
           "shadowColor",
           "disableRipple"
         ],
-        "children": ""
+        "children": "@Input('ly-text') hasText: any"
       },
       {
         "name": "LyWithClass",
@@ -805,11 +811,11 @@
       },
       {
         "name": "ThemeConfig",
-        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  \n  colorShadow: string,\n  direction: Dir,\n  disabled: string,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
+        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  \n  colorShadow: string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
       },
       {
         "name": "StyleMap5",
-        "children": "interface StyleMap5 {\n  /** global theme */\n  classes: any | string,\n  /** requireUpdate */\n  classesWithTheme: any,\n  css: any | string,\n  id: string,\n  priority: number,\n  requireUpdate: boolean,\n  styles: StylesFn2 | Styles2,\n  type: TypeStyle\n}"
+        "children": "interface StyleMap5 {\n  /** global theme */\n  classes: any | string,\n  /** requireUpdate */\n  classesWithTheme: any,\n  css: any | string,\n  id: string,\n  /** Only for styles of TypeStyle.one */\n  parentStyle: Styles,\n  priority: number,\n  requireUpdate: boolean,\n  styles: StylesFn2 | Styles2,\n  type: TypeStyle\n}"
       },
       {
         "name": "Styles2",
@@ -906,6 +912,10 @@
         "children": "const shadowKeyUmbraOpacity = 0.2"
       },
       {
+        "name": "DEFAULT_BG",
+        "children": "const DEFAULT_BG = \"paper\""
+      },
+      {
         "name": "LyPaperMixinBase",
         "children": "const LyPaperMixinBase = mixinStyleUpdater(\nmixinBg(\n  mixinColor(\n    mixinRaised(\n      mixinOutlined(\n        mixinElevation(\n          mixinShadowColor(\n            mixinDisableRipple(LyPaperBase))))))))"
       },
@@ -947,11 +957,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2018-12-11T08:23:05.485Z\""
+        "children": "const AUI_LAST_UPDATE = \"2018-12-11T23:23:33.217Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"1.9.5-nightly.20181211-jpjhaolr\""
+        "children": "const AUI_VERSION = \"1.9.5\""
       }
     ],
     "functionList": [],
@@ -1018,6 +1028,10 @@
         "children": "enum InvertMediaQuery {\n  No,\n  Yes\n}"
       },
       {
+        "name": "AlignAlias",
+        "children": "enum AlignAlias {\n  around = \"space-around\",\n  between = \"space-between\",\n  columnReverse = \"column-reverse\",\n  end = \"flex-end\",\n  evenly = \"space-evenly\",\n  rowReverse = \"row-reverse\",\n  start = \"flex-start\",\n  wrapReverse = \"wrap-reverse\"\n}"
+      },
+      {
         "name": "XPosition",
         "children": "enum XPosition {\n  after = \"after\",\n  before = \"before\",\n  left = \"left\",\n  right = \"right\"\n}"
       },
@@ -1046,17 +1060,33 @@
       {
         "name": "LyTab",
         "selector": "ly-tab",
-        "children": "index: number\n@ViewChild() tabIndicator: ElementRef\n@ViewChild() templateRef: TemplateRef\n@ContentChild() templateRefLazy: TemplateRef\nonClick(): void"
+        "children": "index: number\n@ViewChild() tabIndicator: ElementRef\n@ViewChild() templateRef: TemplateRef\n@ContentChild() templateRefLazy: TemplateRef"
+      },
+      {
+        "name": "LyTabLabel",
+        "selector": "button[ly-tab-label]",
+        "inputs": [
+          "bg",
+          "color",
+          "raised",
+          "disabled",
+          "outlined",
+          "elevation",
+          "shadowColor",
+          "disableRipple"
+        ],
+        "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void\nonClickTab(): void"
       },
       {
         "name": "LyTabs",
         "selector": "ly-tabs",
         "inputs": [
           "bg",
-          "color"
+          "elevation",
+          "shadowColor"
         ],
         "exportAs": "lyTabs",
-        "children": "classes: any\n@Input() native: boolean\n@Output() selectedIndexChange: EventEmitter\n@Input() selectedIndexOnChange: any\n@ViewChild() tabContents: ElementRef\n@ViewChild() tabsIndicator: ElementRef\n@ContentChildren() tabsList: QueryList\n@Input() withBg: string\n@Input() selectedIndex: number\n@Input() withColor: string\nloadTemplate(tab: LyTab, index: number): void\nmarkForCheck(): void"
+        "children": "@Input() native: boolean\n@Output() selectedIndexChange: EventEmitter\n@Input() selectedIndexOnChange: any\n@ViewChild() tabContents: ElementRef\n@ViewChild() tabsIndicator: ElementRef\n@ContentChildren() tabsList: QueryList\n@ViewChild() tabsRef: ElementRef\n@Input() alignTabs: any\n@Input() headerPlacement: any\n@Input() indicatorColor: string\n@Input() selectedIndex: number\n@Input() textColor: string\nloadTemplate(tab: LyTab, index: number): void"
       }
     ],
     "directiveList": [
@@ -1064,18 +1094,43 @@
         "name": "LyTabContent",
         "selector": "[ly-tab-content]",
         "children": "template: TemplateRef"
-      },
-      {
-        "name": "LyTabLabel",
-        "selector": "ly-tab-label, [ly-tab-label]",
-        "children": ""
       }
     ],
     "injectableList": [],
+    "typeAliasList": [
+      {
+        "name": "AlignTabs",
+        "children": "type AlignTabs = 'start' | 'center' | 'end' | 'stretch' | 'baseline'"
+      },
+      {
+        "name": "LyTabsHeaderPlacement",
+        "children": "type LyTabsHeaderPlacement = 'before' | 'after' | 'above' | 'below'"
+      }
+    ],
     "variableList": [
+      {
+        "name": "DEFAULT_BG",
+        "children": "const DEFAULT_BG = \"primary\""
+      },
       {
         "name": "DEFAULT_DISABLE_RIPPLE",
         "children": "const DEFAULT_DISABLE_RIPPLE = false"
+      },
+      {
+        "name": "DEFAULT_ELEVATION",
+        "children": "const DEFAULT_ELEVATION = 4"
+      },
+      {
+        "name": "DEFAULT_HEADER_PLACEMENT",
+        "children": "const DEFAULT_HEADER_PLACEMENT = \"above\""
+      },
+      {
+        "name": "DEFAULT_INDICATOR_COLOR",
+        "children": "const DEFAULT_INDICATOR_COLOR = \"accent\""
+      },
+      {
+        "name": "STYLE_PRIORITY",
+        "children": "const STYLE_PRIORITY = -2"
       }
     ],
     "ngModuleList": [
@@ -1127,7 +1182,7 @@
     "interfaceList": [
       {
         "name": "IMinimaTheme",
-        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  disabled: string,\n  divider: string,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getDirection,\n  pxToRem,\n  accent: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  drawer: object,\n  primary: object,\n  /** Components variables */\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
+        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getDirection,\n  pxToRem,\n  accent: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  disabled: object,\n  drawer: object,\n  paper: object,\n  primary: object,\n  /** Components variables */\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
       }
     ],
     "objectLiteralList": []

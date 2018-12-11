@@ -4,16 +4,10 @@
       "name": "LyCheckbox",
       "selector": "ly-checkbox",
       "inputs": [
-        "bg",
-        "color",
-        "raised",
-        "outlined",
-        "elevation",
-        "shadowColor",
         "disableRipple"
       ],
       "exportAs": "lyCheckbox",
-      "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: boolean\n@Input() disabled: boolean\n@Input() required: boolean\n@Input() withColor: string\nregisterOnChange(fn: any): void\nregisterOnTouched(fn: any): void\nsetDisabledState(isDisabled: boolean): void\ntoggle(): void\nwriteValue(value: any): void"
+      "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: boolean\n@Input() color: string\n@Input() disabled: boolean\n@Input() required: boolean\nregisterOnChange(fn: any): void\nregisterOnTouched(fn: any): void\nsetDisabledState(isDisabled: boolean): void\ntoggle(): void\nwriteValue(value: any): void"
     }
   ],
   "directiveList": [],

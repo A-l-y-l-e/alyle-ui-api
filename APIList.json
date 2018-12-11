@@ -70,6 +70,10 @@
   "button": {
     "children": [
       {
+        "name": "LyAnchor",
+        "type": "Component"
+      },
+      {
         "name": "LyButton",
         "type": "Component"
       },
@@ -270,8 +274,8 @@
         "type": "Component"
       },
       {
-        "name": "LyFieldBase",
-        "type": "Class"
+        "name": "LyInputNative",
+        "type": "Directive"
       },
       {
         "name": "DEFAULT_APPEARANCE",
@@ -279,10 +283,6 @@
       },
       {
         "name": "DEFAULT_WITH_COLOR",
-        "type": "Variable"
-      },
-      {
-        "name": "LyFieldMixinBase",
         "type": "Variable"
       },
       {
@@ -299,10 +299,6 @@
       },
       {
         "name": "LyHint",
-        "type": "Directive"
-      },
-      {
-        "name": "LyInputNative",
         "type": "Directive"
       },
       {
@@ -926,6 +922,10 @@
         "type": "Variable"
       },
       {
+        "name": "AlignAlias",
+        "type": "Enumeration"
+      },
+      {
         "name": "XPosition",
         "type": "Enumeration"
       },
@@ -1072,6 +1072,10 @@
       {
         "name": "LyPaperBase",
         "type": "Class"
+      },
+      {
+        "name": "DEFAULT_BG",
+        "type": "Variable"
       },
       {
         "name": "LyPaperMixinBase",
@@ -1230,10 +1234,6 @@
         "type": "Function"
       },
       {
-        "name": "toMedia",
-        "type": "Function"
-      },
-      {
         "name": "warnDeprecatedKeyStyle",
         "type": "Function"
       },
@@ -1311,7 +1311,7 @@
       },
       {
         "name": "tabsStyles",
-        "type": "Object literal"
+        "type": "Function"
       },
       {
         "name": "LyTab",
@@ -1319,7 +1319,7 @@
       },
       {
         "name": "LyTabLabel",
-        "type": "Directive"
+        "type": "Component"
       },
       {
         "name": "LyTabLabelBase",
@@ -1334,7 +1334,31 @@
         "type": "Class"
       },
       {
+        "name": "AlignTabs",
+        "type": "Type alias"
+      },
+      {
+        "name": "LyTabsHeaderPlacement",
+        "type": "Type alias"
+      },
+      {
+        "name": "DEFAULT_BG",
+        "type": "Variable"
+      },
+      {
         "name": "DEFAULT_DISABLE_RIPPLE",
+        "type": "Variable"
+      },
+      {
+        "name": "DEFAULT_ELEVATION",
+        "type": "Variable"
+      },
+      {
+        "name": "DEFAULT_HEADER_PLACEMENT",
+        "type": "Variable"
+      },
+      {
+        "name": "DEFAULT_INDICATOR_COLOR",
         "type": "Variable"
       },
       {
@@ -1343,6 +1367,10 @@
       },
       {
         "name": "LyTabsMixinBase",
+        "type": "Variable"
+      },
+      {
+        "name": "STYLE_PRIORITY",
         "type": "Variable"
       },
       {

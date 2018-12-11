@@ -14,7 +14,7 @@
     },
     {
       "name": "LyPaper",
-      "selector": "ly-paper, [ly-paper]",
+      "selector": "ly-paper, [ly-paper], [ly-text]",
       "inputs": [
         "bg",
         "flat",
@@ -25,7 +25,7 @@
         "shadowColor",
         "disableRipple"
       ],
-      "children": ""
+      "children": "@Input('ly-text') hasText: any"
     },
     {
       "name": "LyWithClass",
@@ -148,11 +148,11 @@
     },
     {
       "name": "ThemeConfig",
-      "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  \n  colorShadow: string,\n  direction: Dir,\n  disabled: string,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
+      "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  \n  colorShadow: string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
     },
     {
       "name": "StyleMap5",
-      "children": "interface StyleMap5 {\n  /** global theme */\n  classes: any | string,\n  /** requireUpdate */\n  classesWithTheme: any,\n  css: any | string,\n  id: string,\n  priority: number,\n  requireUpdate: boolean,\n  styles: StylesFn2 | Styles2,\n  type: TypeStyle\n}"
+      "children": "interface StyleMap5 {\n  /** global theme */\n  classes: any | string,\n  /** requireUpdate */\n  classesWithTheme: any,\n  css: any | string,\n  id: string,\n  /** Only for styles of TypeStyle.one */\n  parentStyle: Styles,\n  priority: number,\n  requireUpdate: boolean,\n  styles: StylesFn2 | Styles2,\n  type: TypeStyle\n}"
     },
     {
       "name": "Styles2",
@@ -249,6 +249,10 @@
       "children": "const shadowKeyUmbraOpacity = 0.2"
     },
     {
+      "name": "DEFAULT_BG",
+      "children": "const DEFAULT_BG = \"paper\""
+    },
+    {
       "name": "LyPaperMixinBase",
       "children": "const LyPaperMixinBase = mixinStyleUpdater(\nmixinBg(\n  mixinColor(\n    mixinRaised(\n      mixinOutlined(\n        mixinElevation(\n          mixinShadowColor(\n            mixinDisableRipple(LyPaperBase))))))))"
     },
@@ -290,11 +294,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2018-12-11T08:23:05.485Z\""
+      "children": "const AUI_LAST_UPDATE = \"2018-12-11T23:23:33.217Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"1.9.5-nightly.20181211-jpjhaolr\""
+      "children": "const AUI_VERSION = \"1.9.5\""
     }
   ],
   "functionList": [],
@@ -359,6 +363,10 @@
     {
       "name": "InvertMediaQuery",
       "children": "enum InvertMediaQuery {\n  No,\n  Yes\n}"
+    },
+    {
+      "name": "AlignAlias",
+      "children": "enum AlignAlias {\n  around = \"space-around\",\n  between = \"space-between\",\n  columnReverse = \"column-reverse\",\n  end = \"flex-end\",\n  evenly = \"space-evenly\",\n  rowReverse = \"row-reverse\",\n  start = \"flex-start\",\n  wrapReverse = \"wrap-reverse\"\n}"
     },
     {
       "name": "XPosition",

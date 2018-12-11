@@ -1,8 +1,23 @@
 {
   "componentList": [
     {
+      "name": "LyAnchor",
+      "selector": "a[ly-button]",
+      "inputs": [
+        "bg",
+        "color",
+        "raised",
+        "disabled",
+        "outlined",
+        "elevation",
+        "shadowColor",
+        "disableRipple"
+      ],
+      "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void"
+    },
+    {
       "name": "LyButton",
-      "selector": "[ly-button]",
+      "selector": "button[ly-button]",
       "inputs": [
         "bg",
         "color",
