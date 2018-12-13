@@ -3,7 +3,7 @@
     {
       "name": "LyResizingCroppingImages",
       "selector": "ly-img-cropper, ly-cropping",
-      "children": "/** On crop new image */\n@Output() cropped: EventEmitter\n/** Emit an error when the loaded image is not valid */\n@Output() error: EventEmitter\nisCropped: boolean\n/** When is loaded image & ready for crop */\nisLoaded: boolean\n/** On loaded new image */\n@Output() loaded: EventEmitter\n@Output() scaleChange: EventEmitter\n@Input() config: ImgCropperConfig\n/** Get min scale */\nminScale: number\n/** Set scale */\n@Input() scale: number\ncenter(): void\nclean(): void\ncrop(config?: ImgCropperConfig): void\nfit(): void\nfitToScreen(): void\nresize$(): void\nrotate(degrees: number): void\nselectInputEvent(img: Event): void\nsetImageUrl(src: string): void\nsetScale(size: number, noAutoCrop?: boolean): void\nupdatePosition(x?: number, y?: number): void\nzoomIn(): void\nzoomOut(): void"
+      "children": "/** On crop new image */\n@Output() cropped: EventEmitter\n/** Emit an error when the loaded image is not valid */\n@Output() error: EventEmitter\nisCropped: boolean\n/** When is loaded image & ready for crop */\nisLoaded: boolean\n/** On loaded new image */\n@Output() loaded: EventEmitter\n@Output() scaleChange: EventEmitter\n@Input() config: ImgCropperConfig\n/** Get min scale */\nminScale: number\n/** Set scale */\n@Input() scale: number\ncenter(): void\nclean(): void\ncrop(config?: ImgCropperConfig): void\nfit(): void\nfitToScreen(): void\nresize$(): void\nrotate(degrees: number): void\nselectInputEvent(img: Event): void\nsetImageUrl(src: string, fn?: any): void\nsetScale(size: number, noAutoCrop?: boolean): void\nupdatePosition(x?: number, y?: number): void\nzoomIn(): void\nzoomOut(): void"
     }
   ],
   "directiveList": [],
