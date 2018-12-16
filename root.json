@@ -294,11 +294,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2018-12-15T08:22:53.323Z\""
+      "children": "const AUI_LAST_UPDATE = \"2018-12-16T08:22:55.693Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"1.9.7-nightly.20181215-jpp71tvw\""
+      "children": "const AUI_VERSION = \"1.9.7-nightly.20181216-jpqmhqdq\""
     }
   ],
   "functionList": [],
