@@ -407,6 +407,46 @@
       }
     ]
   },
+  "list": {
+    "children": [
+      {
+        "name": "LyLine",
+        "type": "Directive"
+      },
+      {
+        "name": "LyList",
+        "type": "Directive"
+      },
+      {
+        "name": "LyListIcon",
+        "type": "Directive"
+      },
+      {
+        "name": "LyListItem",
+        "type": "Component"
+      },
+      {
+        "name": "LyListItemBase",
+        "type": "Class"
+      },
+      {
+        "name": "DISABLE_PADDING",
+        "type": "Variable"
+      },
+      {
+        "name": "LyListItemMixinBase",
+        "type": "Variable"
+      },
+      {
+        "name": "STYLE_PRIORITY",
+        "type": "Variable"
+      },
+      {
+        "name": "LyListModule",
+        "type": "NgModule"
+      }
+    ]
+  },
   "menu": {
     "children": [
       {
@@ -1248,6 +1288,10 @@
       {
         "name": "ignoreCSSKEY",
         "type": "Object literal"
+      },
+      {
+        "name": "AvatarVariables",
+        "type": "Interface"
       },
       {
         "name": "ButtonVariables",

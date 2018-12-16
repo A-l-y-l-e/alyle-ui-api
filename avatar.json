@@ -18,7 +18,7 @@
   "variableList": [
     {
       "name": "DEFAULT_BG",
-      "children": "const DEFAULT_BG = \"background:base\""
+      "children": "const DEFAULT_BG = \"action\""
     },
     {
       "name": "DEFAULT_SIZE",

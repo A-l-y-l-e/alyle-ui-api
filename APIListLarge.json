@@ -19,7 +19,7 @@
     "variableList": [
       {
         "name": "DEFAULT_BG",
-        "children": "const DEFAULT_BG = \"background:base\""
+        "children": "const DEFAULT_BG = \"action\""
       },
       {
         "name": "DEFAULT_SIZE",
@@ -454,6 +454,60 @@
       }
     ]
   },
+  "list": {
+    "componentList": [
+      {
+        "name": "LyListItem",
+        "selector": "ly-list-item, a[ly-list-item], button[ly-list-item]",
+        "inputs": [
+          "bg",
+          "color",
+          "raised",
+          "disabled",
+          "outlined",
+          "elevation",
+          "shadowColor",
+          "disableRipple"
+        ],
+        "exportAs": "lyListItem",
+        "children": "listItemClasses: any"
+      }
+    ],
+    "directiveList": [
+      {
+        "name": "LyLine",
+        "selector": "[ly-line]",
+        "children": ""
+      },
+      {
+        "name": "LyList",
+        "selector": "ly-list",
+        "exportAs": "lyList",
+        "children": "classes: any"
+      },
+      {
+        "name": "LyListIcon",
+        "selector": "[ly-list-icon]",
+        "children": "/** Disable extra padding */\n@Input() disablePadding: any"
+      }
+    ],
+    "variableList": [
+      {
+        "name": "DISABLE_PADDING",
+        "children": "const DISABLE_PADDING = false"
+      },
+      {
+        "name": "STYLE_PRIORITY",
+        "children": "const STYLE_PRIORITY = 2"
+      }
+    ],
+    "ngModuleList": [
+      {
+        "name": "LyListModule",
+        "children": "import { LyListModule } from '@alyle/ui/list'"
+      }
+    ]
+  },
   "menu": {
     "componentList": [
       {
@@ -811,7 +865,7 @@
       },
       {
         "name": "ThemeConfig",
-        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  \n  colorShadow: string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
+        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  \n  colorShadow: string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
       },
       {
         "name": "StyleMap5",
@@ -820,6 +874,10 @@
       {
         "name": "Styles2",
         "children": "interface Styles2 {\n  /** Prefix name */\n  $name: string\n}"
+      },
+      {
+        "name": "AvatarVariables",
+        "children": "interface AvatarVariables {\n  root: StyleContainer\n}"
       },
       {
         "name": "ButtonVariables",
@@ -957,11 +1015,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2018-12-16T08:22:55.693Z\""
+        "children": "const AUI_LAST_UPDATE = \"2018-12-16T23:12:46.521Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"1.9.7-nightly.20181216-jpqmhqdq\""
+        "children": "const AUI_VERSION = \"1.9.7\""
       }
     ],
     "functionList": [],
@@ -1182,7 +1240,7 @@
     "interfaceList": [
       {
         "name": "IMinimaTheme",
-        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getDirection,\n  pxToRem,\n  accent: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  disabled: object,\n  drawer: object,\n  paper: object,\n  primary: object,\n  /** Components variables */\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
+        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  avatar: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getDirection,\n  pxToRem,\n  accent: object,\n  action: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  disabled: object,\n  drawer: object,\n  paper: object,\n  primary: object,\n  /** Components variables */\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
       }
     ],
     "objectLiteralList": []
