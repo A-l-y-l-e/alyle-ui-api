@@ -14,7 +14,7 @@
         "disableRipple"
       ],
       "exportAs": "lyListItem",
-      "children": "listItemClasses: any"
+      "children": ""
     }
   ],
   "directiveList": [
@@ -27,7 +27,7 @@
       "name": "LyList",
       "selector": "ly-list",
       "exportAs": "lyList",
-      "children": "classes: any"
+      "children": ""
     },
     {
       "name": "LyListIcon",
