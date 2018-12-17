@@ -29,7 +29,7 @@
         "shadowColor"
       ],
       "exportAs": "lyTabs",
-      "children": "@Input() native: boolean\n@Output() selectedIndexChange: EventEmitter\n@Input() selectedIndexOnChange: any\n@ViewChild() tabContents: ElementRef\n@ViewChild() tabsIndicator: ElementRef\n@ContentChildren() tabsList: QueryList\n@ViewChild() tabsRef: ElementRef\n@Input() alignTabs: any\n@Input() headerPlacement: any\n@Input() indicatorColor: string\n@Input() selectedIndex: number\n@Input() textColor: string\nloadTemplate(tab: LyTab, index: number): void"
+      "children": "@Output() selectedIndexChange: EventEmitter\n@Input() selectedIndexOnChange: any\n@ViewChild() tabContents: ElementRef\n@ViewChild() tabsIndicator: ElementRef\n@ContentChildren() tabsList: QueryList\n@ViewChild() tabsRef: ElementRef\n@Input() alignTabs: any\n@Input() headerPlacement: any\n@Input() indicatorColor: string\n@Input() scrollable: any\n@Input() selectedIndex: number\n@Input() textColor: string\nloadTemplate(tab: LyTab, index: number): void"
     }
   ],
   "directiveList": [

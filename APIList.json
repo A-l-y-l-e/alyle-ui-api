@@ -918,6 +918,10 @@
         "type": "Function"
       },
       {
+        "name": "createScrollWithAnimation",
+        "type": "Function"
+      },
+      {
         "name": "easeOutCuaic",
         "type": "Function"
       },
@@ -930,7 +934,7 @@
         "type": "Function"
       },
       {
-        "name": "scrollToX",
+        "name": "scrollWithAnimation",
         "type": "Function"
       },
       {

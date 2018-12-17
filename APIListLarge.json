@@ -1015,11 +1015,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2018-12-17T08:23:14.215Z\""
+        "children": "const AUI_LAST_UPDATE = \"2018-12-17T23:06:35.094Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"1.9.8-nightly.20181217-jps1xzc9\""
+        "children": "const AUI_VERSION = \"1.9.8\""
       }
     ],
     "functionList": [],
@@ -1144,7 +1144,7 @@
           "shadowColor"
         ],
         "exportAs": "lyTabs",
-        "children": "@Input() native: boolean\n@Output() selectedIndexChange: EventEmitter\n@Input() selectedIndexOnChange: any\n@ViewChild() tabContents: ElementRef\n@ViewChild() tabsIndicator: ElementRef\n@ContentChildren() tabsList: QueryList\n@ViewChild() tabsRef: ElementRef\n@Input() alignTabs: any\n@Input() headerPlacement: any\n@Input() indicatorColor: string\n@Input() selectedIndex: number\n@Input() textColor: string\nloadTemplate(tab: LyTab, index: number): void"
+        "children": "@Output() selectedIndexChange: EventEmitter\n@Input() selectedIndexOnChange: any\n@ViewChild() tabContents: ElementRef\n@ViewChild() tabsIndicator: ElementRef\n@ContentChildren() tabsList: QueryList\n@ViewChild() tabsRef: ElementRef\n@Input() alignTabs: any\n@Input() headerPlacement: any\n@Input() indicatorColor: string\n@Input() scrollable: any\n@Input() selectedIndex: number\n@Input() textColor: string\nloadTemplate(tab: LyTab, index: number): void"
       }
     ],
     "directiveList": [
