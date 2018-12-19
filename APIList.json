@@ -978,8 +978,16 @@
         "type": "Enumeration"
       },
       {
+        "name": "Positioning",
+        "type": "Class"
+      },
+      {
         "name": "Placement",
         "type": "Type alias"
+      },
+      {
+        "name": "createPosition",
+        "type": "Function"
       },
       {
         "name": "getPosition",
