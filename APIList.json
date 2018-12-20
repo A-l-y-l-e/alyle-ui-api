@@ -211,6 +211,22 @@
       }
     ]
   },
+  "divider": {
+    "children": [
+      {
+        "name": "LyDivider",
+        "type": "Directive"
+      },
+      {
+        "name": "style",
+        "type": "Function"
+      },
+      {
+        "name": "LyDividerModule",
+        "type": "NgModule"
+      }
+    ]
+  },
   "drawer": {
     "children": [
       {

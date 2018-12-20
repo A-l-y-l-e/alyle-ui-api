@@ -6,7 +6,6 @@
       "selector": "ly-toolbar",
       "inputs": [
         "bg",
-        "flat",
         "color",
         "raised",
         "outlined",
