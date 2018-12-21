@@ -594,6 +594,14 @@
         "type": "Variable"
       },
       {
+        "name": "createCanvasImg",
+        "type": "Function"
+      },
+      {
+        "name": "getMinScale",
+        "type": "Function"
+      },
+      {
         "name": "LyResizingCroppingImageModule",
         "type": "NgModule"
       }
@@ -1378,14 +1386,6 @@
         "type": "Directive"
       },
       {
-        "name": "LyTabsClassesService",
-        "type": "Injectable"
-      },
-      {
-        "name": "tabsStyles",
-        "type": "Function"
-      },
-      {
         "name": "LyTab",
         "type": "Component"
       },
@@ -1444,6 +1444,14 @@
       {
         "name": "STYLE_PRIORITY",
         "type": "Variable"
+      },
+      {
+        "name": "LyTabsClassesService",
+        "type": "Injectable"
+      },
+      {
+        "name": "tabsStyles",
+        "type": "Function"
       },
       {
         "name": "LyTabsModule",

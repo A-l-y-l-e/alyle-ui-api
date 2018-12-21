@@ -39,7 +39,6 @@
       "children": "template: TemplateRef"
     }
   ],
-  "injectableList": [],
   "typeAliasList": [
     {
       "name": "AlignTabs",
@@ -76,6 +75,7 @@
       "children": "const STYLE_PRIORITY = -2"
     }
   ],
+  "injectableList": [],
   "ngModuleList": [
     {
       "name": "LyTabsModule",
