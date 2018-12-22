@@ -20,17 +20,11 @@
     },
     {
       "name": "ImgCropperEvent",
-      "children": "interface ImgCropperEvent {\n  /** Cropped image in base64, !deprecated use instead `dataURL` */\n  base64: string,\n  /** Cropped image data URL */\n  dataURL: string,\n  height: number,\n  name: string,\n  /** Original Image data URL */\n  originalDataURL: string,\n  position: any,\n  /** Current rotation in degrees */\n  rotation: number,\n  scale: number,\n  /** Filetype */\n  type: string,\n  width: number\n}"
+      "children": "interface ImgCropperEvent {\n  /** Cropped image data URL */\n  dataURL: string,\n  height: number,\n  name: string,\n  /** Original Image data URL */\n  originalDataURL: string,\n  position: any,\n  /** Current rotation in degrees */\n  rotation: number,\n  scale: number,\n  /** Filetype */\n  type: string,\n  width: number\n}"
     },
     {
       "name": "ImgOutput",
       "children": "interface ImgOutput {\n  height: number,\n  width: number\n}"
-    }
-  ],
-  "typeAliasList": [
-    {
-      "name": "LyResizingCroppingImagesConfig",
-      "children": "/** Deprecated, use instead ImgCropperConfig */\ntype LyResizingCroppingImagesConfig = ImgCropperConfig"
     }
   ],
   "variableList": [

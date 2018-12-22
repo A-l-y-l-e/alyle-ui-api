@@ -297,11 +297,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2018-12-21T08:22:35.605Z\""
+      "children": "const AUI_LAST_UPDATE = \"2018-12-22T04:40:35.027Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"1.9.10-nightly.20181221-jpxrok7r\""
+      "children": "const AUI_VERSION = \"1.9.10\""
     }
   ],
   "functionList": [],
@@ -328,7 +328,7 @@
     },
     {
       "name": "PartialThemeVariables",
-      "children": "type PartialThemeVariables = Partial"
+      "children": "type PartialThemeVariables = RecursivePartial"
     },
     {
       "name": "ThemeVariables",
@@ -385,7 +385,7 @@
     },
     {
       "name": "DirAlias",
-      "children": "enum DirAlias {\n  after = \"after\",\n  before = \"before\",\n  \n  end = \"end\",\n  \n  start = \"start\"\n}"
+      "children": "enum DirAlias {\n  after = \"after\",\n  before = \"before\"\n}"
     },
     {
       "name": "DirPosition",

@@ -272,7 +272,7 @@
         "name": "LyDrawer",
         "selector": "ly-drawer",
         "exportAs": "lyDrawer",
-        "children": "@Input() height: any\n@Input() mode: mode\n@Input() spacingAbove: any\n@Input() spacingAfter: any\n@Input() spacingBefore: any\n@Input() spacingBelow: any\n\n@Input() spacingBottom: any\n@Input() spacingLeft: any\n@Input() spacingRight: any\n\n@Input() spacingTop: any\n@Input() width: any\n@Input() hasBackdrop: any\n@Input() opened: boolean\n@Input() position: position\ntoggle(): void"
+        "children": "@Input() height: any\n@Input() mode: mode\n@Input() spacingAbove: any\n@Input() spacingAfter: any\n@Input() spacingBefore: any\n@Input() spacingBelow: any\n@Input() spacingLeft: any\n@Input() spacingRight: any\n@Input() width: any\n@Input() hasBackdrop: any\n@Input() opened: boolean\n@Input() position: position\ntoggle(): void"
       }
     ],
     "directiveList": [
@@ -290,7 +290,7 @@
     "typeAliasList": [
       {
         "name": "position",
-        "children": "type position = 'start' | 'end' | 'top' | 'bottom' | Placement"
+        "children": "type position = Placement"
       }
     ],
     "variableList": [
@@ -635,17 +635,11 @@
       },
       {
         "name": "ImgCropperEvent",
-        "children": "interface ImgCropperEvent {\n  /** Cropped image in base64, !deprecated use instead `dataURL` */\n  base64: string,\n  /** Cropped image data URL */\n  dataURL: string,\n  height: number,\n  name: string,\n  /** Original Image data URL */\n  originalDataURL: string,\n  position: any,\n  /** Current rotation in degrees */\n  rotation: number,\n  scale: number,\n  /** Filetype */\n  type: string,\n  width: number\n}"
+        "children": "interface ImgCropperEvent {\n  /** Cropped image data URL */\n  dataURL: string,\n  height: number,\n  name: string,\n  /** Original Image data URL */\n  originalDataURL: string,\n  position: any,\n  /** Current rotation in degrees */\n  rotation: number,\n  scale: number,\n  /** Filetype */\n  type: string,\n  width: number\n}"
       },
       {
         "name": "ImgOutput",
         "children": "interface ImgOutput {\n  height: number,\n  width: number\n}"
-      }
-    ],
-    "typeAliasList": [
-      {
-        "name": "LyResizingCroppingImagesConfig",
-        "children": "/** Deprecated, use instead ImgCropperConfig */\ntype LyResizingCroppingImagesConfig = ImgCropperConfig"
       }
     ],
     "variableList": [
@@ -1030,11 +1024,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2018-12-21T08:22:35.605Z\""
+        "children": "const AUI_LAST_UPDATE = \"2018-12-22T04:40:35.027Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"1.9.10-nightly.20181221-jpxrok7r\""
+        "children": "const AUI_VERSION = \"1.9.10\""
       }
     ],
     "functionList": [],
@@ -1061,7 +1055,7 @@
       },
       {
         "name": "PartialThemeVariables",
-        "children": "type PartialThemeVariables = Partial"
+        "children": "type PartialThemeVariables = RecursivePartial"
       },
       {
         "name": "ThemeVariables",
@@ -1118,7 +1112,7 @@
       },
       {
         "name": "DirAlias",
-        "children": "enum DirAlias {\n  after = \"after\",\n  before = \"before\",\n  \n  end = \"end\",\n  \n  start = \"start\"\n}"
+        "children": "enum DirAlias {\n  after = \"after\",\n  before = \"before\"\n}"
       },
       {
         "name": "DirPosition",

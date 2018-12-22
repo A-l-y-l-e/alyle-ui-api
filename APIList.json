@@ -582,10 +582,6 @@
         "type": "Interface"
       },
       {
-        "name": "LyResizingCroppingImagesConfig",
-        "type": "Type alias"
-      },
-      {
         "name": "CONFIG_DEFAULT",
         "type": "Variable"
       },
@@ -594,11 +590,19 @@
         "type": "Variable"
       },
       {
+        "name": "convertToValidDegrees",
+        "type": "Function"
+      },
+      {
         "name": "createCanvasImg",
         "type": "Function"
       },
       {
         "name": "getMinScale",
+        "type": "Function"
+      },
+      {
+        "name": "limitNum",
         "type": "Function"
       },
       {
@@ -830,10 +834,6 @@
         "type": "Injectable"
       },
       {
-        "name": "WindowScrollService",
-        "type": "Injectable"
-      },
-      {
         "name": "BACKDROP_STYLES",
         "type": "Variable"
       },
@@ -842,7 +842,11 @@
         "type": "NgModule"
       },
       {
-        "name": "ResizeService",
+        "name": "WinResize",
+        "type": "Injectable"
+      },
+      {
+        "name": "WinScroll",
         "type": "Injectable"
       },
       {
@@ -1174,6 +1178,10 @@
         "type": "Type alias"
       },
       {
+        "name": "RecursivePartial",
+        "type": "Type alias"
+      },
+      {
         "name": "ThemeVariables",
         "type": "Type alias"
       },
@@ -1307,10 +1315,6 @@
       },
       {
         "name": "toHyphenCase",
-        "type": "Function"
-      },
-      {
-        "name": "warnDeprecatedKeyStyle",
         "type": "Function"
       },
       {
