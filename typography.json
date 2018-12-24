@@ -4,13 +4,13 @@
     {
       "name": "LyTypography",
       "selector": "[lyTyp]",
-      "children": "@Input() gutter: boolean\n@Input() gutterBottom: boolean\n@Input() gutterTop: boolean\n@Input() lyTyp: string"
+      "children": "@Input() gutter: boolean\n@Input() gutterBottom: boolean\n@Input() gutterTop: boolean\n@Input() lyTyp: string\n/** The text will truncate with an ellipsis. */\n@Input() noWrap: boolean"
     }
   ],
   "variableList": [
     {
       "name": "STYLE_PRIORITY",
-      "children": "const STYLE_PRIORITY = -2"
+      "children": "const STYLE_PRIORITY = -1"
     }
   ],
   "ngModuleList": [
