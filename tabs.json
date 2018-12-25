@@ -3,7 +3,7 @@
     {
       "name": "LyTab",
       "selector": "ly-tab",
-      "children": "index: number\n@ViewChild() tabIndicator: ElementRef\n@ViewChild() templateRef: TemplateRef\n@ContentChild() templateRefLazy: TemplateRef"
+      "children": "/** Current tab index */\nindex: number"
     },
     {
       "name": "LyTabLabel",
@@ -18,7 +18,7 @@
         "shadowColor",
         "disableRipple"
       ],
-      "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void\nonClickTab(): void"
+      "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void"
     },
     {
       "name": "LyTabs",
@@ -75,7 +75,12 @@
       "children": "const STYLE_PRIORITY = -2"
     }
   ],
-  "injectableList": [],
+  "injectableList": [
+    {
+      "name": "LyTabsClassesService",
+      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyTabsClassesService {\n  classes: any\n}"
+    }
+  ],
   "ngModuleList": [
     {
       "name": "LyTabsModule",

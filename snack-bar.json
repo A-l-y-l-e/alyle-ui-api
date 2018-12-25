@@ -5,7 +5,7 @@
       "name": "LySnackBar",
       "selector": "ng-template[ly-snack-bar]",
       "exportAs": "lySnackBar",
-      "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: number\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\ndismiss(): void\nopen(): void"
+      "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: number\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\n/** Dismiss snackBar */\ndismiss(): void\nopen(): void"
     }
   ],
   "interfaceList": [
@@ -39,5 +39,10 @@
       "children": "import { LySnackBarModule } from '@alyle/ui/snack-bar'"
     }
   ],
-  "injectableList": []
+  "injectableList": [
+    {
+      "name": "LySnackBarService",
+      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LySnackBarService {\n  \n}"
+    }
+  ]
 }

@@ -242,11 +242,11 @@
         "type": "Directive"
       },
       {
-        "name": "mode",
+        "name": "LyDrawerMode",
         "type": "Type alias"
       },
       {
-        "name": "position",
+        "name": "LyDrawerPosition",
         "type": "Type alias"
       },
       {

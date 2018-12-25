@@ -11,7 +11,7 @@
       "name": "LyInputNative",
       "selector": "input[lyInput], textarea[lyInput]",
       "exportAs": "lyInput",
-      "children": "focused: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\nfocus(): void"
+      "children": "focused: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\n/** Focuses the input. */\nfocus(): void"
     },
     {
       "name": "LyHint",

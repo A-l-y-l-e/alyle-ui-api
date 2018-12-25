@@ -224,7 +224,7 @@
           "disableRipple"
         ],
         "exportAs": "lyCheckbox",
-        "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: boolean\n@Input() color: string\n@Input() disabled: boolean\n@Input() required: boolean\nregisterOnChange(fn: any): void\nregisterOnTouched(fn: any): void\nsetDisabledState(isDisabled: boolean): void\ntoggle(): void\nwriteValue(value: any): void"
+        "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: boolean\n@Input() color: string\n@Input() disabled: boolean\n@Input() required: boolean\nregisterOnChange(fn: any): void\nregisterOnTouched(fn: any): void\nsetDisabledState(isDisabled: boolean): void\n/** Toggles the `checked` state of the checkbox. */\ntoggle(): void\nwriteValue(value: any): void"
       }
     ],
     "directiveList": [],
@@ -272,7 +272,7 @@
         "name": "LyDrawer",
         "selector": "ly-drawer",
         "exportAs": "lyDrawer",
-        "children": "@Input() height: any\n@Input() mode: mode\n@Input() spacingAbove: any\n@Input() spacingAfter: any\n@Input() spacingBefore: any\n@Input() spacingBelow: any\n@Input() spacingLeft: any\n@Input() spacingRight: any\n@Input() width: any\n@Input() hasBackdrop: any\n@Input() opened: boolean\n@Input() position: position\ntoggle(): void"
+        "children": "@Input() height: any\n@Input() mode: LyDrawerMode\n@Input() spacingAbove: any\n@Input() spacingAfter: any\n@Input() spacingBefore: any\n@Input() spacingBelow: any\n@Input() width: any\n@Input() hasBackdrop: any\n@Input() opened: boolean\n@Input() position: LyDrawerPosition\ntoggle(): void"
       }
     ],
     "directiveList": [
@@ -289,8 +289,12 @@
     ],
     "typeAliasList": [
       {
-        "name": "position",
-        "children": "type position = Placement"
+        "name": "LyDrawerMode",
+        "children": "type LyDrawerMode = 'side' | 'over'"
+      },
+      {
+        "name": "LyDrawerPosition",
+        "children": "type LyDrawerPosition = Placement"
       }
     ],
     "variableList": [
@@ -335,7 +339,7 @@
         "name": "LyInputNative",
         "selector": "input[lyInput], textarea[lyInput]",
         "exportAs": "lyInput",
-        "children": "focused: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\nfocus(): void"
+        "children": "focused: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\n/** Focuses the input. */\nfocus(): void"
       },
       {
         "name": "LyHint",
@@ -458,7 +462,12 @@
         "children": "import { LyIconModule } from '@alyle/ui/icon'"
       }
     ],
-    "injectableList": [],
+    "injectableList": [
+      {
+        "name": "LyIconService",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyIconService {\n  defaultSvgIcon: SVGElement\n  defaultClass: string\n  defaultClassPrefix: string\n  addSvgIconLiteral(key: string, literal: SafeHtml): void\n  getFontClass(key: string): void\n  getSvg(key: string): void\n  /**\n   * Register new font class alias\n   * demo:\n   * For FontAwesome\n   * registerFontClass({\n   *   key: 'fa',\n   *   class: 'fa'\n   *   prefix: 'fa-'\n   * })\n   */\n  registerFontClass(opt: FontClassOptions): void\n  /** Set default className for `ly-icon` */\n  setDefaultClass(className: string | null, prefix?: string): void\n  setSvg(key: string, url: SafeResourceUrl): void\n}"
+      }
+    ],
     "interfaceList": [
       {
         "name": "FontClassOptions",
@@ -585,7 +594,7 @@
         "name": "LyRadioGroup",
         "selector": "ly-radio-group",
         "exportAs": "lyRadioGroup",
-        "children": "@Output() change: EventEmitter\nclasses: any\n@Input() color: string\nname: string\nngZone: NgZone\ntheme: LyTheme2\n@Input() value: any\nmarkForCheck(): void\nregisterOnChange(fn: any): void\nregisterOnTouched(fn: any): void\nsetDisabledState(isDisabled: boolean): void\nupdatevalue(value: any): void\nwriteValue(value: any): void"
+        "children": "@Output() change: EventEmitter\nclasses: any\n@Input() color: string\nname: string\nngZone: NgZone\ntheme: LyTheme2\n@Input() value: any\nmarkForCheck(): void\n/**\n * Registers a callback to be triggered when the model value changes.\n * Implemented as part of ControlValueAccessor.\n */\nregisterOnChange(fn: any): void\n/**\n * Registers a callback to be triggered when the control is touched.\n * Implemented as part of ControlValueAccessor.\n */\nregisterOnTouched(fn: any): void\n/** Sets the disabled state of the control. Implemented as a part of ControlValueAccessor. */\nsetDisabledState(isDisabled: boolean): void\nupdatevalue(value: any): void\nwriteValue(value: any): void"
       }
     ],
     "directiveList": [],
@@ -611,14 +620,19 @@
       }
     ],
     "objectLiteralList": [],
-    "injectableList": []
+    "injectableList": [
+      {
+        "name": "LyRadioService",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyRadioService {\n  classes: any\n}"
+      }
+    ]
   },
   "resizing-cropping-images": {
     "componentList": [
       {
         "name": "LyResizingCroppingImages",
         "selector": "ly-img-cropper, ly-cropping",
-        "children": "/** On crop new image */\n@Output() cropped: EventEmitter\n/** Emit an error when the loaded image is not valid */\n@Output() error: EventEmitter\nisCropped: boolean\n/** When is loaded image & ready for crop */\nisLoaded: boolean\n/** On loaded new image */\n@Output() loaded: EventEmitter\n@Output() scaleChange: EventEmitter\n@Input() config: ImgCropperConfig\n/** Get min scale */\nminScale: number\n/** Set scale */\n@Input() scale: number\ncenter(): void\nclean(): void\ncrop(config?: ImgCropperConfig): void\nfit(): void\nfitToScreen(): void\nrotate(degrees: number): void\nselectInputEvent(img: Event): void\nsetImageUrl(src: string, fn?: any): void\nsetScale(size: number, noAutoCrop?: boolean): void\nupdatePosition(x?: number, y?: number): void\nzoomIn(): void\nzoomOut(): void"
+        "children": "/** On crop new image */\n@Output() cropped: EventEmitter\n/** Emit an error when the loaded image is not valid */\n@Output() error: EventEmitter\nisCropped: boolean\n/** When is loaded image & ready for crop */\nisLoaded: boolean\n/** On loaded new image */\n@Output() loaded: EventEmitter\n@Output() scaleChange: EventEmitter\n@Input() config: ImgCropperConfig\n/** Get min scale */\nminScale: number\n/** Set scale */\n@Input() scale: number\ncenter(): void\n/** Clean the img cropper */\nclean(): void\n/**\n * Crop Image\n * Resizing & cropping image\n */\ncrop(config?: ImgCropperConfig): void\nfit(): void\n/** Ajustar a la pantalla */\nfitToScreen(): void\nrotate(degrees: number): void\nselectInputEvent(img: Event): void\n/** Load Image from URL */\nsetImageUrl(src: string, fn?: any): void\n/** Set the size of the image, the values can be 0 between 1, where 1 is the original size */\nsetScale(size: number, noAutoCrop?: boolean): void\nupdatePosition(x?: number, y?: number): void\n/** + */\nzoomIn(): void\n/** - */\nzoomOut(): void"
       }
     ],
     "directiveList": [],
@@ -689,7 +703,7 @@
         "name": "LySnackBar",
         "selector": "ng-template[ly-snack-bar]",
         "exportAs": "lySnackBar",
-        "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: number\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\ndismiss(): void\nopen(): void"
+        "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: number\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\n/** Dismiss snackBar */\ndismiss(): void\nopen(): void"
       }
     ],
     "interfaceList": [
@@ -723,7 +737,12 @@
         "children": "import { LySnackBarModule } from '@alyle/ui/snack-bar'"
       }
     ],
-    "injectableList": []
+    "injectableList": [
+      {
+        "name": "LySnackBarService",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LySnackBarService {\n  \n}"
+      }
+    ]
   },
   "root": {
     "componentList": [
@@ -874,7 +893,7 @@
       },
       {
         "name": "ThemeConfig",
-        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  \n  colorShadow: string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
+        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  colorShadow: string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
       },
       {
         "name": "StyleMap5",
@@ -1024,11 +1043,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2018-12-24T08:22:38.412Z\""
+        "children": "const AUI_LAST_UPDATE = \"2018-12-25T08:23:02.601Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"1.9.11-nightly.20181224-jq2206dp\""
+        "children": "const AUI_VERSION = \"1.9.11-nightly.20181225-jq3hgjpm\""
       }
     ],
     "functionList": [],
@@ -1066,7 +1085,60 @@
         "children": "type StylesFn2 = any"
       }
     ],
-    "injectableList": [],
+    "injectableList": [
+      {
+        "name": "ElementObserver",
+        "children": "@Injectable({providedIn: 'root'})\nclass ElementObserver {\n  /** Destroy Observer */\n  destroy(elementOrRef: Element | ElementRef): void\n  observe(elementOrRef: Element | ElementRef, fn: MutationCallback, options?: MutationObserverInit): void\n}"
+      },
+      {
+        "name": "MutationObserverFactory",
+        "children": "@Injectable({providedIn: 'root'})\nclass MutationObserverFactory {\n  create(callback: MutationCallback): void\n}"
+      },
+      {
+        "name": "LyOverlay",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlay {\n  create(template: TemplateRef | string, context?: any, config?: OverlayConfig): void\n}"
+      },
+      {
+        "name": "LyOverlayContainer",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlayContainer {\n  containerElement: HTMLElement\n}"
+      },
+      {
+        "name": "WinResize",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass WinResize {\n  resize$: Observable\n}"
+      },
+      {
+        "name": "WinScroll",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass WinScroll {\n  scroll$: Observable\n}"
+      },
+      {
+        "name": "LyFocusState",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyFocusState {\n  listen(element: HTMLElement | ElementRef, keyElement?: HTMLElement | ElementRef): void\n  unlisten(element: HTMLElement | ElementRef): void\n}"
+      },
+      {
+        "name": "LyHammerGestureConfig",
+        "children": "@Injectable()\nclass LyHammerGestureConfig {\n  events: any\n  /**\n   * Properties whose default values can be overridden for a given event.\n   * Different sets of properties apply to different events.\n   * For information about which properties are supported for which events,\n   * and their allowed and default values, see\n   * [HammerJS documentation](http://hammerjs.github.io/).\n   */\n  options: any\n  /**\n   * Maps gesture event names to a set of configuration options\n   * that specify overrides to the default values for specific properties.\n   */\n  overrides: any\n  buildHammer(element: HTMLElement): void\n}"
+      },
+      {
+        "name": "LyRippleService",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyRippleService {\n  classes: any\n}"
+      },
+      {
+        "name": "LyCoreStyles",
+        "children": "@Injectable({ providedIn: 'root' })\nclass LyCoreStyles {\n  classes: any\n}"
+      },
+      {
+        "name": "CoreTheme",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass CoreTheme {\n  firstElement: HTMLElement\n  mediaStyleContainer: HTMLElement\n  primaryStyleContainer: HTMLElement\n  renderer: Renderer2\n  secondaryStyleContainer: HTMLElement\n  themes: Set\n  /** add new theme */\n  add(theme: ThemeVariables): void\n  get(name: string): void\n  getStyleMap(name: string): void\n  updateClassName(element: any, renderer: Renderer2, newClassname: string, oldClassname?: string): void\n}"
+      },
+      {
+        "name": "LyTheme2",
+        "children": "@Injectable()\nclass LyTheme2 {\n  config: ThemeVariables\n  core: CoreTheme\n  elements: Map\n  initialTheme: string\n  /**\n   * Create a simple style\n   * return className\n   */\n  addSimpleStyle(id: string, css: StyleContainer | any, priority?: number, parentStyle?: Styles): void\n  /** Add a new dynamic style, use only within @Input() */\n  addStyle(id: string, style: StyleContainer | any | any | string, el?: any, instance?: string, priority?: number, parentStyle?: Styles): void\n  /** Add new add a new style sheet */\n  addStyleSheet(styles: any, priority?: number): void\n  requestAnimationFrame(fn: any): void\n  setTheme(nam: string): void\n  setUpTheme(themeName: string): void\n  /** Toggle right-to-left/left-to-right */\n  toggleDirection(): void\n  updateClass(element: any, renderer: Renderer2, newClass: string, oldClass?: string): void\n}"
+      },
+      {
+        "name": "StylesInDocument",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass StylesInDocument {\n  styleContainers: Map\n  styleElementGlobalMap: Map\n  styles: any\n}"
+      }
+    ],
     "ngModuleList": [
       {
         "name": "LyOverlayModule",
@@ -1127,7 +1199,7 @@
       {
         "name": "LyTab",
         "selector": "ly-tab",
-        "children": "index: number\n@ViewChild() tabIndicator: ElementRef\n@ViewChild() templateRef: TemplateRef\n@ContentChild() templateRefLazy: TemplateRef"
+        "children": "/** Current tab index */\nindex: number"
       },
       {
         "name": "LyTabLabel",
@@ -1142,7 +1214,7 @@
           "shadowColor",
           "disableRipple"
         ],
-        "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void\nonClickTab(): void"
+        "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void"
       },
       {
         "name": "LyTabs",
@@ -1199,7 +1271,12 @@
         "children": "const STYLE_PRIORITY = -2"
       }
     ],
-    "injectableList": [],
+    "injectableList": [
+      {
+        "name": "LyTabsClassesService",
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyTabsClassesService {\n  classes: any\n}"
+      }
+    ],
     "ngModuleList": [
       {
         "name": "LyTabsModule",

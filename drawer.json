@@ -4,7 +4,7 @@
       "name": "LyDrawer",
       "selector": "ly-drawer",
       "exportAs": "lyDrawer",
-      "children": "@Input() height: any\n@Input() mode: mode\n@Input() spacingAbove: any\n@Input() spacingAfter: any\n@Input() spacingBefore: any\n@Input() spacingBelow: any\n@Input() spacingLeft: any\n@Input() spacingRight: any\n@Input() width: any\n@Input() hasBackdrop: any\n@Input() opened: boolean\n@Input() position: position\ntoggle(): void"
+      "children": "@Input() height: any\n@Input() mode: LyDrawerMode\n@Input() spacingAbove: any\n@Input() spacingAfter: any\n@Input() spacingBefore: any\n@Input() spacingBelow: any\n@Input() width: any\n@Input() hasBackdrop: any\n@Input() opened: boolean\n@Input() position: LyDrawerPosition\ntoggle(): void"
     }
   ],
   "directiveList": [
@@ -21,8 +21,12 @@
   ],
   "typeAliasList": [
     {
-      "name": "position",
-      "children": "type position = Placement"
+      "name": "LyDrawerMode",
+      "children": "type LyDrawerMode = 'side' | 'over'"
+    },
+    {
+      "name": "LyDrawerPosition",
+      "children": "type LyDrawerPosition = Placement"
     }
   ],
   "variableList": [
