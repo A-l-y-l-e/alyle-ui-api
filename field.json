@@ -16,7 +16,7 @@
     {
       "name": "LyHint",
       "selector": "ly-field > ly-hint",
-      "children": ""
+      "children": "@Input() align: any"
     },
     {
       "name": "LyLabel",
@@ -51,12 +51,22 @@
     {
       "name": "STYLE_PRIORITY",
       "children": "const STYLE_PRIORITY = -2"
+    },
+    {
+      "name": "STYLE_PRIORITY",
+      "children": "const STYLE_PRIORITY = -2"
     }
   ],
   "ngModuleList": [
     {
       "name": "LyFieldModule",
       "children": "import { LyFieldModule } from '@alyle/ui/field'"
+    }
+  ],
+  "typeAliasList": [
+    {
+      "name": "LyHintAlign",
+      "children": "type LyHintAlign = 'before' | 'after'"
     }
   ]
 }

@@ -318,6 +318,14 @@
         "type": "Directive"
       },
       {
+        "name": "LyHintAlign",
+        "type": "Type alias"
+      },
+      {
+        "name": "STYLE_PRIORITY",
+        "type": "Variable"
+      },
+      {
         "name": "LyLabel",
         "type": "Directive"
       },
@@ -1019,6 +1027,10 @@
       },
       {
         "name": "getPosition",
+        "type": "Function"
+      },
+      {
+        "name": "invertPlacement",
         "type": "Function"
       },
       {
