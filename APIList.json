@@ -534,6 +534,10 @@
         "type": "Class"
       },
       {
+        "name": "DEFAULT_COLOR",
+        "type": "Variable"
+      },
+      {
         "name": "DEFAULT_DISABLE_RIPPLE",
         "type": "Variable"
       },
@@ -552,14 +556,6 @@
       {
         "name": "LY_RADIO_CONTROL_VALUE_ACCESSOR",
         "type": "Object literal"
-      },
-      {
-        "name": "LyRadioService",
-        "type": "Injectable"
-      },
-      {
-        "name": "STYLE_PRIORITY",
-        "type": "Variable"
       }
     ]
   },

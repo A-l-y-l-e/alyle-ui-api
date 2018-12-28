@@ -192,7 +192,7 @@
       {
         "name": "LyCarousel",
         "selector": "ly-carousel",
-        "children": "@Input() interval: number\n@ContentChildren() lyItems: QueryList\n@Input() mode: CarouselMode\nnullImg: string\nselectedElement: HTMLElement\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() touch: boolean\nnext(notResetInterval?: boolean): void\nprev(): void\nselect(val: number, notResetInterval?: boolean): void\nstop(): void"
+        "children": "@Input() interval: number\n@ContentChildren() lyItems: QueryList\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() touch: boolean\nnext(notResetInterval?: boolean): void\nprev(): void\nstop(): void"
       }
     ],
     "directiveList": [
@@ -595,10 +595,9 @@
         "name": "LyRadio",
         "selector": "ly-radio",
         "inputs": [
-          "color",
           "disableRipple"
         ],
-        "children": "@Output() change: EventEmitter\ncoreStyles: LyCoreStyles\nid: string\nname: string\n@Optional() radioGroup: LyRadioGroup\n@Input() checked: boolean\ninputId: string\n@Input() value: any"
+        "children": "@Output() change: EventEmitter\nclasses: any\ncoreStyles: LyCoreStyles\nid: string\nname: string\n@Optional() radioGroup: LyRadioGroup\n@Input() checked: boolean\n@Input() color: string\ninputId: string\n@Input() value: any"
       },
       {
         "name": "LyRadioGroup",
@@ -617,25 +616,19 @@
     "classList": [],
     "variableList": [
       {
+        "name": "DEFAULT_COLOR",
+        "children": "const DEFAULT_COLOR = \"accent\""
+      },
+      {
         "name": "DEFAULT_DISABLE_RIPPLE",
         "children": "const DEFAULT_DISABLE_RIPPLE = false"
       },
       {
         "name": "STYLE_PRIORITY",
         "children": "const STYLE_PRIORITY = -2"
-      },
-      {
-        "name": "STYLE_PRIORITY",
-        "children": "const STYLE_PRIORITY = -2"
       }
     ],
-    "objectLiteralList": [],
-    "injectableList": [
-      {
-        "name": "LyRadioService",
-        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyRadioService {\n  classes: any\n}"
-      }
-    ]
+    "objectLiteralList": []
   },
   "resizing-cropping-images": {
     "componentList": [
@@ -1053,11 +1046,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2018-12-27T08:22:50.851Z\""
+        "children": "const AUI_LAST_UPDATE = \"2018-12-28T08:22:45.403Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"1.9.12-nightly.20181227-jq6cbzz9\""
+        "children": "const AUI_VERSION = \"1.9.12-nightly.20181228-jq7rrqfx\""
       }
     ],
     "functionList": [],
@@ -1336,7 +1329,7 @@
     "interfaceList": [
       {
         "name": "IMinimaTheme",
-        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  avatar: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getDirection,\n  pxToRem,\n  accent: object,\n  action: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  disabled: object,\n  drawer: object,\n  paper: object,\n  primary: object,\n  /** Components variables */\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
+        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  avatar: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getDirection,\n  pxToRem,\n  accent: object,\n  action: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  disabled: object,\n  drawer: object,\n  paper: object,\n  primary: object,\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
       }
     ],
     "objectLiteralList": []

@@ -4,10 +4,9 @@
       "name": "LyRadio",
       "selector": "ly-radio",
       "inputs": [
-        "color",
         "disableRipple"
       ],
-      "children": "@Output() change: EventEmitter\ncoreStyles: LyCoreStyles\nid: string\nname: string\n@Optional() radioGroup: LyRadioGroup\n@Input() checked: boolean\ninputId: string\n@Input() value: any"
+      "children": "@Output() change: EventEmitter\nclasses: any\ncoreStyles: LyCoreStyles\nid: string\nname: string\n@Optional() radioGroup: LyRadioGroup\n@Input() checked: boolean\n@Input() color: string\ninputId: string\n@Input() value: any"
     },
     {
       "name": "LyRadioGroup",
@@ -26,23 +25,17 @@
   "classList": [],
   "variableList": [
     {
+      "name": "DEFAULT_COLOR",
+      "children": "const DEFAULT_COLOR = \"accent\""
+    },
+    {
       "name": "DEFAULT_DISABLE_RIPPLE",
       "children": "const DEFAULT_DISABLE_RIPPLE = false"
     },
     {
       "name": "STYLE_PRIORITY",
       "children": "const STYLE_PRIORITY = -2"
-    },
-    {
-      "name": "STYLE_PRIORITY",
-      "children": "const STYLE_PRIORITY = -2"
     }
   ],
-  "objectLiteralList": [],
-  "injectableList": [
-    {
-      "name": "LyRadioService",
-      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyRadioService {\n  classes: any\n}"
-    }
-  ]
+  "objectLiteralList": []
 }
