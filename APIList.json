@@ -286,6 +286,14 @@
   "field": {
     "children": [
       {
+        "name": "LyError",
+        "type": "Directive"
+      },
+      {
+        "name": "STYLE_PRIORITY",
+        "type": "Variable"
+      },
+      {
         "name": "LyField",
         "type": "Component"
       },
@@ -862,12 +870,12 @@
         "type": "Injectable"
       },
       {
-        "name": "FocusState",
+        "name": "FocusStateInfo",
         "type": "Interface"
       },
       {
-        "name": "FocusStateInfo",
-        "type": "Interface"
+        "name": "FocusState",
+        "type": "Type alias"
       },
       {
         "name": "HammerInput",

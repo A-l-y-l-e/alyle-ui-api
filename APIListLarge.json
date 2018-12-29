@@ -224,7 +224,7 @@
           "disableRipple"
         ],
         "exportAs": "lyCheckbox",
-        "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: boolean\n@Input() color: string\n@Input() disabled: boolean\n@Input() required: boolean\nregisterOnChange(fn: any): void\nregisterOnTouched(fn: any): void\nsetDisabledState(isDisabled: boolean): void\n/** Toggles the `checked` state of the checkbox. */\ntoggle(): void\nwriteValue(value: any): void"
+        "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: boolean\n@Input() color: string\n@Input() disabled: boolean\n@Input() required: boolean\n/** Toggles the `checked` state of the checkbox. */\ntoggle(): void"
       }
     ],
     "directiveList": [],
@@ -336,6 +336,11 @@
     ],
     "directiveList": [
       {
+        "name": "LyError",
+        "selector": "ly-error",
+        "children": "classes: any"
+      },
+      {
         "name": "LyInputNative",
         "selector": "input[lyInput], textarea[lyInput]",
         "exportAs": "lyInput",
@@ -368,6 +373,10 @@
       }
     ],
     "variableList": [
+      {
+        "name": "STYLE_PRIORITY",
+        "children": "const STYLE_PRIORITY = -2"
+      },
       {
         "name": "DEFAULT_APPEARANCE",
         "children": "const DEFAULT_APPEARANCE = \"standard\""
@@ -597,13 +606,13 @@
         "inputs": [
           "disableRipple"
         ],
-        "children": "@Output() change: EventEmitter\nclasses: any\ncoreStyles: LyCoreStyles\nid: string\nname: string\n@Optional() radioGroup: LyRadioGroup\n@Input() checked: boolean\n@Input() color: string\ninputId: string\n@Input() value: any"
+        "children": "@Output() change: EventEmitter\n@Input() checked: boolean\n@Input() color: string\n@Input() disabled: boolean\n@Input() value: any"
       },
       {
         "name": "LyRadioGroup",
         "selector": "ly-radio-group",
         "exportAs": "lyRadioGroup",
-        "children": "@Output() change: EventEmitter\nclasses: any\n@Input() color: string\nname: string\nngZone: NgZone\ntheme: LyTheme2\n@Input() value: any\nmarkForCheck(): void\n/**\n * Registers a callback to be triggered when the model value changes.\n * Implemented as part of ControlValueAccessor.\n */\nregisterOnChange(fn: any): void\n/**\n * Registers a callback to be triggered when the control is touched.\n * Implemented as part of ControlValueAccessor.\n */\nregisterOnTouched(fn: any): void\n/** Sets the disabled state of the control. Implemented as a part of ControlValueAccessor. */\nsetDisabledState(isDisabled: boolean): void\nupdatevalue(value: any): void\nwriteValue(value: any): void"
+        "children": "@Output() change: EventEmitter\n@Input() color: string\n@Input() value: any"
       }
     ],
     "directiveList": [],
@@ -839,10 +848,6 @@
         "children": "interface OverlayFromTemplateRef {\n  containerElement: HTMLDivElement,\n  /** Detach & remove */\n  destroy: any,\n  /** Detaches a view from dirty checking again of ApplicationRef. */\n  detach: any,\n  /** Remove element of DOM */\n  remove: any\n}"
       },
       {
-        "name": "FocusState",
-        "children": "interface FocusState {\n  by: 'keyboard' | 'mouse',\n  event: FocusEvent\n}"
-      },
-      {
         "name": "FocusStateInfo",
         "children": "interface FocusStateInfo {\n  subject: Subject,\n  unlisten: any\n}"
       },
@@ -1046,11 +1051,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2018-12-28T08:22:45.403Z\""
+        "children": "const AUI_LAST_UPDATE = \"2018-12-29T08:22:52.261Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"1.9.12-nightly.20181228-jq7rrqfx\""
+        "children": "const AUI_VERSION = \"1.9.12-nightly.20181229-jq977qef\""
       }
     ],
     "functionList": [],
@@ -1062,6 +1067,10 @@
       {
         "name": "Constructor",
         "children": "type Constructor = any"
+      },
+      {
+        "name": "FocusState",
+        "children": "type FocusState = 'keyboard' | 'mouse' | null"
       },
       {
         "name": "Placement",

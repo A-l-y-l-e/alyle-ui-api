@@ -8,6 +8,11 @@
   ],
   "directiveList": [
     {
+      "name": "LyError",
+      "selector": "ly-error",
+      "children": "classes: any"
+    },
+    {
       "name": "LyInputNative",
       "selector": "input[lyInput], textarea[lyInput]",
       "exportAs": "lyInput",
@@ -40,6 +45,10 @@
     }
   ],
   "variableList": [
+    {
+      "name": "STYLE_PRIORITY",
+      "children": "const STYLE_PRIORITY = -2"
+    },
     {
       "name": "DEFAULT_APPEARANCE",
       "children": "const DEFAULT_APPEARANCE = \"standard\""

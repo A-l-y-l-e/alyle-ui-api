@@ -90,10 +90,6 @@
       "children": "interface OverlayFromTemplateRef {\n  containerElement: HTMLDivElement,\n  /** Detach & remove */\n  destroy: any,\n  /** Detaches a view from dirty checking again of ApplicationRef. */\n  detach: any,\n  /** Remove element of DOM */\n  remove: any\n}"
     },
     {
-      "name": "FocusState",
-      "children": "interface FocusState {\n  by: 'keyboard' | 'mouse',\n  event: FocusEvent\n}"
-    },
-    {
       "name": "FocusStateInfo",
       "children": "interface FocusStateInfo {\n  subject: Subject,\n  unlisten: any\n}"
     },
@@ -297,11 +293,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2018-12-28T08:22:45.403Z\""
+      "children": "const AUI_LAST_UPDATE = \"2018-12-29T08:22:52.261Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"1.9.12-nightly.20181228-jq7rrqfx\""
+      "children": "const AUI_VERSION = \"1.9.12-nightly.20181229-jq977qef\""
     }
   ],
   "functionList": [],
@@ -313,6 +309,10 @@
     {
       "name": "Constructor",
       "children": "type Constructor = any"
+    },
+    {
+      "name": "FocusState",
+      "children": "type FocusState = 'keyboard' | 'mouse' | null"
     },
     {
       "name": "Placement",

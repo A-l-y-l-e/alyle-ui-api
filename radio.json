@@ -6,13 +6,13 @@
       "inputs": [
         "disableRipple"
       ],
-      "children": "@Output() change: EventEmitter\nclasses: any\ncoreStyles: LyCoreStyles\nid: string\nname: string\n@Optional() radioGroup: LyRadioGroup\n@Input() checked: boolean\n@Input() color: string\ninputId: string\n@Input() value: any"
+      "children": "@Output() change: EventEmitter\n@Input() checked: boolean\n@Input() color: string\n@Input() disabled: boolean\n@Input() value: any"
     },
     {
       "name": "LyRadioGroup",
       "selector": "ly-radio-group",
       "exportAs": "lyRadioGroup",
-      "children": "@Output() change: EventEmitter\nclasses: any\n@Input() color: string\nname: string\nngZone: NgZone\ntheme: LyTheme2\n@Input() value: any\nmarkForCheck(): void\n/**\n * Registers a callback to be triggered when the model value changes.\n * Implemented as part of ControlValueAccessor.\n */\nregisterOnChange(fn: any): void\n/**\n * Registers a callback to be triggered when the control is touched.\n * Implemented as part of ControlValueAccessor.\n */\nregisterOnTouched(fn: any): void\n/** Sets the disabled state of the control. Implemented as a part of ControlValueAccessor. */\nsetDisabledState(isDisabled: boolean): void\nupdatevalue(value: any): void\nwriteValue(value: any): void"
+      "children": "@Output() change: EventEmitter\n@Input() color: string\n@Input() value: any"
     }
   ],
   "directiveList": [],
