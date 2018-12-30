@@ -3,7 +3,8 @@
     {
       "name": "LyField",
       "selector": "ly-field",
-      "children": "/** The field appearance style. */\n@Input() appearance: string\n/** Theme color for the component. */\n@Input() color: string\n/** Whether the label is floating. */\n@Input() floatingLabel: boolean"
+      "exportAs": "lyFormField",
+      "children": "@Input() persistentHint: boolean\n/** The field appearance style. */\n@Input() appearance: string\n/** Theme color for the component. */\n@Input() color: string\nerrorState: boolean\n/** Whether the label is floating. */\n@Input() floatingLabel: boolean\n@Input() fullWidth: boolean"
     }
   ],
   "directiveList": [
@@ -16,12 +17,12 @@
       "name": "LyInputNative",
       "selector": "input[lyInput], textarea[lyInput]",
       "exportAs": "lyInput",
-      "children": "focused: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\n/** Focuses the input. */\nfocus(): void"
+      "children": "errorState: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\n/** Focuses the input. */\nfocus(): void"
     },
     {
       "name": "LyHint",
       "selector": "ly-field > ly-hint",
-      "children": "@Input() align: any"
+      "children": "classes: any\n@Input() align: any"
     },
     {
       "name": "LyLabel",

@@ -293,11 +293,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2018-12-29T08:22:52.261Z\""
+      "children": "const AUI_LAST_UPDATE = \"2018-12-30T05:08:08.366Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"1.9.12-nightly.20181229-jq977qef\""
+      "children": "const AUI_VERSION = \"2.0.0\""
     }
   ],
   "functionList": [],
