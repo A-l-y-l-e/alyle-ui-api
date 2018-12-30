@@ -1052,11 +1052,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2018-12-30T05:08:08.366Z\""
+        "children": "const AUI_LAST_UPDATE = \"2018-12-30T08:23:08.586Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.0.0\""
+        "children": "const AUI_VERSION = \"2.0.1-nightly.20181230-jqamnxnw\""
       }
     ],
     "functionList": [],
