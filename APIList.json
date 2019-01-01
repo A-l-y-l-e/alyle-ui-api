@@ -643,6 +643,26 @@
       }
     ]
   },
+  "schematics/ng-add": {
+    "children": [
+      {
+        "name": "AUI_VERSION",
+        "type": "Variable"
+      },
+      {
+        "name": "PKG",
+        "type": "Variable"
+      },
+      {
+        "name": "ngAdd",
+        "type": "Function"
+      },
+      {
+        "name": "sortObjectByKeys",
+        "type": "Function"
+      }
+    ]
+  },
   "snack-bar": {
     "children": [
       {

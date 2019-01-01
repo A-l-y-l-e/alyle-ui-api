@@ -1,0 +1,15 @@
+{
+  "componentList": [],
+  "directiveList": [],
+  "variableList": [
+    {
+      "name": "AUI_VERSION",
+      "children": "const AUI_VERSION = require(`${PKG}/package.json`).version"
+    },
+    {
+      "name": "PKG",
+      "children": "const PKG = \"@alyle/ui\""
+    }
+  ],
+  "functionList": []
+}
