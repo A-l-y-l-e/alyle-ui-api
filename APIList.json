@@ -646,12 +646,32 @@
   "schematics/ng-add": {
     "children": [
       {
+        "name": "hammerjsImportStatement",
+        "type": "Variable"
+      },
+      {
+        "name": "addHammerJsToMain",
+        "type": "Function"
+      },
+      {
+        "name": "ANGULAR_CORE_VERSION",
+        "type": "Variable"
+      },
+      {
         "name": "AUI_VERSION",
         "type": "Variable"
       },
       {
-        "name": "PKG",
+        "name": "CHROMA_JS_VERSION",
         "type": "Variable"
+      },
+      {
+        "name": "HAMMERJS_VERSION",
+        "type": "Variable"
+      },
+      {
+        "name": "addPkg",
+        "type": "Function"
       },
       {
         "name": "ngAdd",
@@ -659,6 +679,38 @@
       },
       {
         "name": "sortObjectByKeys",
+        "type": "Function"
+      },
+      {
+        "name": "Schema",
+        "type": "Interface"
+      },
+      {
+        "name": "checkVersionAngularCLI",
+        "type": "Function"
+      },
+      {
+        "name": "getTsSourceFile",
+        "type": "Function"
+      },
+      {
+        "name": "setUpAppModule",
+        "type": "Function"
+      },
+      {
+        "name": "updateAppModule",
+        "type": "Function"
+      }
+    ]
+  },
+  "schematics/utils": {
+    "children": [
+      {
+        "name": "getProjectFromWorkspace",
+        "type": "Function"
+      },
+      {
+        "name": "getProjectTargetOptions",
         "type": "Function"
       }
     ]
@@ -923,7 +975,7 @@
       },
       {
         "name": "RecognizerStatic",
-        "type": "Interface"
+        "type": "Type alias"
       },
       {
         "name": "LyHammerGestureConfig",
@@ -995,14 +1047,6 @@
       },
       {
         "name": "scrollWithAnimation",
-        "type": "Function"
-      },
-      {
-        "name": "Interval",
-        "type": "Function"
-      },
-      {
-        "name": "TimeOut",
         "type": "Function"
       },
       {

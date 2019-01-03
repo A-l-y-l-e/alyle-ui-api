@@ -118,10 +118,6 @@
       "children": "interface Recognizer {\n  constructor,\n  recognizeWith\n}"
     },
     {
-      "name": "RecognizerStatic",
-      "children": "interface RecognizerStatic {\n  constructor\n}"
-    },
-    {
       "name": "RippleConfig",
       "children": "interface RippleConfig {\n  centered: boolean,\n  disabled: boolean,\n  percentageToIncrease: number,\n  radius: 'containerSize' | number,\n  sensitive: boolean\n}"
     },
@@ -293,11 +289,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2019-01-03T08:22:17.500Z\""
+      "children": "const AUI_LAST_UPDATE = \"2019-01-03T22:57:51.346Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"2.0.2-nightly.20190103-jqgce8wt\""
+      "children": "const AUI_VERSION = \"2.0.2-nightly.20190103-jqh7o8ab\""
     }
   ],
   "functionList": [],
@@ -313,6 +309,10 @@
     {
       "name": "FocusState",
       "children": "type FocusState = 'keyboard' | 'mouse' | null"
+    },
+    {
+      "name": "RecognizerStatic",
+      "children": "type RecognizerStatic = any"
     },
     {
       "name": "Placement",
