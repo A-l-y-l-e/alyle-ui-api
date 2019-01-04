@@ -8,7 +8,7 @@
     },
     {
       "name": "ANGULAR_CORE_VERSION",
-      "children": "const ANGULAR_CORE_VERSION = require(`@angular/core/package.json`).version"
+      "children": "const ANGULAR_CORE_VERSION = require(join(process.cwd(), 'package.json')).devDependencies['@angular/core']"
     },
     {
       "name": "AUI_VERSION",

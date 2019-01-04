@@ -674,6 +674,10 @@
         "type": "Function"
       },
       {
+        "name": "installPkgs",
+        "type": "Function"
+      },
+      {
         "name": "ngAdd",
         "type": "Function"
       },
