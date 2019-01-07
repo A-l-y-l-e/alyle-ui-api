@@ -1,18 +1,11 @@
 {
   "componentList": [],
   "directiveList": [],
+  "functionList": [],
   "variableList": [
     {
       "name": "hammerjsImportStatement",
       "children": "const hammerjsImportStatement = `import 'hammerjs';`"
-    },
-    {
-      "name": "ANGULAR_CORE_VERSION",
-      "children": "const ANGULAR_CORE_VERSION = require(join(process.cwd(), 'package.json')).dependencies['@angular/core']"
-    },
-    {
-      "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = require(`@alyle/ui/package.json`).version"
     },
     {
       "name": "CHROMA_JS_VERSION",
@@ -23,7 +16,6 @@
       "children": "const HAMMERJS_VERSION = \"^2.0.8\""
     }
   ],
-  "functionList": [],
   "interfaceList": [
     {
       "name": "Schema",

@@ -712,18 +712,11 @@
   "schematics/ng-add": {
     "componentList": [],
     "directiveList": [],
+    "functionList": [],
     "variableList": [
       {
         "name": "hammerjsImportStatement",
         "children": "const hammerjsImportStatement = `import 'hammerjs';`"
-      },
-      {
-        "name": "ANGULAR_CORE_VERSION",
-        "children": "const ANGULAR_CORE_VERSION = require(join(process.cwd(), 'package.json')).dependencies['@angular/core']"
-      },
-      {
-        "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = require(`@alyle/ui/package.json`).version"
       },
       {
         "name": "CHROMA_JS_VERSION",
@@ -734,7 +727,6 @@
         "children": "const HAMMERJS_VERSION = \"^2.0.8\""
       }
     ],
-    "functionList": [],
     "interfaceList": [
       {
         "name": "Schema",
@@ -1086,11 +1078,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-01-06T08:22:19.797Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-01-07T05:13:00.544Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.0.2-nightly.20190106-jqkmpuom\""
+        "children": "const AUI_VERSION = \"2.0.2-nightly.20190107-jqlve8hu\""
       }
     ],
     "functionList": [],

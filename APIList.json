@@ -646,6 +646,10 @@
   "schematics/ng-add": {
     "children": [
       {
+        "name": "addFontsToIndex",
+        "type": "Function"
+      },
+      {
         "name": "hammerjsImportStatement",
         "type": "Variable"
       },
@@ -690,10 +694,6 @@
         "type": "Interface"
       },
       {
-        "name": "checkVersionAngularCLI",
-        "type": "Function"
-      },
-      {
         "name": "getTsSourceFile",
         "type": "Function"
       },
@@ -704,11 +704,39 @@
       {
         "name": "updateAppModule",
         "type": "Function"
+      },
+      {
+        "name": "getComponentOrDirective",
+        "type": "Function"
+      },
+      {
+        "name": "getContructor",
+        "type": "Function"
+      },
+      {
+        "name": "setUpStyles",
+        "type": "Function"
       }
     ]
   },
   "schematics/utils": {
     "children": [
+      {
+        "name": "addImport",
+        "type": "Function"
+      },
+      {
+        "name": "getTsSourceFile",
+        "type": "Function"
+      },
+      {
+        "name": "prettierConstructorParameters",
+        "type": "Function"
+      },
+      {
+        "name": "getAppComponentPath",
+        "type": "Function"
+      },
       {
         "name": "getProjectFromWorkspace",
         "type": "Function"
