@@ -643,6 +643,30 @@
       }
     ]
   },
+  "schematics/component": {
+    "children": [
+      {
+        "name": "default",
+        "type": "Function"
+      },
+      {
+        "name": "updateFiles",
+        "type": "Function"
+      }
+    ]
+  },
+  "schematics/directive": {
+    "children": [
+      {
+        "name": "default",
+        "type": "Function"
+      },
+      {
+        "name": "updateFiles",
+        "type": "Function"
+      }
+    ]
+  },
   "schematics/ng-add": {
     "children": [
       {
@@ -678,11 +702,11 @@
         "type": "Function"
       },
       {
-        "name": "installPkgs",
+        "name": "default",
         "type": "Function"
       },
       {
-        "name": "ngAdd",
+        "name": "installPkgs",
         "type": "Function"
       },
       {
@@ -703,18 +727,6 @@
       },
       {
         "name": "updateAppModule",
-        "type": "Function"
-      },
-      {
-        "name": "getComponentOrDirective",
-        "type": "Function"
-      },
-      {
-        "name": "getContructor",
-        "type": "Function"
-      },
-      {
-        "name": "setUpStyles",
         "type": "Function"
       }
     ]
@@ -743,6 +755,18 @@
       },
       {
         "name": "getProjectTargetOptions",
+        "type": "Function"
+      },
+      {
+        "name": "getComponentOrDirective",
+        "type": "Function"
+      },
+      {
+        "name": "getContructor",
+        "type": "Function"
+      },
+      {
+        "name": "setUpStyles",
         "type": "Function"
       }
     ]
