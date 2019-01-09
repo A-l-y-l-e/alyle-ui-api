@@ -14,9 +14,9 @@
       "children": "classes: any"
     },
     {
-      "name": "LyInputNative",
-      "selector": "input[lyInput], textarea[lyInput]",
-      "exportAs": "lyInput",
+      "name": "LyNativeControl",
+      "selector": "input[lyInput], textarea[lyInput], input[lyNativeControl], textarea[lyNativeControl]",
+      "exportAs": "LyNativeControl",
       "children": "errorState: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\n/** Focuses the input. */\nfocus(): void"
     },
     {

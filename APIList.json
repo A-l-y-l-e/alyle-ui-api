@@ -298,7 +298,7 @@
         "type": "Component"
       },
       {
-        "name": "LyInputNative",
+        "name": "LyNativeControl",
         "type": "Directive"
       },
       {

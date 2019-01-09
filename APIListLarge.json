@@ -342,9 +342,9 @@
         "children": "classes: any"
       },
       {
-        "name": "LyInputNative",
-        "selector": "input[lyInput], textarea[lyInput]",
-        "exportAs": "lyInput",
+        "name": "LyNativeControl",
+        "selector": "input[lyInput], textarea[lyInput], input[lyNativeControl], textarea[lyNativeControl]",
+        "exportAs": "LyNativeControl",
         "children": "errorState: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\n/** Focuses the input. */\nfocus(): void"
       },
       {
@@ -1088,11 +1088,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-01-08T08:22:05.258Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-01-09T00:16:50.541Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.0.3-nightly.20190108-jqnhl8sr\""
+        "children": "const AUI_VERSION = \"2.0.3\""
       }
     ],
     "functionList": [],
