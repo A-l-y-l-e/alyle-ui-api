@@ -28,7 +28,7 @@
     {
       "name": "LyCardMedia",
       "selector": "ly-card-media",
-      "children": "@Input() bgImg: string\n/** Aspect ratio */\n@Input() ratio: string"
+      "children": "@Input() bgImg: any\n/** Aspect ratio */\n@Input() ratio: any"
     }
   ],
   "variableList": [

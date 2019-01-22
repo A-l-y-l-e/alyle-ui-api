@@ -12,7 +12,7 @@
         "elevation",
         "shadowColor"
       ],
-      "children": "@Input() size: number"
+      "children": "@Input() size: any"
     }
   ],
   "variableList": [

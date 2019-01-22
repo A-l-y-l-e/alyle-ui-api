@@ -314,6 +314,10 @@
         "type": "Variable"
       },
       {
+        "name": "inputText",
+        "type": "Variable"
+      },
+      {
         "name": "DEFAULT_APPEARANCE_THEME",
         "type": "Object literal"
       },
@@ -1046,14 +1050,6 @@
         "type": "Variable"
       },
       {
-        "name": "InvertMediaQuery",
-        "type": "Enumeration"
-      },
-      {
-        "name": "transformMediaQuery",
-        "type": "Function"
-      },
-      {
         "name": "NgTranscludeDirective",
         "type": "Directive"
       },
@@ -1067,18 +1063,6 @@
       },
       {
         "name": "defaultEntry",
-        "type": "Function"
-      },
-      {
-        "name": "exactPosition",
-        "type": "Function"
-      },
-      {
-        "name": "getWindow",
-        "type": "Function"
-      },
-      {
-        "name": "isWindow",
         "type": "Function"
       },
       {
@@ -1146,12 +1130,8 @@
         "type": "Type alias"
       },
       {
-        "name": "createPosition",
-        "type": "Function"
-      },
-      {
-        "name": "getPosition",
-        "type": "Function"
+        "name": "INITIAL_WH",
+        "type": "Variable"
       },
       {
         "name": "invertPlacement",
@@ -1354,11 +1334,11 @@
         "type": "Interface"
       },
       {
-        "name": "StyleMap5",
+        "name": "StyleGroup",
         "type": "Interface"
       },
       {
-        "name": "Styles2",
+        "name": "StyleMap5",
         "type": "Interface"
       },
       {
@@ -1366,7 +1346,7 @@
         "type": "Type alias"
       },
       {
-        "name": "StylesFn2",
+        "name": "StyleContainerFn",
         "type": "Type alias"
       },
       {

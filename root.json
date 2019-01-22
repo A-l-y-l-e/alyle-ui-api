@@ -10,7 +10,7 @@
     {
       "name": "NgTranscludeDirective",
       "selector": "[ngTransclude]",
-      "children": "@Input() ngTransclude: TemplateRef"
+      "children": "getNgTransclude: any\n@Input() ngTransclude: any"
     },
     {
       "name": "LyPaper",
@@ -35,11 +35,11 @@
   "interfaceList": [
     {
       "name": "ColorScheme",
-      "children": "interface ColorScheme {\n  background: any,\n  bar: string,\n  /** Components variables */\n  colorShadow: string,\n  divider: string,\n  input: any,\n  text: any\n}"
+      "children": "interface ColorScheme {\n  background: undefined | any,\n  bar: undefined | string,\n  /** Components variables */\n  colorShadow: undefined | string,\n  divider: undefined | string,\n  input: undefined | any,\n  text: undefined | any\n}"
     },
     {
       "name": "PaletteVariables",
-      "children": "interface PaletteVariables {\n  contrast: string,\n  default: string\n}"
+      "children": "interface PaletteVariables {\n  contrast: undefined | string,\n  default: undefined | string\n}"
     },
     {
       "name": "CanBg",
@@ -87,7 +87,7 @@
     },
     {
       "name": "OverlayFromTemplateRef",
-      "children": "interface OverlayFromTemplateRef {\n  containerElement: HTMLDivElement,\n  /** Detach & remove */\n  destroy: any,\n  /** Detaches a view from dirty checking again of ApplicationRef. */\n  detach: any,\n  /** Remove element of DOM */\n  remove: any\n}"
+      "children": "interface OverlayFromTemplateRef {\n  containerElement: HTMLDivElement,\n  /** Detach & remove */\n  destroy: any,\n  /** Detaches a view from dirty checking again of ApplicationRef. */\n  detach: any,\n  /** Function that will be called on scroll or resize event */\n  onResizeScroll: any | null,\n  /** Remove element of DOM */\n  remove: any\n}"
     },
     {
       "name": "FocusStateInfo",
@@ -107,7 +107,7 @@
     },
     {
       "name": "HammerOptions",
-      "children": "interface HammerOptions {\n  cssProps: any,\n  domEvents: boolean,\n  enable: boolean | any,\n  inputClass: HammerInput,\n  inputTarget: EventTarget,\n  preset: any,\n  recognizers: any,\n  touchAction: string\n}"
+      "children": "interface HammerOptions {\n  cssProps: undefined | any,\n  domEvents: undefined | false | true,\n  enable: boolean | any,\n  inputClass: HammerInput,\n  inputTarget: EventTarget,\n  preset: any,\n  recognizers: any,\n  touchAction: undefined | string\n}"
     },
     {
       "name": "HammerStatic",
@@ -119,7 +119,7 @@
     },
     {
       "name": "RippleConfig",
-      "children": "interface RippleConfig {\n  centered: boolean,\n  disabled: boolean,\n  percentageToIncrease: number,\n  radius: 'containerSize' | number,\n  sensitive: boolean\n}"
+      "children": "interface RippleConfig {\n  centered: undefined | false | true,\n  disabled: undefined | false | true,\n  percentageToIncrease: undefined | number,\n  radius: 'containerSize' | number,\n  sensitive: undefined | false | true\n}"
     },
     {
       "name": "DataStyle",
@@ -135,19 +135,19 @@
     },
     {
       "name": "PaletteColor",
-      "children": "interface PaletteColor {\n  contrast: string,\n  /** shadow color */\n  shadow: string\n}"
+      "children": "interface PaletteColor {\n  contrast: undefined | string,\n  /** shadow color */\n  shadow: undefined | string\n}"
     },
     {
       "name": "ThemeConfig",
-      "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  colorShadow: string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
+      "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  colorShadow: undefined | string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
+    },
+    {
+      "name": "StyleGroup",
+      "children": "interface StyleGroup {\n  $keyframes: Keyframes,\n  /** Prefix name */\n  $name: undefined | string\n}"
     },
     {
       "name": "StyleMap5",
-      "children": "interface StyleMap5 {\n  /** global theme */\n  classes: any | string,\n  /** requireUpdate */\n  classesWithTheme: any,\n  css: any | string,\n  id: string,\n  /** Only for styles of TypeStyle.one */\n  parentStyle: Styles,\n  priority: number,\n  requireUpdate: boolean,\n  styles: StylesFn2 | Styles2,\n  type: TypeStyle\n}"
-    },
-    {
-      "name": "Styles2",
-      "children": "interface Styles2 {\n  /** Prefix name */\n  $name: string\n}"
+      "children": "interface StyleMap5 {\n  /** global theme */\n  classes: any | string,\n  /** requireUpdate */\n  classesWithTheme: undefined | any,\n  css: any | string,\n  id: string | null,\n  /** Only for styles of TypeStyle.one */\n  parentStyle: Styles,\n  priority: number | null,\n  requireUpdate: undefined | false | true,\n  styles: Styles,\n  type: TypeStyle\n}"
     },
     {
       "name": "AvatarVariables",
@@ -155,7 +155,7 @@
     },
     {
       "name": "ButtonVariables",
-      "children": "interface ButtonVariables {\n  appearance: any,\n  root: StyleContainer,\n  size: any\n}"
+      "children": "interface ButtonVariables {\n  appearance: undefined | any,\n  root: StyleContainer,\n  size: undefined | any\n}"
     },
     {
       "name": "CheckboxVariables",
@@ -175,7 +175,7 @@
     },
     {
       "name": "TypographyTypeVariables",
-      "children": "interface TypographyTypeVariables {\n  fontFamily: string,\n  fontSize: string,\n  fontWeight: number,\n  gutterBottom: number,\n  gutterTop: number,\n  letterSpacing: string,\n  textTransform: string\n}"
+      "children": "interface TypographyTypeVariables {\n  fontFamily: undefined | string,\n  fontSize: undefined | string,\n  fontWeight: undefined | number,\n  gutterBottom: undefined | number,\n  gutterTop: undefined | number,\n  letterSpacing: undefined | string,\n  textTransform: undefined | string\n}"
     },
     {
       "name": "TypographyVariables",
@@ -222,6 +222,10 @@
     {
       "name": "hasV8BreakIterator",
       "children": "const hasV8BreakIterator = (typeof(Intl) !== 'undefined' && (Intl as any).v8BreakIterator)"
+    },
+    {
+      "name": "INITIAL_WH",
+      "children": "const INITIAL_WH = \"initial\""
     },
     {
       "name": "Shadows",
@@ -289,11 +293,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2019-01-09T08:22:11.617Z\""
+      "children": "const AUI_LAST_UPDATE = \"2019-01-22T01:42:03.013Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"2.0.4-nightly.20190109-jqox18df\""
+      "children": "const AUI_VERSION = \"2.0.6\""
     }
   ],
   "functionList": [],
@@ -335,8 +339,8 @@
       "children": "type ThemeVariables = any"
     },
     {
-      "name": "StylesFn2",
-      "children": "type StylesFn2 = any"
+      "name": "StyleContainerFn",
+      "children": "/** StyleContainer or fn that return StyleContainer */\ntype StyleContainerFn = any | StyleContainer | string | null | undefined"
     }
   ],
   "injectableList": [
@@ -354,7 +358,7 @@
     },
     {
       "name": "LyOverlayContainer",
-      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlayContainer {\n  containerElement: HTMLElement\n}"
+      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlayContainer {\n  containerElement: any\n}"
     },
     {
       "name": "WinResize",
@@ -382,11 +386,11 @@
     },
     {
       "name": "CoreTheme",
-      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass CoreTheme {\n  firstElement: HTMLElement\n  mediaStyleContainer: HTMLElement\n  primaryStyleContainer: HTMLElement\n  renderer: Renderer2\n  secondaryStyleContainer: HTMLElement\n  themes: Set\n  /** add new theme */\n  add(theme: ThemeVariables): void\n  get(name: string): void\n  getStyleMap(name: string): void\n  updateClassName(element: any, renderer: Renderer2, newClassname: string, oldClassname?: string): void\n}"
+      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass CoreTheme {\n  firstElement: HTMLElement\n  mediaStyleContainer: HTMLElement\n  primaryStyleContainer: HTMLElement\n  renderer: Renderer2\n  secondaryStyleContainer: HTMLElement\n  themes: Set\n  /** add new theme */\n  add(theme: ThemeVariables): void\n  get(name: string): void\n  getStyleMap(name: string): void\n  updateClassName(element: any, renderer: Renderer2, newClassname: string, oldClassname?: undefined | string): void\n}"
     },
     {
       "name": "LyTheme2",
-      "children": "@Injectable()\nclass LyTheme2 {\n  config: ThemeVariables\n  core: CoreTheme\n  elements: Map\n  initialTheme: string\n  /**\n   * Create a simple style\n   * return className\n   */\n  addSimpleStyle(id: string, css: StyleContainer | any, priority?: number, parentStyle?: Styles): void\n  /** Add a new dynamic style, use only within @Input() */\n  addStyle(id: string, style: StyleContainer | any | any | string, el?: any, instance?: string, priority?: number, parentStyle?: Styles): void\n  /** Add new add a new style sheet */\n  addStyleSheet(styles: any, priority?: number): void\n  requestAnimationFrame(fn: any): void\n  setTheme(nam: string): void\n  setUpTheme(themeName: string): void\n  /** Toggle right-to-left/left-to-right */\n  toggleDirection(): void\n  updateClass(element: any, renderer: Renderer2, newClass: string, oldClass?: string): void\n}"
+      "children": "@Injectable()\nclass LyTheme2 {\n  config: ThemeVariables\n  core: CoreTheme\n  elements: Map\n  initialTheme: string\n  /** Get Theme Variables */\n  variables: any\n  /**\n   * Create a simple style\n   * return className\n   */\n  addSimpleStyle(id: string, css: StyleContainer | any, priority?: undefined | number, parentStyle?: Styles): void\n  /** Add a new dynamic style, use only within @Input() */\n  addStyle(id: string, style?: StyleContainerFn, el?: any, instance?: string | null, priority?: number | null, parentStyle?: Styles): void\n  /** Add new add a new style sheet */\n  addStyleSheet(styles: any, priority?: undefined | number): void\n  requestAnimationFrame(fn: any): void\n  setTheme(nam: string): void\n  setUpTheme(themeName: string): void\n  /** Toggle right-to-left/left-to-right */\n  toggleDirection(): void\n  updateClass(element: any, renderer: Renderer2, newClass: string, oldClass?: undefined | string): void\n}"
     },
     {
       "name": "StylesInDocument",
@@ -415,10 +419,6 @@
     {
       "name": "FocusStatus",
       "children": "enum FocusStatus {\n  /** mouse and/or touch */\n  DEFAULT = \"default\",\n  /** keyboard and/or program */\n  KEYBOARD = \"keyboard\"\n}"
-    },
-    {
-      "name": "InvertMediaQuery",
-      "children": "enum InvertMediaQuery {\n  No,\n  Yes\n}"
     },
     {
       "name": "AlignAlias",

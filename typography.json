@@ -4,7 +4,7 @@
     {
       "name": "LyTypography",
       "selector": "[lyTyp]",
-      "children": "@Input() gutter: boolean\n@Input() gutterBottom: boolean\n@Input() gutterTop: boolean\n@Input() lyTyp: string\n/** The text will truncate with an ellipsis. */\n@Input() noWrap: boolean"
+      "children": "@Input() gutter: any\n@Input() gutterBottom: any\n@Input() gutterTop: any\n@Input() lyTyp: any\n/** The text will truncate with an ellipsis. */\n@Input() noWrap: any"
     }
   ],
   "variableList": [

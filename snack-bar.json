@@ -5,7 +5,7 @@
       "name": "LySnackBar",
       "selector": "ng-template[ly-snack-bar]",
       "exportAs": "lySnackBar",
-      "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: number\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\n/** Dismiss snackBar */\ndismiss(): void\nopen(): void"
+      "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: any\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\n/** Dismiss snackBar */\ndismiss(): void\nopen(): void"
     }
   ],
   "interfaceList": [

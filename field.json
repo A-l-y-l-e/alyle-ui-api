@@ -4,7 +4,7 @@
       "name": "LyField",
       "selector": "ly-field",
       "exportAs": "lyFormField",
-      "children": "@Input() persistentHint: boolean\n/** The field appearance style. */\n@Input() appearance: string\n/** Theme color for the component. */\n@Input() color: string\nerrorState: boolean\n/** Whether the label is floating. */\n@Input() floatingLabel: boolean\n@Input() fullWidth: boolean"
+      "children": "@Input() persistentHint: boolean\n/** The field appearance style. */\n@Input() appearance: any\n/** Theme color for the component. */\n@Input() color: any\nerrorState: any\n/** Whether the label is floating. */\n@Input() floatingLabel: any\n@Input() fullWidth: any\nonFocus(): void"
     }
   ],
   "directiveList": [
@@ -17,7 +17,7 @@
       "name": "LyNativeControl",
       "selector": "input[lyInput], textarea[lyInput], input[lyNativeControl], textarea[lyNativeControl]",
       "exportAs": "LyNativeControl",
-      "children": "errorState: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\n/** Focuses the input. */\nfocus(): void"
+      "children": "errorState: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: any\n@Input() placeholder: any\n@HostBinding() @Input() required: any\n/** Focuses the input. */\nfocus(): void"
     },
     {
       "name": "LyHint",
@@ -61,6 +61,10 @@
     {
       "name": "STYLE_PRIORITY",
       "children": "const STYLE_PRIORITY = -2"
+    },
+    {
+      "name": "inputText",
+      "children": "const inputText = [\n  'text',\n  'number',\n  'password',\n  'search',\n  'tel',\n  'url'\n]"
     },
     {
       "name": "STYLE_PRIORITY",

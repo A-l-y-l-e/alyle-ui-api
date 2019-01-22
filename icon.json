@@ -12,7 +12,7 @@
         "elevation",
         "shadowColor"
       ],
-      "children": "@Input() fontIcon: string\n@Input() fontSet: string\n@Input() icon: string"
+      "children": "@Input() fontIcon: any\n@Input() fontSet: any\n@Input() icon: any"
     }
   ],
   "variableList": [
@@ -34,13 +34,13 @@
   "injectableList": [
     {
       "name": "LyIconService",
-      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyIconService {\n  defaultSvgIcon: SVGElement\n  defaultClass: string\n  defaultClassPrefix: string\n  addSvgIconLiteral(key: string, literal: SafeHtml): void\n  getFontClass(key: string): void\n  getSvg(key: string): void\n  /**\n   * Register new font class alias\n   * demo:\n   * For FontAwesome\n   * registerFontClass({\n   *   key: 'fa',\n   *   class: 'fa'\n   *   prefix: 'fa-'\n   * })\n   */\n  registerFontClass(opt: FontClassOptions): void\n  /** Set default className for `ly-icon` */\n  setDefaultClass(className: string | null, prefix?: string): void\n  setSvg(key: string, url: SafeResourceUrl): void\n}"
+      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyIconService {\n  defaultSvgIcon: SVGElement\n  defaultClass: any\n  defaultClassPrefix: any\n  addSvgIconLiteral(key: string, literal: SafeHtml): void\n  getFontClass(key: string): void\n  getSvg(key: string): void\n  /**\n   * Register new font class alias\n   * demo:\n   * For FontAwesome\n   * registerFontClass({\n   *   key: 'fa',\n   *   class: 'fa'\n   *   prefix: 'fa-'\n   * })\n   */\n  registerFontClass(opt: FontClassOptions): void\n  /** Set default className for `ly-icon` */\n  setDefaultClass(className?: undefined | string, prefix?: undefined | string): void\n  setSvg(key: string, url: SafeResourceUrl): void\n}"
     }
   ],
   "interfaceList": [
     {
       "name": "FontClassOptions",
-      "children": "interface FontClassOptions {\n  /** Class name */\n  class: string,\n  key: string,\n  /** Frefix class */\n  prefix: string\n}"
+      "children": "interface FontClassOptions {\n  /** Class name */\n  class: undefined | string,\n  key: string,\n  /** Frefix class */\n  prefix: undefined | string\n}"
     },
     {
       "name": "SvgIcon",

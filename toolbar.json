@@ -12,7 +12,7 @@
         "elevation",
         "shadowColor"
       ],
-      "children": "@Input() position: position"
+      "children": "@Input() position: any"
     }
   ],
   "variableList": [

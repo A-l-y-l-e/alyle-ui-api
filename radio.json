@@ -6,7 +6,7 @@
       "inputs": [
         "disableRipple"
       ],
-      "children": "@Output() change: EventEmitter\n@Input() checked: boolean\n@Input() color: string\n@Input() disabled: boolean\n@Input() value: any"
+      "children": "@Output() change: EventEmitter\n@Input() checked: any\n@Input() color: any\n@Input() disabled: any\n@Input() value: any"
     },
     {
       "name": "LyRadioGroup",

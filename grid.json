@@ -4,7 +4,7 @@
     {
       "name": "LyGrid",
       "selector": "ly-grid[container]",
-      "children": "/**\n * Defines the `align-items` style property.\n * Support breakpoints\n */\n@Input() alignItems: any\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() direction: Direction\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() justify: Justify\n/**\n * Defines the space between the component with the `item` attribute.\n * Support breakpoints\n */\n@Input() spacing: any\n@Input() spacingX: any\n@Input() spacingY: any"
+      "children": "/**\n * Defines the `align-items` style property.\n * Support breakpoints\n */\n@Input() alignItems: any\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() direction: any\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() justify: any\n/**\n * Defines the space between the component with the `item` attribute.\n * Support breakpoints\n */\n@Input() spacing: any\n@Input() spacingX: any\n@Input() spacingY: any"
     },
     {
       "name": "LyGridItem",

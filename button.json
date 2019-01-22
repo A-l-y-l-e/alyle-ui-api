@@ -13,7 +13,7 @@
         "shadowColor",
         "disableRipple"
       ],
-      "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void"
+      "children": "/** Button appearance */\n@Input() appearance: any\n/** Button size */\n@Input() size: any\nfocus(): void"
     },
     {
       "name": "LyButton",
@@ -28,7 +28,7 @@
         "shadowColor",
         "disableRipple"
       ],
-      "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void"
+      "children": "/** Button appearance */\n@Input() appearance: any\n/** Button size */\n@Input() size: any\nfocus(): void"
     }
   ],
   "directiveList": [],
