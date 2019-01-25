@@ -1096,11 +1096,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-01-23T08:22:38.263Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-01-25T08:22:27.102Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.0.8-nightly.20190123-jr8x7q9l\""
+        "children": "const AUI_VERSION = \"2.0.8-nightly.20190125-jrbs36zj\""
       }
     ],
     "functionList": [],
