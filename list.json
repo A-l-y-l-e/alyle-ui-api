@@ -2,36 +2,32 @@
   "componentList": [
     {
       "name": "LyListItem",
-      "selector": "ly-list-item, a[ly-list-item], button[ly-list-item]",
-      "inputs": [
-        "bg",
-        "color",
-        "raised",
-        "disabled",
-        "outlined",
-        "elevation",
-        "shadowColor",
-        "disableRipple"
-      ],
-      "exportAs": "lyListItem",
+      "selector": "'ly-list-item, a[ly-list-item], button[ly-list-item]'",
+      "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+      "exportAs": "'lyListItem'",
       "children": ""
     }
   ],
   "directiveList": [
     {
       "name": "LyLine",
-      "selector": "[ly-line]",
+      "selector": "'[ly-line]'",
+      "inputs": "",
+      "exportAs": "",
       "children": ""
     },
     {
       "name": "LyList",
-      "selector": "ly-list",
-      "exportAs": "lyList",
+      "selector": "'ly-list'",
+      "inputs": "",
+      "exportAs": "'lyList'",
       "children": ""
     },
     {
       "name": "LyListIcon",
-      "selector": "[ly-list-icon]",
+      "selector": "'[ly-list-icon]'",
+      "inputs": "",
+      "exportAs": "",
       "children": "/** Disable extra padding */\n@Input() disablePadding: any"
     }
   ],

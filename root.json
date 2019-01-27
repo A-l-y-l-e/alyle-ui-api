@@ -2,33 +2,32 @@
   "componentList": [
     {
       "name": "LyOverlayBackdrop",
-      "selector": "ly-overlay-backdrop",
+      "selector": "'ly-overlay-backdrop'",
+      "inputs": "",
+      "exportAs": "",
       "children": "onclick(): void"
     }
   ],
   "directiveList": [
     {
       "name": "NgTranscludeDirective",
-      "selector": "[ngTransclude]",
+      "selector": "'[ngTransclude]'",
+      "inputs": "",
+      "exportAs": "",
       "children": "getNgTransclude: any\n@Input() ngTransclude: any"
     },
     {
       "name": "LyPaper",
-      "selector": "ly-paper, [ly-paper], [ly-text]",
-      "inputs": [
-        "bg",
-        "color",
-        "raised",
-        "outlined",
-        "elevation",
-        "shadowColor",
-        "disableRipple"
-      ],
+      "selector": "`ly-paper, [ly-paper], [ly-text]`",
+      "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+      "exportAs": "",
       "children": "@Input('ly-text') hasText: any"
     },
     {
       "name": "LyWithClass",
-      "selector": "[withClass]",
+      "selector": "'[withClass]'",
+      "inputs": "",
+      "exportAs": "",
       "children": "@Input() withClass: any"
     }
   ],
@@ -67,7 +66,7 @@
     },
     {
       "name": "CanDisable",
-      "children": "interface CanDisable {\n  disabled: string\n}"
+      "children": "interface CanDisable {\n  disabled: boolean\n}"
     },
     {
       "name": "CanElevation",
@@ -120,6 +119,10 @@
     {
       "name": "RippleConfig",
       "children": "interface RippleConfig {\n  centered: undefined | false | true,\n  disabled: undefined | false | true,\n  percentageToIncrease: undefined | number,\n  radius: 'containerSize' | number,\n  sensitive: undefined | false | true\n}"
+    },
+    {
+      "name": "SelectionOpts",
+      "children": "interface SelectionOpts {\n  getKey: undefined | any,\n  multiple: undefined | true,\n  /**\n * Initially selected values\n * Note: if `multiple` === `true` then `selecteds` should be of type `T[]`\n * else it should be of type `T`\n */\n  selecteds: any | any\n}"
     },
     {
       "name": "DataStyle",
@@ -208,6 +211,10 @@
       "children": "const DEFAULT_COLOR = \"primary\""
     },
     {
+      "name": "DEFAULT_TAB_INDEX",
+      "children": "const DEFAULT_TAB_INDEX = 0"
+    },
+    {
       "name": "BACKDROP_STYLES",
       "children": "const BACKDROP_STYLES = ({\n  backdrop: {\n    pointerEvents: 'all',\n    userSelect: 'none'\n  }\n})"
     },
@@ -293,11 +300,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2019-01-26T08:22:26.419Z\""
+      "children": "const AUI_LAST_UPDATE = \"2019-01-27T08:22:32.401Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"2.0.8-nightly.20190126-jrd7j14k\""
+      "children": "const AUI_VERSION = \"2.0.8-nightly.20190127-jremz0er\""
     }
   ],
   "functionList": [],
@@ -370,7 +377,7 @@
     },
     {
       "name": "LyFocusState",
-      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyFocusState {\n  listen(element: HTMLElement | ElementRef, keyElement?: HTMLElement | ElementRef): void\n  unlisten(element: HTMLElement | ElementRef): void\n}"
+      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyFocusState {\n  focusElement(element: HTMLElement | ElementRef, origin: FocusState, options: FocusOptions): void\n  listen(element: HTMLElement | ElementRef, keyElement?: HTMLElement | ElementRef): void\n  unlisten(element: HTMLElement | ElementRef): void\n}"
     },
     {
       "name": "LyHammerGestureConfig",

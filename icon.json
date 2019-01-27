@@ -3,15 +3,9 @@
   "directiveList": [
     {
       "name": "LyIcon",
-      "selector": "ly-icon",
-      "inputs": [
-        "bg",
-        "color",
-        "raised",
-        "outlined",
-        "elevation",
-        "shadowColor"
-      ],
+      "selector": "'ly-icon'",
+      "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n  ]",
+      "exportAs": "",
       "children": "@Input() fontIcon: any\n@Input() fontSet: any\n@Input() icon: any"
     }
   ],

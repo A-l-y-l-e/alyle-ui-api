@@ -2,16 +2,16 @@
   "componentList": [
     {
       "name": "LyRadio",
-      "selector": "ly-radio",
-      "inputs": [
-        "disableRipple"
-      ],
+      "selector": "'ly-radio'",
+      "inputs": "[\n    'disableRipple'\n  ]",
+      "exportAs": "",
       "children": "@Output() change: EventEmitter\n@Input() checked: any\n@Input() color: any\n@Input() disabled: any\n@Input() value: any"
     },
     {
       "name": "LyRadioGroup",
-      "selector": "ly-radio-group",
-      "exportAs": "lyRadioGroup",
+      "selector": "'ly-radio-group'",
+      "inputs": "",
+      "exportAs": "'lyRadioGroup'",
       "children": "@Output() change: EventEmitter\n@Input() color: string\n@Input() value: any"
     }
   ],

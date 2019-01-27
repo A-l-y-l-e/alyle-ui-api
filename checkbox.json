@@ -2,11 +2,9 @@
   "componentList": [
     {
       "name": "LyCheckbox",
-      "selector": "ly-checkbox",
-      "inputs": [
-        "disableRipple"
-      ],
-      "exportAs": "lyCheckbox",
+      "selector": "'ly-checkbox'",
+      "inputs": "[\n    'disableRipple'\n  ]",
+      "exportAs": "'lyCheckbox'",
       "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: any\n@Input() color: any\n@Input() disabled: any\n@Input() required: any\n/** Toggles the `checked` state of the checkbox. */\ntoggle(): void"
     }
   ],

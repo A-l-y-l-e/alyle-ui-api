@@ -3,12 +3,16 @@
   "directiveList": [
     {
       "name": "ThemeMinimaDark",
-      "selector": "[ly-theme-minima-dark]",
+      "selector": "'[ly-theme-minima-dark]'",
+      "inputs": "",
+      "exportAs": "",
       "children": ""
     },
     {
       "name": "ThemeMinimaLight",
-      "selector": "[ly-theme-minima-light]",
+      "selector": "'[ly-theme-minima-light]'",
+      "inputs": "",
+      "exportAs": "",
       "children": ""
     }
   ],

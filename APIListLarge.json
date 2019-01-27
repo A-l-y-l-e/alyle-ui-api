@@ -4,15 +4,9 @@
     "directiveList": [
       {
         "name": "LyAvatar",
-        "selector": "ly-avatar",
-        "inputs": [
-          "bg",
-          "color",
-          "raised",
-          "outlined",
-          "elevation",
-          "shadowColor"
-        ],
+        "selector": "'ly-avatar'",
+        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n  ]",
+        "exportAs": "",
         "children": "@Input() size: any"
       }
     ],
@@ -42,16 +36,9 @@
     "directiveList": [
       {
         "name": "LyBadge",
-        "selector": "ly-badge, [lyBadge]",
-        "inputs": [
-          "bg",
-          "color",
-          "raised",
-          "disabled",
-          "outlined",
-          "elevation",
-          "shadowColor"
-        ],
+        "selector": "'ly-badge, [lyBadge]'",
+        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor'\n  ]",
+        "exportAs": "",
         "children": "/** The content for the badge */\n@Input('lyBadge') content: any\n/** The color of the badge */\n@Input() lyBadgeBg: any\n/** The position for the badge */\n@Input('lyBadgePosition') position: any"
       }
     ],
@@ -80,32 +67,16 @@
     "componentList": [
       {
         "name": "LyAnchor",
-        "selector": "a[ly-button]",
-        "inputs": [
-          "bg",
-          "color",
-          "raised",
-          "disabled",
-          "outlined",
-          "elevation",
-          "shadowColor",
-          "disableRipple"
-        ],
+        "selector": "'a[ly-button]'",
+        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+        "exportAs": "",
         "children": "/** Button appearance */\n@Input() appearance: any\n/** Button size */\n@Input() size: any\nfocus(): void"
       },
       {
         "name": "LyButton",
-        "selector": "button[ly-button]",
-        "inputs": [
-          "bg",
-          "color",
-          "raised",
-          "disabled",
-          "outlined",
-          "elevation",
-          "shadowColor",
-          "disableRipple"
-        ],
+        "selector": "'button[ly-button]'",
+        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+        "exportAs": "",
         "children": "/** Button appearance */\n@Input() appearance: any\n/** Button size */\n@Input() size: any\nfocus(): void"
       }
     ],
@@ -142,31 +113,30 @@
     "directiveList": [
       {
         "name": "LyCard",
-        "selector": "ly-card",
-        "inputs": [
-          "bg",
-          "color",
-          "raised",
-          "outlined",
-          "elevation",
-          "shadowColor",
-          "disableRipple"
-        ],
+        "selector": "'ly-card'",
+        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple',\n  ]",
+        "exportAs": "",
         "children": ""
       },
       {
         "name": "LyCardActions",
-        "selector": "ly-card-actions",
+        "selector": "'ly-card-actions'",
+        "inputs": "",
+        "exportAs": "",
         "children": "@Input() disableActionSpacing: boolean"
       },
       {
         "name": "LyCardContent",
-        "selector": "ly-card-content",
+        "selector": "'ly-card-content'",
+        "inputs": "",
+        "exportAs": "",
         "children": ""
       },
       {
         "name": "LyCardMedia",
-        "selector": "ly-card-media",
+        "selector": "'ly-card-media'",
+        "inputs": "",
+        "exportAs": "",
         "children": "@Input() bgImg: any\n/** Aspect ratio */\n@Input() ratio: any"
       }
     ],
@@ -191,14 +161,18 @@
     "componentList": [
       {
         "name": "LyCarousel",
-        "selector": "ly-carousel",
+        "selector": "'ly-carousel'",
+        "inputs": "",
+        "exportAs": "",
         "children": "@Input() interval: number\n@ContentChildren() lyItems: QueryList\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() touch: any\nnext(notResetInterval?: undefined | false | true): void\nprev(): void\nstop(): void"
       }
     ],
     "directiveList": [
       {
         "name": "LyCarouselItem",
-        "selector": "ly-carousel-item",
+        "selector": "'ly-carousel-item'",
+        "inputs": "",
+        "exportAs": "",
         "children": "@Input() srcImg: any"
       }
     ],
@@ -219,11 +193,9 @@
     "componentList": [
       {
         "name": "LyCheckbox",
-        "selector": "ly-checkbox",
-        "inputs": [
-          "disableRipple"
-        ],
-        "exportAs": "lyCheckbox",
+        "selector": "'ly-checkbox'",
+        "inputs": "[\n    'disableRipple'\n  ]",
+        "exportAs": "'lyCheckbox'",
         "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: any\n@Input() color: any\n@Input() disabled: any\n@Input() required: any\n/** Toggles the `checked` state of the checkbox. */\ntoggle(): void"
       }
     ],
@@ -255,7 +227,9 @@
     "directiveList": [
       {
         "name": "LyDivider",
-        "selector": "ly-divider",
+        "selector": "'ly-divider'",
+        "inputs": "",
+        "exportAs": "",
         "children": "/** Add indentation (72px) */\n@Input() inset: any"
       }
     ],
@@ -270,20 +244,25 @@
     "componentList": [
       {
         "name": "LyDrawer",
-        "selector": "ly-drawer",
-        "exportAs": "lyDrawer",
+        "selector": "'ly-drawer'",
+        "inputs": "",
+        "exportAs": "'lyDrawer'",
         "children": "@Input() height: any\n@Input() mode: LyDrawerMode\n@Input() spacingAbove: any\n@Input() spacingAfter: any\n@Input() spacingBefore: any\n@Input() spacingBelow: any\n@Input() width: any\n@Input() hasBackdrop: any\n@Input() opened: any\n@Input() position: any\ntoggle(): void"
       }
     ],
     "directiveList": [
       {
         "name": "LyDrawerContainer",
-        "selector": "ly-drawer-container",
+        "selector": "'ly-drawer-container'",
+        "inputs": "",
+        "exportAs": "",
         "children": ""
       },
       {
         "name": "LyDrawerContent",
-        "selector": "ly-drawer-content",
+        "selector": "'ly-drawer-content'",
+        "inputs": "",
+        "exportAs": "",
         "children": ""
       }
     ],
@@ -330,46 +309,60 @@
     "componentList": [
       {
         "name": "LyField",
-        "selector": "ly-field",
-        "exportAs": "lyFormField",
+        "selector": "'ly-field'",
+        "inputs": "",
+        "exportAs": "'lyFormField'",
         "children": "@Input() persistentHint: boolean\n/** The field appearance style. */\n@Input() appearance: any\n/** Theme color for the component. */\n@Input() color: any\nerrorState: any\n/** Whether the label is floating. */\n@Input() floatingLabel: any\n@Input() fullWidth: any\nonFocus(): void"
       }
     ],
     "directiveList": [
       {
         "name": "LyError",
-        "selector": "ly-error",
+        "selector": "'ly-error'",
+        "inputs": "",
+        "exportAs": "",
         "children": "classes: any"
       },
       {
         "name": "LyNativeControl",
-        "selector": "input[lyInput], textarea[lyInput], input[lyNativeControl], textarea[lyNativeControl]",
-        "exportAs": "LyNativeControl",
-        "children": "errorState: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: any\n@Input() placeholder: any\n@HostBinding() @Input() required: any\n/** Focuses the input. */\nfocus(): void"
+        "selector": "'input[lyInput], textarea[lyInput], input[lyNativeControl], textarea[lyNativeControl], select[lyNativeControl]'",
+        "inputs": "",
+        "exportAs": "'LyNativeControl'",
+        "children": "errorState: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: any\nempty: any\nfloatingLabel: any\nfocused: any\n@Input() placeholder: any\n@HostBinding() @Input() required: any\n/** Focuses the input. */\nfocus(): void"
       },
       {
         "name": "LyHint",
-        "selector": "ly-field > ly-hint",
+        "selector": "'ly-field > ly-hint'",
+        "inputs": "",
+        "exportAs": "",
         "children": "classes: any\n@Input() align: any"
       },
       {
         "name": "LyLabel",
-        "selector": "ly-field > ly-label",
+        "selector": "'ly-field > ly-label'",
+        "inputs": "",
+        "exportAs": "",
         "children": ""
       },
       {
         "name": "LyPlaceholder",
-        "selector": "ly-field > ly-placeholder",
+        "selector": "'ly-field > ly-placeholder'",
+        "inputs": "",
+        "exportAs": "",
         "children": ""
       },
       {
         "name": "LyPrefix",
-        "selector": "[lyPrefix]",
+        "selector": "'[lyPrefix]'",
+        "inputs": "",
+        "exportAs": "",
         "children": ""
       },
       {
         "name": "LySuffix",
-        "selector": "[lySuffix]",
+        "selector": "'[lySuffix]'",
+        "inputs": "",
+        "exportAs": "",
         "children": ""
       }
     ],
@@ -399,6 +392,7 @@
         "children": "const STYLE_PRIORITY = -2"
       }
     ],
+    "classList": [],
     "ngModuleList": [
       {
         "name": "LyFieldModule",
@@ -417,12 +411,16 @@
     "directiveList": [
       {
         "name": "LyGrid",
-        "selector": "ly-grid[container]",
+        "selector": "'ly-grid[container]'",
+        "inputs": "",
+        "exportAs": "",
         "children": "/**\n * Defines the `align-items` style property.\n * Support breakpoints\n */\n@Input() alignItems: any\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() direction: any\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() justify: any\n/**\n * Defines the space between the component with the `item` attribute.\n * Support breakpoints\n */\n@Input() spacing: any\n@Input() spacingX: any\n@Input() spacingY: any"
       },
       {
         "name": "LyGridItem",
-        "selector": "ly-grid[item]",
+        "selector": "'ly-grid[item]'",
+        "inputs": "",
+        "exportAs": "",
         "children": "/**\n * Defines the number of grids\n * Support breakpoints\n */\n@Input() col: any\n/**\n * Defines the order style property.\n * Support breakpoints\n */\n@Input() order: any"
       }
     ],
@@ -458,15 +456,9 @@
     "directiveList": [
       {
         "name": "LyIcon",
-        "selector": "ly-icon",
-        "inputs": [
-          "bg",
-          "color",
-          "raised",
-          "outlined",
-          "elevation",
-          "shadowColor"
-        ],
+        "selector": "'ly-icon'",
+        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n  ]",
+        "exportAs": "",
         "children": "@Input() fontIcon: any\n@Input() fontSet: any\n@Input() icon: any"
       }
     ],
@@ -507,36 +499,32 @@
     "componentList": [
       {
         "name": "LyListItem",
-        "selector": "ly-list-item, a[ly-list-item], button[ly-list-item]",
-        "inputs": [
-          "bg",
-          "color",
-          "raised",
-          "disabled",
-          "outlined",
-          "elevation",
-          "shadowColor",
-          "disableRipple"
-        ],
-        "exportAs": "lyListItem",
+        "selector": "'ly-list-item, a[ly-list-item], button[ly-list-item]'",
+        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+        "exportAs": "'lyListItem'",
         "children": ""
       }
     ],
     "directiveList": [
       {
         "name": "LyLine",
-        "selector": "[ly-line]",
+        "selector": "'[ly-line]'",
+        "inputs": "",
+        "exportAs": "",
         "children": ""
       },
       {
         "name": "LyList",
-        "selector": "ly-list",
-        "exportAs": "lyList",
+        "selector": "'ly-list'",
+        "inputs": "",
+        "exportAs": "'lyList'",
         "children": ""
       },
       {
         "name": "LyListIcon",
-        "selector": "[ly-list-icon]",
+        "selector": "'[ly-list-icon]'",
+        "inputs": "",
+        "exportAs": "",
         "children": "/** Disable extra padding */\n@Input() disablePadding: any"
       }
     ],
@@ -561,20 +549,25 @@
     "componentList": [
       {
         "name": "LyMenu",
-        "selector": "ly-menu",
-        "exportAs": "lyMenu",
+        "selector": "'ly-menu'",
+        "inputs": "",
+        "exportAs": "'lyMenu'",
         "children": "@HostBinding() menuLeave2: any\n/** Position where the menu will be placed. */\n@Input() placement: Placement\n@Input() ref: LyMenuTriggerFor\n/** The x-axis position of the menu. */\n@Input() xPosition: XPosition\n/** The y-axis position of the menu. */\n@Input() yPosition: YPosition\nendAnimation(e: any): void"
       }
     ],
     "directiveList": [
       {
         "name": "LyMenuItem",
-        "selector": "[ly-menu-item]",
+        "selector": "'[ly-menu-item]'",
+        "inputs": "",
+        "exportAs": "",
         "children": ""
       },
       {
         "name": "LyMenuTriggerFor",
-        "selector": "[lyMenuTriggerFor]",
+        "selector": "'[lyMenuTriggerFor]'",
+        "inputs": "",
+        "exportAs": "",
         "children": "@Input() lyMenuTriggerFor: TemplateRef\ndestroy(): void\ndetach(): void"
       }
     ],
@@ -607,16 +600,16 @@
     "componentList": [
       {
         "name": "LyRadio",
-        "selector": "ly-radio",
-        "inputs": [
-          "disableRipple"
-        ],
+        "selector": "'ly-radio'",
+        "inputs": "[\n    'disableRipple'\n  ]",
+        "exportAs": "",
         "children": "@Output() change: EventEmitter\n@Input() checked: any\n@Input() color: any\n@Input() disabled: any\n@Input() value: any"
       },
       {
         "name": "LyRadioGroup",
-        "selector": "ly-radio-group",
-        "exportAs": "lyRadioGroup",
+        "selector": "'ly-radio-group'",
+        "inputs": "",
+        "exportAs": "'lyRadioGroup'",
         "children": "@Output() change: EventEmitter\n@Input() color: string\n@Input() value: any"
       }
     ],
@@ -648,7 +641,9 @@
     "componentList": [
       {
         "name": "LyResizingCroppingImages",
-        "selector": "ly-img-cropper, ly-cropping",
+        "selector": "'ly-img-cropper, ly-cropping'",
+        "inputs": "",
+        "exportAs": "",
         "children": "/** On crop new image */\n@Output() cropped: EventEmitter\n/** Emit an error when the loaded image is not valid */\n@Output() error: EventEmitter\nisCropped: boolean\n/** When is loaded image & ready for crop */\nisLoaded: boolean\n/** On loaded new image */\n@Output() loaded: EventEmitter\n@Output() scaleChange: EventEmitter\n@Input() config: any\n/** Get min scale */\nminScale: any\n/** Set scale */\n@Input() scale: any\ncenter(): void\n/** Clean the img cropper */\nclean(): void\n/**\n * Crop Image\n * Resizing & cropping image\n */\ncrop(config?: ImgCropperConfig): void\nfit(): void\n/** Ajustar a la pantalla */\nfitToScreen(): void\nrotate(degrees: number): void\nselectInputEvent(img: Event): void\n/** Load Image from URL */\nsetImageUrl(src: string, fn?: undefined | any): void\n/** Set the size of the image, the values can be 0 between 1, where 1 is the original size */\nsetScale(size?: undefined | number, noAutoCrop?: undefined | false | true): void\nupdatePosition(x?: undefined | number, y?: undefined | number): void\n/** + */\nzoomIn(): void\n/** - */\nzoomOut(): void"
       }
     ],
@@ -695,7 +690,9 @@
     "directiveList": [
       {
         "name": "MediaDirective",
-        "selector": "[lyShow], [lyHide]",
+        "selector": "'[lyShow], [lyHide]'",
+        "inputs": "",
+        "exportAs": "",
         "children": "/** Hides the item when the value is resolved as true */\n@Input() lyHide: any\n/** Shows the item when the value is resolved as true */\n@Input() lyShow: any"
       }
     ],
@@ -753,13 +750,49 @@
     "directiveList": [],
     "functionList": []
   },
+  "select": {
+    "componentList": [
+      {
+        "name": "LyOption",
+        "selector": "'ly-option'",
+        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+        "exportAs": "",
+        "children": "isSelected: any\n/** Tracks simple string values bound to the option element. */\n@Input('value') value: any\n/** The displayed value of the option. */\nviewValue: any\nselect(): void\ntoggle(): void"
+      },
+      {
+        "name": "LySelect",
+        "selector": "'ly-select'",
+        "inputs": "['tabIndex']",
+        "exportAs": "'lySelect'",
+        "children": "errorState: boolean\n@ContentChildren() options: QueryList\nstateChanges: Subject\n@ViewChild() templateRef: TemplateRef\n/** Whether the input is disabled. */\n@Input() disabled: any\nempty: any\nfloatingLabel: any\nfocused: any\n@Input() multiple: any\n@Input() placeholder: any\n@Input() required: any\n/** Current selecteds */\nselected: any\n/** The value displayed in the trigger. */\ntriggerValue: any\n@Input() valueKey: any\nclose(): void\n/** Focuses the input. */\nfocus(): void\n/** The registered callback function called when a change event occurs on the input element. */\nonChange(_: any): void\n/** The registered callback function called when a blur event occurs on the input element. */\nonTouched(): void\nopen(): void\n/** Registers a function called when the control value changes. */\nregisterOnChange(fn: any): void\n/** Registers a function called when the control is touched. */\nregisterOnTouched(fn: any): void\n/**\n * Disables the select. Part of the ControlValueAccessor interface required\n * to integrate with Angular's core forms API.\n */\nsetDisabledState(isDisabled: boolean): void\n/** Sets the \"value\" property on the input element. */\nwriteValue(value: any): void"
+      }
+    ],
+    "directiveList": [],
+    "variableList": [
+      {
+        "name": "DEFAULT_DISABLE_RIPPLE",
+        "children": "const DEFAULT_DISABLE_RIPPLE = false"
+      },
+      {
+        "name": "STYLE_PRIORITY",
+        "children": "const STYLE_PRIORITY = -2"
+      }
+    ],
+    "ngModuleList": [
+      {
+        "name": "LySelectModule",
+        "children": "import { LySelectModule } from '@alyle/ui/select'"
+      }
+    ]
+  },
   "snack-bar": {
     "componentList": [],
     "directiveList": [
       {
         "name": "LySnackBar",
-        "selector": "ng-template[ly-snack-bar]",
-        "exportAs": "lySnackBar",
+        "selector": "'ng-template[ly-snack-bar]'",
+        "inputs": "",
+        "exportAs": "'lySnackBar'",
         "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: any\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\n/** Dismiss snackBar */\ndismiss(): void\nopen(): void"
       }
     ],
@@ -805,33 +838,32 @@
     "componentList": [
       {
         "name": "LyOverlayBackdrop",
-        "selector": "ly-overlay-backdrop",
+        "selector": "'ly-overlay-backdrop'",
+        "inputs": "",
+        "exportAs": "",
         "children": "onclick(): void"
       }
     ],
     "directiveList": [
       {
         "name": "NgTranscludeDirective",
-        "selector": "[ngTransclude]",
+        "selector": "'[ngTransclude]'",
+        "inputs": "",
+        "exportAs": "",
         "children": "getNgTransclude: any\n@Input() ngTransclude: any"
       },
       {
         "name": "LyPaper",
-        "selector": "ly-paper, [ly-paper], [ly-text]",
-        "inputs": [
-          "bg",
-          "color",
-          "raised",
-          "outlined",
-          "elevation",
-          "shadowColor",
-          "disableRipple"
-        ],
+        "selector": "`ly-paper, [ly-paper], [ly-text]`",
+        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+        "exportAs": "",
         "children": "@Input('ly-text') hasText: any"
       },
       {
         "name": "LyWithClass",
-        "selector": "[withClass]",
+        "selector": "'[withClass]'",
+        "inputs": "",
+        "exportAs": "",
         "children": "@Input() withClass: any"
       }
     ],
@@ -870,7 +902,7 @@
       },
       {
         "name": "CanDisable",
-        "children": "interface CanDisable {\n  disabled: string\n}"
+        "children": "interface CanDisable {\n  disabled: boolean\n}"
       },
       {
         "name": "CanElevation",
@@ -923,6 +955,10 @@
       {
         "name": "RippleConfig",
         "children": "interface RippleConfig {\n  centered: undefined | false | true,\n  disabled: undefined | false | true,\n  percentageToIncrease: undefined | number,\n  radius: 'containerSize' | number,\n  sensitive: undefined | false | true\n}"
+      },
+      {
+        "name": "SelectionOpts",
+        "children": "interface SelectionOpts {\n  getKey: undefined | any,\n  multiple: undefined | true,\n  /**\n * Initially selected values\n * Note: if `multiple` === `true` then `selecteds` should be of type `T[]`\n * else it should be of type `T`\n */\n  selecteds: any | any\n}"
       },
       {
         "name": "DataStyle",
@@ -1011,6 +1047,10 @@
         "children": "const DEFAULT_COLOR = \"primary\""
       },
       {
+        "name": "DEFAULT_TAB_INDEX",
+        "children": "const DEFAULT_TAB_INDEX = 0"
+      },
+      {
         "name": "BACKDROP_STYLES",
         "children": "const BACKDROP_STYLES = ({\n  backdrop: {\n    pointerEvents: 'all',\n    userSelect: 'none'\n  }\n})"
       },
@@ -1096,11 +1136,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-01-26T08:22:26.419Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-01-27T08:22:32.401Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.0.8-nightly.20190126-jrd7j14k\""
+        "children": "const AUI_VERSION = \"2.0.8-nightly.20190127-jremz0er\""
       }
     ],
     "functionList": [],
@@ -1173,7 +1213,7 @@
       },
       {
         "name": "LyFocusState",
-        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyFocusState {\n  listen(element: HTMLElement | ElementRef, keyElement?: HTMLElement | ElementRef): void\n  unlisten(element: HTMLElement | ElementRef): void\n}"
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyFocusState {\n  focusElement(element: HTMLElement | ElementRef, origin: FocusState, options: FocusOptions): void\n  listen(element: HTMLElement | ElementRef, keyElement?: HTMLElement | ElementRef): void\n  unlisten(element: HTMLElement | ElementRef): void\n}"
       },
       {
         "name": "LyHammerGestureConfig",
@@ -1255,40 +1295,32 @@
     "componentList": [
       {
         "name": "LyTab",
-        "selector": "ly-tab",
+        "selector": "'ly-tab'",
+        "inputs": "",
+        "exportAs": "",
         "children": "/** Current tab index */\nindex: number"
       },
       {
         "name": "LyTabLabel",
-        "selector": "button[ly-tab-label]",
-        "inputs": [
-          "bg",
-          "color",
-          "raised",
-          "disabled",
-          "outlined",
-          "elevation",
-          "shadowColor",
-          "disableRipple"
-        ],
+        "selector": "'button[ly-tab-label]'",
+        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+        "exportAs": "",
         "children": "/** Button appearance */\n@Input() appearance: any\n/** Button size */\n@Input() size: any\nfocus(): void"
       },
       {
         "name": "LyTabs",
-        "selector": "ly-tabs",
-        "inputs": [
-          "bg",
-          "elevation",
-          "shadowColor"
-        ],
-        "exportAs": "lyTabs",
+        "selector": "'ly-tabs'",
+        "inputs": "[\n    'bg', 'elevation', 'shadowColor'\n  ]",
+        "exportAs": "'lyTabs'",
         "children": "@Output() selectedIndexChange: EventEmitter\n@Input() selectedIndexOnChange: any\n@ViewChild() tabContents: ElementRef\n@ViewChild() tabsIndicator: ElementRef\n@ContentChildren() tabsList: QueryList\n@ViewChild() tabsRef: ElementRef\n@Input() alignTabs: any\n@Input() headerPlacement: any\n@Input() indicatorColor: any\n@Input() scrollable: any\n@Input() selectedIndex: any\n@Input() textColor: any\nloadTemplate(tab: LyTab, index: number): void"
       }
     ],
     "directiveList": [
       {
         "name": "LyTabContent",
-        "selector": "[ly-tab-content]",
+        "selector": "'[ly-tab-content]'",
+        "inputs": "",
+        "exportAs": "",
         "children": "template: TemplateRef"
       }
     ],
@@ -1346,12 +1378,16 @@
     "directiveList": [
       {
         "name": "ThemeMinimaDark",
-        "selector": "[ly-theme-minima-dark]",
+        "selector": "'[ly-theme-minima-dark]'",
+        "inputs": "",
+        "exportAs": "",
         "children": ""
       },
       {
         "name": "ThemeMinimaLight",
-        "selector": "[ly-theme-minima-light]",
+        "selector": "'[ly-theme-minima-light]'",
+        "inputs": "",
+        "exportAs": "",
         "children": ""
       }
     ],
@@ -1393,15 +1429,9 @@
     "directiveList": [
       {
         "name": "LyToolbar",
-        "selector": "ly-toolbar",
-        "inputs": [
-          "bg",
-          "color",
-          "raised",
-          "outlined",
-          "elevation",
-          "shadowColor"
-        ],
+        "selector": "'ly-toolbar'",
+        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor'\n  ]",
+        "exportAs": "",
         "children": "@Input() position: any"
       }
     ],
@@ -1431,8 +1461,9 @@
     "directiveList": [
       {
         "name": "LyTooltip",
-        "selector": "[lyTooltip]",
-        "exportAs": "lyTooltip",
+        "selector": "'[lyTooltip]'",
+        "inputs": "",
+        "exportAs": "'lyTooltip'",
         "children": "@Input() lyTooltipHideDelay: number\n@Input() lyTooltipShowDelay: number\n@Input() placement: Placement\n@Input() xPosition: XPosition\n@Input() yPosition: YPosition\n@Input('lyTooltip') tooltip: any\nhide(delay?: undefined | number): void\nshow(delay?: undefined | number): void\ntoggle(): void"
       }
     ],
@@ -1458,7 +1489,9 @@
     "directiveList": [
       {
         "name": "LyTypography",
-        "selector": "[lyTyp]",
+        "selector": "`[lyTyp]`",
+        "inputs": "",
+        "exportAs": "",
         "children": "@Input() gutter: any\n@Input() gutterBottom: any\n@Input() gutterTop: any\n@Input() lyTyp: any\n/** The text will truncate with an ellipsis. */\n@Input() noWrap: any"
       }
     ],

@@ -3,7 +3,9 @@
   "directiveList": [
     {
       "name": "LyTypography",
-      "selector": "[lyTyp]",
+      "selector": "`[lyTyp]`",
+      "inputs": "",
+      "exportAs": "",
       "children": "@Input() gutter: any\n@Input() gutterBottom: any\n@Input() gutterTop: any\n@Input() lyTyp: any\n/** The text will truncate with an ellipsis. */\n@Input() noWrap: any"
     }
   ],

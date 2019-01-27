@@ -322,6 +322,10 @@
         "type": "Object literal"
       },
       {
+        "name": "LyFieldControlBase",
+        "type": "Class"
+      },
+      {
         "name": "LyFieldModule",
         "type": "NgModule"
       },
@@ -775,6 +779,58 @@
       }
     ]
   },
+  "select": {
+    "children": [
+      {
+        "name": "LyOption",
+        "type": "Component"
+      },
+      {
+        "name": "LyOptionBase",
+        "type": "Class"
+      },
+      {
+        "name": "LySelect",
+        "type": "Component"
+      },
+      {
+        "name": "LySelectBase",
+        "type": "Class"
+      },
+      {
+        "name": "ANIMATIONS",
+        "type": "Variable"
+      },
+      {
+        "name": "DEFAULT_DISABLE_RIPPLE",
+        "type": "Variable"
+      },
+      {
+        "name": "LyOptionMixinBase",
+        "type": "Variable"
+      },
+      {
+        "name": "LySelectMixinBase",
+        "type": "Variable"
+      },
+      {
+        "name": "STYLE_PRIORITY",
+        "type": "Variable"
+      },
+      {
+        "name": "getValue",
+        "type": "Function"
+      },
+      {
+        "name": "same",
+        "type": "Function"
+      },
+      {
+        "name": "LySelectModule",
+        "type": "NgModule"
+      }
+    ]
+  },
   "snack-bar": {
     "children": [
       {
@@ -906,6 +962,10 @@
         "type": "Interface"
       },
       {
+        "name": "CanDisableCtor",
+        "type": "Type alias"
+      },
+      {
         "name": "mixinDisabled",
         "type": "Function"
       },
@@ -939,6 +999,22 @@
       },
       {
         "name": "mixinShadowColor",
+        "type": "Function"
+      },
+      {
+        "name": "HasTabIndex",
+        "type": "Interface"
+      },
+      {
+        "name": "HasTabIndexCtor",
+        "type": "Type alias"
+      },
+      {
+        "name": "DEFAULT_TAB_INDEX",
+        "type": "Variable"
+      },
+      {
+        "name": "mixinTabIndex",
         "type": "Function"
       },
       {
@@ -1160,6 +1236,18 @@
       {
         "name": "LyRippleService",
         "type": "Injectable"
+      },
+      {
+        "name": "LySelectionModel",
+        "type": "Class"
+      },
+      {
+        "name": "SelectionOpts",
+        "type": "Interface"
+      },
+      {
+        "name": "same",
+        "type": "Function"
       },
       {
         "name": "Shadows",

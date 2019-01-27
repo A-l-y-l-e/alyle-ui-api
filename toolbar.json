@@ -3,15 +3,9 @@
   "directiveList": [
     {
       "name": "LyToolbar",
-      "selector": "ly-toolbar",
-      "inputs": [
-        "bg",
-        "color",
-        "raised",
-        "outlined",
-        "elevation",
-        "shadowColor"
-      ],
+      "selector": "'ly-toolbar'",
+      "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor'\n  ]",
+      "exportAs": "",
       "children": "@Input() position: any"
     }
   ],

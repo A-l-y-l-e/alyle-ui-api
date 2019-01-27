@@ -2,46 +2,60 @@
   "componentList": [
     {
       "name": "LyField",
-      "selector": "ly-field",
-      "exportAs": "lyFormField",
+      "selector": "'ly-field'",
+      "inputs": "",
+      "exportAs": "'lyFormField'",
       "children": "@Input() persistentHint: boolean\n/** The field appearance style. */\n@Input() appearance: any\n/** Theme color for the component. */\n@Input() color: any\nerrorState: any\n/** Whether the label is floating. */\n@Input() floatingLabel: any\n@Input() fullWidth: any\nonFocus(): void"
     }
   ],
   "directiveList": [
     {
       "name": "LyError",
-      "selector": "ly-error",
+      "selector": "'ly-error'",
+      "inputs": "",
+      "exportAs": "",
       "children": "classes: any"
     },
     {
       "name": "LyNativeControl",
-      "selector": "input[lyInput], textarea[lyInput], input[lyNativeControl], textarea[lyNativeControl]",
-      "exportAs": "LyNativeControl",
-      "children": "errorState: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: any\n@Input() placeholder: any\n@HostBinding() @Input() required: any\n/** Focuses the input. */\nfocus(): void"
+      "selector": "'input[lyInput], textarea[lyInput], input[lyNativeControl], textarea[lyNativeControl], select[lyNativeControl]'",
+      "inputs": "",
+      "exportAs": "'LyNativeControl'",
+      "children": "errorState: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: any\nempty: any\nfloatingLabel: any\nfocused: any\n@Input() placeholder: any\n@HostBinding() @Input() required: any\n/** Focuses the input. */\nfocus(): void"
     },
     {
       "name": "LyHint",
-      "selector": "ly-field > ly-hint",
+      "selector": "'ly-field > ly-hint'",
+      "inputs": "",
+      "exportAs": "",
       "children": "classes: any\n@Input() align: any"
     },
     {
       "name": "LyLabel",
-      "selector": "ly-field > ly-label",
+      "selector": "'ly-field > ly-label'",
+      "inputs": "",
+      "exportAs": "",
       "children": ""
     },
     {
       "name": "LyPlaceholder",
-      "selector": "ly-field > ly-placeholder",
+      "selector": "'ly-field > ly-placeholder'",
+      "inputs": "",
+      "exportAs": "",
       "children": ""
     },
     {
       "name": "LyPrefix",
-      "selector": "[lyPrefix]",
+      "selector": "'[lyPrefix]'",
+      "inputs": "",
+      "exportAs": "",
       "children": ""
     },
     {
       "name": "LySuffix",
-      "selector": "[lySuffix]",
+      "selector": "'[lySuffix]'",
+      "inputs": "",
+      "exportAs": "",
       "children": ""
     }
   ],
@@ -71,6 +85,7 @@
       "children": "const STYLE_PRIORITY = -2"
     }
   ],
+  "classList": [],
   "ngModuleList": [
     {
       "name": "LyFieldModule",

@@ -3,8 +3,9 @@
   "directiveList": [
     {
       "name": "LySnackBar",
-      "selector": "ng-template[ly-snack-bar]",
-      "exportAs": "lySnackBar",
+      "selector": "'ng-template[ly-snack-bar]'",
+      "inputs": "",
+      "exportAs": "'lySnackBar'",
       "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: any\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\n/** Dismiss snackBar */\ndismiss(): void\nopen(): void"
     }
   ],

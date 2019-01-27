@@ -2,20 +2,25 @@
   "componentList": [
     {
       "name": "LyMenu",
-      "selector": "ly-menu",
-      "exportAs": "lyMenu",
+      "selector": "'ly-menu'",
+      "inputs": "",
+      "exportAs": "'lyMenu'",
       "children": "@HostBinding() menuLeave2: any\n/** Position where the menu will be placed. */\n@Input() placement: Placement\n@Input() ref: LyMenuTriggerFor\n/** The x-axis position of the menu. */\n@Input() xPosition: XPosition\n/** The y-axis position of the menu. */\n@Input() yPosition: YPosition\nendAnimation(e: any): void"
     }
   ],
   "directiveList": [
     {
       "name": "LyMenuItem",
-      "selector": "[ly-menu-item]",
+      "selector": "'[ly-menu-item]'",
+      "inputs": "",
+      "exportAs": "",
       "children": ""
     },
     {
       "name": "LyMenuTriggerFor",
-      "selector": "[lyMenuTriggerFor]",
+      "selector": "'[lyMenuTriggerFor]'",
+      "inputs": "",
+      "exportAs": "",
       "children": "@Input() lyMenuTriggerFor: TemplateRef\ndestroy(): void\ndetach(): void"
     }
   ],

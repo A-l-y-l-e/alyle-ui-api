@@ -3,7 +3,9 @@
   "directiveList": [
     {
       "name": "LyDivider",
-      "selector": "ly-divider",
+      "selector": "'ly-divider'",
+      "inputs": "",
+      "exportAs": "",
       "children": "/** Add indentation (72px) */\n@Input() inset: any"
     }
   ],

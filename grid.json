@@ -3,12 +3,16 @@
   "directiveList": [
     {
       "name": "LyGrid",
-      "selector": "ly-grid[container]",
+      "selector": "'ly-grid[container]'",
+      "inputs": "",
+      "exportAs": "",
       "children": "/**\n * Defines the `align-items` style property.\n * Support breakpoints\n */\n@Input() alignItems: any\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() direction: any\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() justify: any\n/**\n * Defines the space between the component with the `item` attribute.\n * Support breakpoints\n */\n@Input() spacing: any\n@Input() spacingX: any\n@Input() spacingY: any"
     },
     {
       "name": "LyGridItem",
-      "selector": "ly-grid[item]",
+      "selector": "'ly-grid[item]'",
+      "inputs": "",
+      "exportAs": "",
       "children": "/**\n * Defines the number of grids\n * Support breakpoints\n */\n@Input() col: any\n/**\n * Defines the order style property.\n * Support breakpoints\n */\n@Input() order: any"
     }
   ],

@@ -3,31 +3,30 @@
   "directiveList": [
     {
       "name": "LyCard",
-      "selector": "ly-card",
-      "inputs": [
-        "bg",
-        "color",
-        "raised",
-        "outlined",
-        "elevation",
-        "shadowColor",
-        "disableRipple"
-      ],
+      "selector": "'ly-card'",
+      "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple',\n  ]",
+      "exportAs": "",
       "children": ""
     },
     {
       "name": "LyCardActions",
-      "selector": "ly-card-actions",
+      "selector": "'ly-card-actions'",
+      "inputs": "",
+      "exportAs": "",
       "children": "@Input() disableActionSpacing: boolean"
     },
     {
       "name": "LyCardContent",
-      "selector": "ly-card-content",
+      "selector": "'ly-card-content'",
+      "inputs": "",
+      "exportAs": "",
       "children": ""
     },
     {
       "name": "LyCardMedia",
-      "selector": "ly-card-media",
+      "selector": "'ly-card-media'",
+      "inputs": "",
+      "exportAs": "",
       "children": "@Input() bgImg: any\n/** Aspect ratio */\n@Input() ratio: any"
     }
   ],
