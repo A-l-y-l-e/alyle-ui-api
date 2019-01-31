@@ -637,11 +637,15 @@
         "selector": "'ly-img-cropper, ly-cropping'",
         "inputs": "",
         "exportAs": "",
-        "children": "/** On crop new image */\n@Output() cropped: EventEmitter\n/** Emit an error when the loaded image is not valid */\n@Output() error: EventEmitter\nisCropped: boolean\n/** When is loaded image & ready for crop */\nisLoaded: boolean\n/** On loaded new image */\n@Output() loaded: EventEmitter\n@Output() scaleChange: EventEmitter\n@Input() config: any\n/** Get min scale */\nminScale: any\n/** Set scale */\n@Input() scale: any\ncenter(): void\n/** Clean the img cropper */\nclean(): void\n/**\n * Crop Image\n * Resizing & cropping image\n */\ncrop(config?: ImgCropperConfig): void\nfit(): void\n/** Ajustar a la pantalla */\nfitToScreen(): void\nrotate(degrees: number): void\nselectInputEvent(img: Event): void\n/** Load Image from URL */\nsetImageUrl(src: string, fn?: undefined | any): void\n/** Set the size of the image, the values can be 0 between 1, where 1 is the original size */\nsetScale(size?: undefined | number, noAutoCrop?: undefined | false | true): void\nupdatePosition(x?: undefined | number, y?: undefined | number): void\n/** + */\nzoomIn(): void\n/** - */\nzoomOut(): void"
+        "children": "/** On crop new image */\n@Output() cropped: EventEmitter\n/** Emit an error when the loaded image is not valid */\n@Output() error: EventEmitter\nisCropped: boolean\n/** When is loaded image & ready for crop */\nisLoaded: boolean\n/** On loaded new image */\n@Output() loaded: EventEmitter\n/**\n * Emit event `error` if the file size for the limit.\n * Note: It only works when the image is received from the `<input>` event.\n */\n@Input() maxFileSize: number\n@Output() scaleChange: EventEmitter\n@Input() config: any\n/** Get min scale */\nminScale: any\n/** Set scale */\n@Input() scale: any\ncenter(): void\n/** Clean the img cropper */\nclean(): void\n/**\n * Crop Image\n * Resizing & cropping image\n */\ncrop(config?: ImgCropperConfig): void\nfit(): void\n/** Ajustar a la pantalla */\nfitToScreen(): void\nrotate(degrees: number): void\nselectInputEvent(img: Event): void\n/** Load Image from URL */\nsetImageUrl(src: string, fn?: undefined | any): void\n/** Set the size of the image, the values can be 0 between 1, where 1 is the original size */\nsetScale(size?: undefined | number, noAutoCrop?: undefined | false | true): void\nupdatePosition(x?: undefined | number, y?: undefined | number): void\n/** + */\nzoomIn(): void\n/** - */\nzoomOut(): void"
       }
     ],
     "directiveList": [],
     "enumerationList": [
+      {
+        "name": "ImgCropperError",
+        "children": "enum ImgCropperError {\n  /** The loaded image exceeds the size limit set. */\n  Size,\n  /** The file loaded is not image. */\n  Type\n}"
+      },
       {
         "name": "ImgResolution",
         "children": "enum ImgResolution {\n  /** Resizing & cropping */\n  Default,\n  /** Only cropping */\n  OriginalImage\n}"
@@ -650,11 +654,15 @@
     "interfaceList": [
       {
         "name": "ImgCropperConfig",
-        "children": "interface ImgCropperConfig {\n  /** Set anti-aliased( default: true) */\n  antiAliased: undefined | false | true,\n  autoCrop: undefined | false | true,\n  /** Background color( default: null), if is null in png is transparent but not in jpg */\n  fill: string | null,\n  /** Cropper area height */\n  height: number,\n  output: ImgOutput | ImgResolution,\n  /** If this is not defined, the new image will be automatically defined */\n  type: undefined | string,\n  /** Cropper area width */\n  width: number\n}"
+        "children": "interface ImgCropperConfig {\n  /** Set anti-aliased( default: true) */\n  antiAliased: undefined | false | true,\n  autoCrop: undefined | false | true,\n  /** Background color( default: null), if is null in png is transparent but not in jpg. */\n  fill: string | null,\n  /** Cropper area height */\n  height: number,\n  /**\n * Emit event `error` if the file size for the limit.\n * Note: It only works when the image is received from the `<input>` event.\n */\n  maxFileSize: number | null,\n  output: ImgOutput | ImgResolution,\n  /** If this is not defined, the new image will be automatically defined. */\n  type: undefined | string,\n  /** Cropper area width */\n  width: number\n}"
+      },
+      {
+        "name": "ImgCropperErrorEvent",
+        "children": "interface ImgCropperErrorEvent {\n  /** Cropped image data URL */\n  dataURL: undefined | string,\n  /** Type of error */\n  error: ImgCropperError,\n  height: undefined | number,\n  name: string | null,\n  /** Original Image data URL */\n  originalDataURL: undefined | string,\n  position: undefined | any,\n  /** Current rotation in degrees */\n  rotation: undefined | number,\n  scale: undefined | number,\n  /** Size of the image in bytes */\n  size: undefined | number,\n  /** Filetype */\n  type: undefined | string,\n  width: undefined | number\n}"
       },
       {
         "name": "ImgCropperEvent",
-        "children": "interface ImgCropperEvent {\n  /** Cropped image data URL */\n  dataURL: undefined | string,\n  height: undefined | number,\n  name: string,\n  /** Original Image data URL */\n  originalDataURL: undefined | string,\n  position: undefined | any,\n  /** Current rotation in degrees */\n  rotation: undefined | number,\n  scale: undefined | number,\n  /** Filetype */\n  type: undefined | string,\n  width: undefined | number\n}"
+        "children": "interface ImgCropperEvent {\n  /** Cropped image data URL */\n  dataURL: undefined | string,\n  height: undefined | number,\n  name: string | null,\n  /** Original Image data URL */\n  originalDataURL: undefined | string,\n  position: undefined | any,\n  /** Current rotation in degrees */\n  rotation: undefined | number,\n  scale: undefined | number,\n  /** Size of the image in bytes */\n  size: undefined | number,\n  /** Filetype */\n  type: undefined | string,\n  width: undefined | number\n}"
       },
       {
         "name": "ImgOutput",
@@ -1129,11 +1137,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-01-31T18:02:42.110Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-01-31T21:25:20.754Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.1.2-nightly.20190131-jrkxgif3\""
+        "children": "const AUI_VERSION = \"2.1.2\""
       }
     ],
     "functionList": [],

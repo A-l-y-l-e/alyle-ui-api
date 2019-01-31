@@ -574,6 +574,10 @@
   "resizing-cropping-images": {
     "children": [
       {
+        "name": "ImgCropperError",
+        "type": "Enumeration"
+      },
+      {
         "name": "ImgResolution",
         "type": "Enumeration"
       },
@@ -583,6 +587,10 @@
       },
       {
         "name": "ImgCropperConfig",
+        "type": "Interface"
+      },
+      {
+        "name": "ImgCropperErrorEvent",
         "type": "Interface"
       },
       {
