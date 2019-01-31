@@ -1129,11 +1129,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-01-31T00:25:42.165Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-01-31T08:22:41.861Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.1.1\""
+        "children": "const AUI_VERSION = \"2.1.2-nightly.20190131-jrkcqmdj\""
       }
     ],
     "functionList": [],
