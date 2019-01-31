@@ -66,15 +66,8 @@
   "button": {
     "componentList": [
       {
-        "name": "LyAnchor",
-        "selector": "'a[ly-button]'",
-        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
-        "exportAs": "",
-        "children": "/** Button appearance */\n@Input() appearance: any\n/** Button size */\n@Input() size: any\nfocus(): void"
-      },
-      {
         "name": "LyButton",
-        "selector": "'button[ly-button]'",
+        "selector": "'button[ly-button], a[ly-button]'",
         "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
         "exportAs": "",
         "children": "/** Button appearance */\n@Input() appearance: any\n/** Button size */\n@Input() size: any\nfocus(): void"
@@ -1136,11 +1129,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-01-30T08:22:29.748Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-01-31T00:25:42.165Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.1.1-nightly.20190130-jrixaid2\""
+        "children": "const AUI_VERSION = \"2.1.1\""
       }
     ],
     "functionList": [],

@@ -70,10 +70,6 @@
   "button": {
     "children": [
       {
-        "name": "LyAnchor",
-        "type": "Component"
-      },
-      {
         "name": "LyButton",
         "type": "Component"
       },
