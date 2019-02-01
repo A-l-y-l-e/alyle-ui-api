@@ -6,7 +6,7 @@
       "selector": "'ly-toolbar'",
       "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor'\n  ]",
       "exportAs": "",
-      "children": "@Input() position: any"
+      "children": "@Input() dense: any\n@Input() position: any"
     }
   ],
   "variableList": [
