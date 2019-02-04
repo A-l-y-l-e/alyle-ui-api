@@ -1062,6 +1062,18 @@
         "type": "Variable"
       },
       {
+        "name": "STYLES_BACKDROP_TRANSPARENT",
+        "type": "Variable"
+      },
+      {
+        "name": "chroma",
+        "type": "Variable"
+      },
+      {
+        "name": "STYLES_BACKDROP_DEFAULT",
+        "type": "Function"
+      },
+      {
         "name": "LyOverlayModule",
         "type": "NgModule"
       },
