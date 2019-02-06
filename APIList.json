@@ -1822,6 +1822,14 @@
         "type": "Directive"
       },
       {
+        "name": "LyTypographyBase",
+        "type": "Class"
+      },
+      {
+        "name": "LyTypographyMixinBase",
+        "type": "Variable"
+      },
+      {
         "name": "STYLE_PRIORITY",
         "type": "Variable"
       },

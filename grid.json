@@ -10,10 +10,10 @@
     },
     {
       "name": "LyGridItem",
-      "selector": "'ly-grid[item]'",
+      "selector": "'ly-grid[item], [ly-grid-item], [lyGridItem]'",
       "inputs": "",
       "exportAs": "",
-      "children": "/**\n * Defines the number of grids\n * Support breakpoints\n */\n@Input() col: any\n/**\n * Defines the order style property.\n * Support breakpoints\n */\n@Input() order: any"
+      "children": "/**\n * Defines the number of grids\n * Support breakpoints\n */\n@Input() col: any\n@Input('lyGridItem') gridItemCol: any\n/**\n * Defines the order style property.\n * Support breakpoints\n */\n@Input() order: any"
     }
   ],
   "typeAliasList": [
