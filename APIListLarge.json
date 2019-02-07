@@ -215,6 +215,67 @@
       }
     ]
   },
+  "dialog": {
+    "componentList": [
+      {
+        "name": "LyDialogContainer",
+        "selector": "'ly-dialog-container'",
+        "inputs": "",
+        "exportAs": "",
+        "children": ""
+      }
+    ],
+    "directiveList": [
+      {
+        "name": "LyDialogActions",
+        "selector": "'ly-dialog-actions, [ly-dialog-actions], [lyDialogActions]'",
+        "inputs": "",
+        "exportAs": "'lyDialogActions'",
+        "children": ""
+      },
+      {
+        "name": "LyDialogContent",
+        "selector": "'ly-dialog-content, [ly-dialog-content], [lyDialogContent]'",
+        "inputs": "",
+        "exportAs": "'lyDialogContent'",
+        "children": ""
+      },
+      {
+        "name": "LyDialogTitle",
+        "selector": "'[ly-dialog-title], [lyDialogTitle]'",
+        "inputs": "",
+        "exportAs": "'lyDialogTitle'",
+        "children": ""
+      }
+    ],
+    "injectableList": [
+      {
+        "name": "LyDialog",
+        "children": "@Injectable()\nclass LyDialog {\n  open(componentOrTemplateRef: Type | TemplateRef, config?: LyDialogConfig): void\n}"
+      },
+      {
+        "name": "LyDialogRef",
+        "children": "@Injectable()\nclass LyDialogRef {\n  afterClosed: any\n  afterOpened: any\n  beforeClosed: any\n  close(result?: any): void\n}"
+      }
+    ],
+    "classList": [],
+    "variableList": [
+      {
+        "name": "STYLE_PRIORITY",
+        "children": "const STYLE_PRIORITY = -2"
+      },
+      {
+        "name": "LY_DIALOG_DATA",
+        "children": "const LY_DIALOG_DATA = new InjectionToken('LyDialogData')"
+      }
+    ],
+    "ngModuleList": [
+      {
+        "name": "LyDialogModule",
+        "children": "import { LyDialogModule } from '@alyle/ui/dialog'"
+      }
+    ]
+  },
   "divider": {
     "componentList": [],
     "directiveList": [
@@ -922,10 +983,6 @@
         "children": "interface CanShadowColor {\n  shadowColor: string\n}"
       },
       {
-        "name": "OverlayFromTemplateRef",
-        "children": "interface OverlayFromTemplateRef {\n  containerElement: HTMLDivElement,\n  /** Detach & remove */\n  destroy: any,\n  /** Detaches a view from dirty checking again of ApplicationRef. */\n  detach: any,\n  /** Function that will be called on scroll or resize event */\n  onResizeScroll: any | null,\n  /** Remove element of DOM */\n  remove: any\n}"
-      },
-      {
         "name": "FocusStateInfo",
         "children": "interface FocusStateInfo {\n  subject: Subject,\n  unlisten: any\n}"
       },
@@ -1052,12 +1109,16 @@
         "children": "const DEFAULT_TAB_INDEX = 0"
       },
       {
-        "name": "BACKDROP_STYLES",
-        "children": "const BACKDROP_STYLES = ({\n  backdrop: {\n    pointerEvents: 'all',\n    userSelect: 'none'\n  }\n})"
+        "name": "STYLES_BACKDROP_ROOT",
+        "children": "const STYLES_BACKDROP_ROOT = ({\n  ...LY_COMMON_STYLES.fill,\n  width: '100vw',\n  height: '100vh',\n  pointerEvents: 'all',\n  userSelect: 'none'\n})"
       },
       {
-        "name": "STYLES_BACKDROP_TRANSPARENT",
-        "children": "const STYLES_BACKDROP_TRANSPARENT = ({\n  pointerEvents: 'all',\n  userSelect: 'none',\n})"
+        "name": "STYLE_PRIORITY",
+        "children": "const STYLE_PRIORITY = -2"
+      },
+      {
+        "name": "STYLES_BACKDROP_DARK",
+        "children": "const STYLES_BACKDROP_DARK = ({\n  backgroundColor: 'rgba(0,0,0,.32)'\n})"
       },
       {
         "name": "HAMMER_GESTURES_EVENTS",
@@ -1141,11 +1202,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-02-06T08:22:32.188Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-02-07T06:21:45.408Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.1.3-nightly.20190206-jrsxdiwt\""
+        "children": "const AUI_VERSION = \"2.3.0\""
       }
     ],
     "functionList": [],
@@ -1187,8 +1248,8 @@
         "children": "type ThemeVariables = any"
       },
       {
-        "name": "StyleContainerFn",
-        "children": "/** StyleContainer or fn that return StyleContainer */\ntype StyleContainerFn = any | StyleContainer | string | null | undefined"
+        "name": "StyleDeclarationsBlock",
+        "children": "/** CSS declarations block */\ntype StyleDeclarationsBlock = any | StyleContainer | string | null | undefined"
       }
     ],
     "injectableList": [
@@ -1202,11 +1263,11 @@
       },
       {
         "name": "LyOverlay",
-        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlay {\n  create(templateOrComponent: Type | TemplateRef | string, context?: any, config?: OverlayConfig): void\n}"
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlay {\n  create(templateOrComponent: Type | TemplateRef | string, context?: any, config?: LyOverlayConfig): void\n}"
       },
       {
         "name": "LyOverlayContainer",
-        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlayContainer {\n  containerElement: any\n}"
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlayContainer {\n  containerElement: any\n  overlayLen: any\n}"
       },
       {
         "name": "WinResize",
@@ -1238,13 +1299,14 @@
       },
       {
         "name": "LyTheme2",
-        "children": "@Injectable()\nclass LyTheme2 {\n  config: ThemeVariables\n  core: CoreTheme\n  elements: Map\n  initialTheme: string\n  /** Get Theme Variables */\n  variables: any\n  /**\n   * Create a simple style\n   * return className\n   */\n  addSimpleStyle(id: string, css: StyleContainer | any, priority?: undefined | number, parentStyle?: Styles): void\n  /** Add a new dynamic style, use only within @Input() */\n  addStyle(id: string, style?: StyleContainerFn, el?: any, instance?: string | null, priority?: number | null, parentStyle?: Styles): void\n  /** Add new add a new style sheet */\n  addStyleSheet(styles: any, priority?: undefined | number): void\n  requestAnimationFrame(fn: any): void\n  setTheme(nam: string): void\n  setUpTheme(themeName: string): void\n  /** Create basic style */\n  style(style: StyleContainerFn, priority?: number | null, parentStyle?: Styles): void\n  /** Toggle right-to-left/left-to-right */\n  toggleDirection(): void\n  updateClass(element: any, renderer: Renderer2, newClass: string, oldClass?: undefined | string): void\n}"
+        "children": "@Injectable()\nclass LyTheme2 {\n  config: ThemeVariables\n  core: CoreTheme\n  elements: Map\n  initialTheme: string\n  /** Get Theme Variables */\n  variables: any\n  /**\n   * Create a simple style\n   * return className\n   */\n  addSimpleStyle(id: string, css: StyleContainer | any, priority?: undefined | number, parentStyle?: Styles): void\n  /** Add a new dynamic style, use only within @Input() */\n  addStyle(id: string, style?: StyleDeclarationsBlock, el?: any, instance?: string | null, priority?: number | null, parentStyle?: Styles): void\n  /** Add new add a new style sheet */\n  addStyleSheet(styles: any, priority?: undefined | number): void\n  requestAnimationFrame(fn: any): void\n  setTheme(nam: string): void\n  setUpTheme(themeName: string): void\n  /** Create basic style */\n  style(style: StyleDeclarationsBlock, priority?: number | null, parentStyle?: Styles): void\n  /** Toggle right-to-left/left-to-right */\n  toggleDirection(): void\n  updateClass(element: any, renderer: Renderer2, newClass: string, oldClass?: undefined | string): void\n}"
       },
       {
         "name": "StylesInDocument",
         "children": "@Injectable({\n  providedIn: 'root'\n})\nclass StylesInDocument {\n  styleContainers: Map\n  styleElementGlobalMap: Map\n  styles: any\n}"
       }
     ],
+    "classList": [],
     "ngModuleList": [
       {
         "name": "LyOverlayModule",
@@ -1293,7 +1355,6 @@
         "children": "enum DirPosition {\n  left = \"left\",\n  right = \"right\"\n}"
       }
     ],
-    "classList": [],
     "objectLiteralList": []
   },
   "tabs": {
