@@ -158,6 +158,18 @@
         "type": "Directive"
       },
       {
+        "name": "DEFAULT_AUTOPLAY",
+        "type": "Variable"
+      },
+      {
+        "name": "DEFAULT_HAS_PROGRESS_BAR",
+        "type": "Variable"
+      },
+      {
+        "name": "DEFAULT_INTERVAL",
+        "type": "Variable"
+      },
+      {
         "name": "STYLE_PRIORITY",
         "type": "Variable"
       },
@@ -236,6 +248,10 @@
       {
         "name": "LyDialogContainer",
         "type": "Component"
+      },
+      {
+        "name": "LyDialogContext",
+        "type": "Class"
       },
       {
         "name": "STYLE_PRIORITY",

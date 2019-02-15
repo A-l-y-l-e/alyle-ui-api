@@ -157,7 +157,7 @@
         "selector": "'ly-carousel'",
         "inputs": "",
         "exportAs": "",
-        "children": "@Input() interval: number\n@ContentChildren() lyItems: QueryList\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() touch: any\nnext(notResetInterval?: undefined | false | true): void\nprev(): void\nstop(): void"
+        "children": "@Input() interval: number\n@ContentChildren() lyItems: QueryList\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() autoplay: any\n@Input() hasProgressBar: any\n@Input() touch: any\nnext(notResetInterval?: undefined | false | true): void\nprev(): void\nstop(): void"
       }
     ],
     "directiveList": [
@@ -170,6 +170,18 @@
       }
     ],
     "variableList": [
+      {
+        "name": "DEFAULT_AUTOPLAY",
+        "children": "const DEFAULT_AUTOPLAY = true"
+      },
+      {
+        "name": "DEFAULT_HAS_PROGRESS_BAR",
+        "children": "const DEFAULT_HAS_PROGRESS_BAR = false"
+      },
+      {
+        "name": "DEFAULT_INTERVAL",
+        "children": "const DEFAULT_INTERVAL = 7000"
+      },
       {
         "name": "STYLE_PRIORITY",
         "children": "const STYLE_PRIORITY = -2"
@@ -1202,11 +1214,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-02-13T06:39:59.735Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-02-15T08:08:51.446Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.3.2-nightly.20190213-js2tsmbd\""
+        "children": "const AUI_VERSION = \"2.3.2\""
       }
     ],
     "functionList": [],
