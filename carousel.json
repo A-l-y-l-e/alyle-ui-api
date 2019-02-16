@@ -5,7 +5,7 @@
       "selector": "'ly-carousel'",
       "inputs": "",
       "exportAs": "",
-      "children": "@Input() interval: number\n@ContentChildren() lyItems: QueryList\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() autoplay: any\n@Input() hasProgressBar: any\n@Input() touch: any\nnext(notResetInterval?: undefined | false | true): void\nprev(): void\nstop(): void"
+      "children": "@ContentChildren() lyItems: QueryList\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() autoplay: any\n@Input() hasProgressBar: any\n@Input() interval: any\n@Input() touch: any\nnext(notResetInterval?: undefined | false | true): void\nprev(): void\nstop(): void"
     }
   ],
   "directiveList": [
