@@ -304,11 +304,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2019-03-03T08:22:26.050Z\""
+      "children": "const AUI_LAST_UPDATE = \"2019-03-04T08:22:22.798Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"2.3.3-nightly.20190303-jssndouc\""
+      "children": "const AUI_VERSION = \"2.3.3-nightly.20190304-jsu2th00\""
     }
   ],
   "functionList": [],
