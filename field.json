@@ -83,6 +83,10 @@
     {
       "name": "STYLE_PRIORITY",
       "children": "const STYLE_PRIORITY = -2"
+    },
+    {
+      "name": "STYLE_SELECT_ARROW",
+      "children": "const STYLE_SELECT_ARROW = ({\n  '&:after': {\n    position: 'absolute',\n    content: `\\'\\'`,\n    width: 0,\n    height: 0,\n    borderLeft: '0.3125em solid transparent',\n    borderRight: '0.3125em solid transparent',\n    borderTop: '0.3125em solid',\n    top: '50%',\n    after: 0,\n    marginTop: '-0.15625em',\n    pointerEvents: 'none'\n  }\n})"
     }
   ],
   "classList": [],

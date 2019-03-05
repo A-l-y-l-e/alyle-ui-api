@@ -456,6 +456,10 @@
       {
         "name": "STYLE_PRIORITY",
         "children": "const STYLE_PRIORITY = -2"
+      },
+      {
+        "name": "STYLE_SELECT_ARROW",
+        "children": "const STYLE_SELECT_ARROW = ({\n  '&:after': {\n    position: 'absolute',\n    content: `\\'\\'`,\n    width: 0,\n    height: 0,\n    borderLeft: '0.3125em solid transparent',\n    borderRight: '0.3125em solid transparent',\n    borderTop: '0.3125em solid',\n    top: '50%',\n    after: 0,\n    marginTop: '-0.15625em',\n    pointerEvents: 'none'\n  }\n})"
       }
     ],
     "classList": [],
@@ -1214,11 +1218,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-03-04T08:22:22.798Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-03-05T08:22:21.705Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.3.3-nightly.20190304-jsu2th00\""
+        "children": "const AUI_VERSION = \"2.3.3-nightly.20190305-jsvi9atn\""
       }
     ],
     "functionList": [],
@@ -1307,7 +1311,7 @@
       },
       {
         "name": "CoreTheme",
-        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass CoreTheme {\n  firstElement: HTMLElement\n  mediaStyleContainer: HTMLElement\n  primaryStyleContainer: HTMLElement\n  renderer: Renderer2\n  secondaryStyleContainer: HTMLElement\n  themes: Set\n  /** add new theme */\n  add(theme: ThemeVariables): void\n  get(name: string): void\n  getStyleMap(name: string): void\n  updateClassName(element: any, renderer: Renderer2, newClassname: string, oldClassname?: undefined | string): void\n}"
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass CoreTheme {\n  firstElement: HTMLElement\n  mediaStyleContainer: HTMLElement\n  primaryStyleContainer: HTMLElement\n  renderer: Renderer2\n  secondaryStyleContainer: HTMLElement\n  themes: Set\n  /** add new theme */\n  add(theme: ThemeVariables): void\n  get(name: string): void\n  getStyleMap(name: string): void\n  hasTheme(theme: ThemeVariables | string): void\n  updateClassName(element: any, renderer: Renderer2, newClassname: string, oldClassname?: undefined | string): void\n}"
       },
       {
         "name": "LyTheme2",

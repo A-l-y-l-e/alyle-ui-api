@@ -442,6 +442,10 @@
         "type": "Directive"
       },
       {
+        "name": "STYLE_SELECT_ARROW",
+        "type": "Variable"
+      },
+      {
         "name": "LySuffix",
         "type": "Directive"
       }
