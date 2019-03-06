@@ -14,12 +14,12 @@
       "selector": "'[ngTransclude]'",
       "inputs": "",
       "exportAs": "",
-      "children": "getNgTransclude: any\n@Input() ngTransclude: any"
+      "children": "getNgTransclude: null | TemplateRef\n@Input() ngTransclude: any"
     },
     {
       "name": "LyPaper",
       "selector": "`ly-paper, [ly-paper], [ly-text]`",
-      "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+      "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\",\n  \"disableRipple\"\n]",
       "exportAs": "",
       "children": "@Input('ly-text') hasText: any"
     },
@@ -304,11 +304,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2019-03-05T08:22:21.705Z\""
+      "children": "const AUI_LAST_UPDATE = \"2019-03-06T01:56:31.722Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"2.3.3-nightly.20190305-jsvi9atn\""
+      "children": "const AUI_VERSION = \"2.5.0\""
     }
   ],
   "functionList": [],
@@ -369,7 +369,7 @@
     },
     {
       "name": "LyOverlayContainer",
-      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlayContainer {\n  containerElement: any\n  overlayLen: any\n}"
+      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlayContainer {\n  containerElement: HTMLElement\n  overlayLen: number\n}"
     },
     {
       "name": "WinResize",
@@ -401,7 +401,7 @@
     },
     {
       "name": "LyTheme2",
-      "children": "@Injectable()\nclass LyTheme2 {\n  config: ThemeVariables\n  core: CoreTheme\n  elements: Map\n  initialTheme: string\n  /** Get Theme Variables */\n  variables: any\n  /**\n   * Create a simple style\n   * return className\n   */\n  addSimpleStyle(id: string, css: StyleContainer | any, priority?: undefined | number, parentStyle?: Styles): void\n  /** Add a new dynamic style, use only within @Input() */\n  addStyle(id: string, style?: StyleDeclarationsBlock, el?: any, instance?: string | null, priority?: number | null, parentStyle?: Styles): void\n  /** Add new add a new style sheet */\n  addStyleSheet(styles: any, priority?: undefined | number): void\n  requestAnimationFrame(fn: any): void\n  setTheme(nam: string): void\n  setUpTheme(themeName: string): void\n  /** Create basic style */\n  style(style: StyleDeclarationsBlock, priority?: number | null, parentStyle?: Styles): void\n  /** Toggle right-to-left/left-to-right */\n  toggleDirection(): void\n  updateClass(element: any, renderer: Renderer2, newClass: string, oldClass?: undefined | string): void\n}"
+      "children": "@Injectable()\nclass LyTheme2 {\n  config: ThemeVariables\n  core: CoreTheme\n  elements: Map\n  initialTheme: string\n  /** Get Theme Variables */\n  variables: ThemeVariables\n  /**\n   * Create a simple style\n   * return className\n   */\n  addSimpleStyle(id: string, css: StyleContainer | any, priority?: undefined | number, parentStyle?: Styles): void\n  /** Add a new dynamic style, use only within @Input() */\n  addStyle(id: string, style?: StyleDeclarationsBlock, el?: any, instance?: string | null, priority?: number | null, parentStyle?: Styles): void\n  /** Add new add a new style sheet */\n  addStyleSheet(styles: any, priority?: undefined | number): void\n  requestAnimationFrame(fn: any): void\n  setTheme(nam: string): void\n  setUpTheme(themeName: string): void\n  /** Create basic style */\n  style(style: StyleDeclarationsBlock, priority?: number | null, parentStyle?: Styles): void\n  /** Toggle right-to-left/left-to-right */\n  toggleDirection(): void\n  updateClass(element: any, renderer: Renderer2, newClass: string, oldClass?: undefined | string): void\n}"
     },
     {
       "name": "StylesInDocument",

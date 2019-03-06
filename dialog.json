@@ -38,7 +38,7 @@
     },
     {
       "name": "LyDialogRef",
-      "children": "@Injectable()\nclass LyDialogRef {\n  afterClosed: any\n  afterOpened: any\n  beforeClosed: any\n  close(result?: any): void\n}"
+      "children": "@Injectable()\nclass LyDialogRef {\n  afterClosed: Observable\n  afterOpened: Observable\n  beforeClosed: Observable\n  close(result?: any): void\n}"
     }
   ],
   "classList": [],

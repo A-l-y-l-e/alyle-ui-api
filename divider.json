@@ -6,7 +6,7 @@
       "selector": "'ly-divider'",
       "inputs": "",
       "exportAs": "",
-      "children": "/** Add indentation (72px) */\n@Input() inset: any"
+      "children": "/** Add indentation (72px) */\n@Input() inset: boolean"
     }
   ],
   "ngModuleList": [

@@ -5,9 +5,9 @@
       {
         "name": "LyAvatar",
         "selector": "'ly-avatar'",
-        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n  ]",
+        "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\"\n]",
         "exportAs": "",
-        "children": "@Input() size: any"
+        "children": "@Input() size: number"
       }
     ],
     "variableList": [
@@ -37,9 +37,9 @@
       {
         "name": "LyBadge",
         "selector": "'ly-badge, [lyBadge]'",
-        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor'\n  ]",
+        "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"disabled\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\"\n]",
         "exportAs": "",
-        "children": "/** The content for the badge */\n@Input('lyBadge') content: any\n/** The color of the badge */\n@Input() lyBadgeBg: any\n/** The position for the badge */\n@Input('lyBadgePosition') position: any"
+        "children": "/** The content for the badge */\n@Input('lyBadge') content: string | number\n/** The color of the badge */\n@Input() lyBadgeBg: string\n/** The position for the badge */\n@Input('lyBadgePosition') position: string"
       }
     ],
     "variableList": [
@@ -68,9 +68,9 @@
       {
         "name": "LyButton",
         "selector": "'button[ly-button], a[ly-button]'",
-        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+        "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"disabled\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\",\n  \"disableRipple\"\n]",
         "exportAs": "",
-        "children": "/** Button appearance */\n@Input() appearance: any\n/** Button size */\n@Input() size: any\nfocus(): void"
+        "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void"
       }
     ],
     "directiveList": [],
@@ -107,7 +107,7 @@
       {
         "name": "LyCard",
         "selector": "'ly-card'",
-        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple',\n  ]",
+        "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\",\n  \"disableRipple\"\n]",
         "exportAs": "",
         "children": ""
       },
@@ -130,7 +130,7 @@
         "selector": "'ly-card-media'",
         "inputs": "",
         "exportAs": "",
-        "children": "@Input() bgImg: any\n/** Aspect ratio */\n@Input() ratio: any"
+        "children": "@Input() bgImg: string\n/** Aspect ratio */\n@Input() ratio: string"
       }
     ],
     "variableList": [
@@ -157,7 +157,7 @@
         "selector": "'ly-carousel'",
         "inputs": "",
         "exportAs": "",
-        "children": "@ContentChildren() lyItems: QueryList\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() autoplay: any\n@Input() hasProgressBar: any\n@Input() interval: any\n@Input() touch: any\nnext(notResetInterval?: undefined | false | true): void\nprev(): void\nstop(): void"
+        "children": "@ContentChildren() lyItems: QueryList\n@Input() selectedIndex: number\n@ViewChild() slideContainer: ElementRef\n@Input() autoplay: boolean\n@Input() hasProgressBar: boolean\n@Input() interval: number\n@Input() touch: boolean\nnext(notResetInterval?: undefined | false | true): void\nprev(): void\nstop(): void"
       }
     ],
     "directiveList": [
@@ -199,9 +199,9 @@
       {
         "name": "LyCheckbox",
         "selector": "'ly-checkbox'",
-        "inputs": "[\n    'disableRipple'\n  ]",
+        "inputs": "[\n  \"disableRipple\"\n]",
         "exportAs": "'lyCheckbox'",
-        "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: any\n@Input() color: any\n@Input() disabled: any\n@Input() required: any\n/** Toggles the `checked` state of the checkbox. */\ntoggle(): void"
+        "children": "/** Event emitted when the checkbox's `checked` value changes. */\n@Output() change: EventEmitter\n/** The value attribute of the native input element */\n@Input() value: string\n/** Whether the checkbox is checked. */\n@Input() checked: boolean\n@Input() color: string\n@Input() disabled: boolean\n@Input() required: boolean\n/** Toggles the `checked` state of the checkbox. */\ntoggle(): void"
       }
     ],
     "directiveList": [],
@@ -267,7 +267,7 @@
       },
       {
         "name": "LyDialogRef",
-        "children": "@Injectable()\nclass LyDialogRef {\n  afterClosed: any\n  afterOpened: any\n  beforeClosed: any\n  close(result?: any): void\n}"
+        "children": "@Injectable()\nclass LyDialogRef {\n  afterClosed: Observable\n  afterOpened: Observable\n  beforeClosed: Observable\n  close(result?: any): void\n}"
       }
     ],
     "classList": [],
@@ -296,7 +296,7 @@
         "selector": "'ly-divider'",
         "inputs": "",
         "exportAs": "",
-        "children": "/** Add indentation (72px) */\n@Input() inset: any"
+        "children": "/** Add indentation (72px) */\n@Input() inset: boolean"
       }
     ],
     "ngModuleList": [
@@ -313,7 +313,7 @@
         "selector": "'ly-drawer'",
         "inputs": "",
         "exportAs": "'lyDrawer'",
-        "children": "@Input() height: any\n@Input() mode: LyDrawerMode\n@Input() spacingAbove: any\n@Input() spacingAfter: any\n@Input() spacingBefore: any\n@Input() spacingBelow: any\n@Input() width: any\n@Input() hasBackdrop: any\n@Input() opened: any\n@Input() position: any\ntoggle(): void"
+        "children": "@Input() height: any\n@Input() mode: LyDrawerMode\n@Input() spacingAbove: any\n@Input() spacingAfter: any\n@Input() spacingBefore: any\n@Input() spacingBelow: any\n@Input() width: any\n@Input() hasBackdrop: any\n@Input() opened: boolean\n@Input() position: LyDrawerPosition\ntoggle(): void"
       }
     ],
     "directiveList": [
@@ -378,7 +378,7 @@
         "selector": "'ly-field'",
         "inputs": "",
         "exportAs": "'lyFormField'",
-        "children": "@Input() persistentHint: boolean\n/** The field appearance style. */\n@Input() appearance: any\n/** Theme color for the component. */\n@Input() color: any\nerrorState: any\n/** Whether the label is floating. */\n@Input() floatingLabel: any\n@Input() fullWidth: any\nonFocus(): void"
+        "children": "@Input() persistentHint: boolean\n/** The field appearance style. */\n@Input() appearance: string\n/** Theme color for the component. */\n@Input() color: string\nerrorState: boolean\n/** Whether the label is floating. */\n@Input() floatingLabel: boolean\n@Input() fullWidth: boolean\nonFocus(): void"
       }
     ],
     "directiveList": [
@@ -394,14 +394,14 @@
         "selector": "'input[lyInput], textarea[lyInput], input[lyNativeControl], textarea[lyNativeControl], select[lyNativeControl]'",
         "inputs": "",
         "exportAs": "'LyNativeControl'",
-        "children": "errorState: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: any\nempty: any\nfloatingLabel: any\nfocused: any\n@Input() placeholder: any\n@HostBinding() @Input() required: any\n/** Focuses the input. */\nfocus(): void"
+        "children": "errorState: boolean\nstateChanges: Subject\n/** Whether the input is disabled. */\n@HostBinding() @Input() disabled: boolean\nempty: boolean\nfloatingLabel: boolean\nfocused: boolean\n@Input() placeholder: string\n@HostBinding() @Input() required: boolean\n/** Focuses the input. */\nfocus(): void"
       },
       {
         "name": "LyHint",
         "selector": "'ly-field > ly-hint'",
         "inputs": "",
         "exportAs": "",
-        "children": "classes: any\n@Input() align: any"
+        "children": "classes: any\n@Input() align: 'before' | 'after'"
       },
       {
         "name": "LyLabel",
@@ -484,14 +484,14 @@
         "selector": "'ly-grid[container]'",
         "inputs": "",
         "exportAs": "",
-        "children": "/**\n * Defines the `align-items` style property.\n * Support breakpoints\n */\n@Input() alignItems: any\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() direction: any\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() justify: any\n/**\n * Defines the space between the component with the `item` attribute.\n * Support breakpoints\n */\n@Input() spacing: any\n@Input() spacingX: any\n@Input() spacingY: any"
+        "children": "/**\n * Defines the `align-items` style property.\n * Support breakpoints\n */\n@Input() alignItems: 'center' | 'baseline' | 'start' | 'end' | 'stretch'\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() direction: Direction\n/**\n * Defines the justify-content style property.\n * Support breakpoints\n */\n@Input() justify: Justify\n/**\n * Defines the space between the component with the `item` attribute.\n * Support breakpoints\n */\n@Input() spacing: string | number\n@Input() spacingX: string | number\n@Input() spacingY: string | number"
       },
       {
         "name": "LyGridItem",
         "selector": "'ly-grid[item], [ly-grid-item], [lyGridItem]'",
         "inputs": "",
         "exportAs": "",
-        "children": "/**\n * Defines the number of grids\n * Support breakpoints\n */\n@Input() col: any\n@Input('lyGridItem') gridItemCol: any\n/**\n * Defines the order style property.\n * Support breakpoints\n */\n@Input() order: any"
+        "children": "/**\n * Defines the number of grids\n * Support breakpoints\n */\n@Input() col: string | number\n@Input('lyGridItem') gridItemCol: any\n/**\n * Defines the order style property.\n * Support breakpoints\n */\n@Input() order: string | number"
       }
     ],
     "typeAliasList": [
@@ -527,9 +527,9 @@
       {
         "name": "LyIcon",
         "selector": "'ly-icon'",
-        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n  ]",
+        "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\"\n]",
         "exportAs": "",
-        "children": "@Input() fontIcon: any\n@Input() fontSet: any\n@Input() icon: any"
+        "children": "@Input() fontIcon: string\n@Input() fontSet: string\n@Input() icon: string"
       }
     ],
     "variableList": [
@@ -551,7 +551,7 @@
     "injectableList": [
       {
         "name": "LyIconService",
-        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyIconService {\n  defaultSvgIcon: SVGElement\n  defaultClass: any\n  defaultClassPrefix: any\n  addSvgIconLiteral(key: string, literal: SafeHtml): void\n  getFontClass(key: string): void\n  getSvg(key: string): void\n  /**\n   * Register new font class alias\n   * demo:\n   * For FontAwesome\n   * registerFontClass({\n   *   key: 'fa',\n   *   class: 'fa'\n   *   prefix: 'fa-'\n   * })\n   */\n  registerFontClass(opt: FontClassOptions): void\n  /** Set default className for `ly-icon` */\n  setDefaultClass(className?: undefined | string, prefix?: undefined | string): void\n  setSvg(key: string, url: SafeResourceUrl): void\n}"
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyIconService {\n  defaultSvgIcon: SVGElement\n  defaultClass: undefined | string\n  defaultClassPrefix: undefined | string\n  addSvgIconLiteral(key: string, literal: SafeHtml): void\n  getFontClass(key: string): void\n  getSvg(key: string): void\n  /**\n   * Register new font class alias\n   * demo:\n   * For FontAwesome\n   * registerFontClass({\n   *   key: 'fa',\n   *   class: 'fa'\n   *   prefix: 'fa-'\n   * })\n   */\n  registerFontClass(opt: FontClassOptions): void\n  /** Set default className for `ly-icon` */\n  setDefaultClass(className?: undefined | string, prefix?: undefined | string): void\n  setSvg(key: string, url: SafeResourceUrl): void\n}"
       }
     ],
     "interfaceList": [
@@ -570,7 +570,7 @@
       {
         "name": "LyListItem",
         "selector": "'ly-list-item, a[ly-list-item], button[ly-list-item]'",
-        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+        "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"disabled\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\",\n  \"disableRipple\"\n]",
         "exportAs": "'lyListItem'",
         "children": ""
       }
@@ -671,9 +671,9 @@
       {
         "name": "LyRadio",
         "selector": "'ly-radio'",
-        "inputs": "[\n    'disableRipple'\n  ]",
+        "inputs": "[\n  \"disableRipple\"\n]",
         "exportAs": "",
-        "children": "@Output() change: EventEmitter\n@Input() checked: any\n@Input() color: any\n@Input() disabled: any\n@Input() value: any"
+        "children": "@Output() change: EventEmitter\n@Input() checked: boolean\n@Input() color: string\n@Input() disabled: boolean\n@Input() value: null"
       },
       {
         "name": "LyRadioGroup",
@@ -714,7 +714,7 @@
         "selector": "'ly-img-cropper, ly-cropping'",
         "inputs": "",
         "exportAs": "",
-        "children": "/** On crop new image */\n@Output() cropped: EventEmitter\n/** Emit an error when the loaded image is not valid */\n@Output() error: EventEmitter\nisCropped: boolean\n/** When is loaded image & ready for crop */\nisLoaded: boolean\n/** On loaded new image */\n@Output() loaded: EventEmitter\n/**\n * Emit event `error` if the file size for the limit.\n * Note: It only works when the image is received from the `<input>` event.\n */\n@Input() maxFileSize: number\n@Output() scaleChange: EventEmitter\n@Input() config: any\n/** Get min scale */\nminScale: any\n/** Set scale */\n@Input() scale: any\ncenter(): void\n/** Clean the img cropper */\nclean(): void\n/**\n * Crop Image\n * Resizing & cropping image\n */\ncrop(config?: ImgCropperConfig): void\nfit(): void\n/** Ajustar a la pantalla */\nfitToScreen(): void\nrotate(degrees: number): void\nselectInputEvent(img: Event): void\n/** Load Image from URL */\nsetImageUrl(src: string, fn?: undefined | any): void\n/** Set the size of the image, the values can be 0 between 1, where 1 is the original size */\nsetScale(size?: undefined | number, noAutoCrop?: undefined | false | true): void\nupdatePosition(x?: undefined | number, y?: undefined | number): void\n/** + */\nzoomIn(): void\n/** - */\nzoomOut(): void"
+        "children": "/** On crop new image */\n@Output() cropped: EventEmitter\n/** Emit an error when the loaded image is not valid */\n@Output() error: EventEmitter\nisCropped: boolean\n/** When is loaded image & ready for crop */\nisLoaded: boolean\n/** On loaded new image */\n@Output() loaded: EventEmitter\n/**\n * Emit event `error` if the file size for the limit.\n * Note: It only works when the image is received from the `<input>` event.\n */\n@Input() maxFileSize: number\n@Output() scaleChange: EventEmitter\n@Input() config: ImgCropperConfig\n/** Get min scale */\nminScale: number | undefined\n/** Set scale */\n@Input() scale: number | undefined\ncenter(): void\n/** Clean the img cropper */\nclean(): void\n/**\n * Crop Image\n * Resizing & cropping image\n */\ncrop(config?: ImgCropperConfig): void\nfit(): void\n/** Ajustar a la pantalla */\nfitToScreen(): void\nrotate(degrees: number): void\nselectInputEvent(img: Event): void\n/** Load Image from URL */\nsetImageUrl(src: string, fn?: undefined | any): void\n/** Set the size of the image, the values can be 0 between 1, where 1 is the original size */\nsetScale(size?: undefined | number, noAutoCrop?: undefined | false | true): void\nupdatePosition(x?: undefined | number, y?: undefined | number): void\n/** + */\nzoomIn(): void\n/** - */\nzoomOut(): void"
       }
     ],
     "directiveList": [],
@@ -771,7 +771,7 @@
         "selector": "'[lyShow], [lyHide]'",
         "inputs": "",
         "exportAs": "",
-        "children": "/** Hides the item when the value is resolved as true */\n@Input() lyHide: any\n/** Shows the item when the value is resolved as true */\n@Input() lyShow: any"
+        "children": "/** Hides the item when the value is resolved as true */\n@Input() lyHide: string\n/** Shows the item when the value is resolved as true */\n@Input() lyShow: string"
       }
     ],
     "objectLiteralList": [],
@@ -833,16 +833,16 @@
       {
         "name": "LyOption",
         "selector": "'ly-option'",
-        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+        "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"disabled\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\",\n  \"disableRipple\"\n]",
         "exportAs": "",
-        "children": "isSelected: any\n/** Tracks simple string values bound to the option element. */\n@Input('value') value: any\n/** The displayed value of the option. */\nviewValue: any\nselect(): void\ntoggle(): void"
+        "children": "isSelected: boolean\n/** Tracks simple string values bound to the option element. */\n@Input('value') value: any\n/** The displayed value of the option. */\nviewValue: string\nselect(): void\ntoggle(): void"
       },
       {
         "name": "LySelect",
         "selector": "'ly-select'",
-        "inputs": "['tabIndex']",
+        "inputs": "[\n  \"tabIndex\"\n]",
         "exportAs": "'lySelect'",
-        "children": "errorState: boolean\n@ContentChildren() options: QueryList\nstateChanges: Subject\n@ViewChild() templateRef: TemplateRef\n@ViewChild() valueTextDivRef: ElementRef\n/** Whether the input is disabled. */\n@Input() disabled: any\nempty: any\nfloatingLabel: any\nfocused: any\n@Input() multiple: any\n@Input() placeholder: any\n@Input() required: any\n/** Current selecteds */\nselected: any\n/** The value displayed in the trigger. */\ntriggerValue: any\n@Input() valueKey: any\nclose(): void\n/** Focuses the input. */\nfocus(): void\n/** The registered callback function called when a change event occurs on the input element. */\nonChange(_: any): void\n/** The registered callback function called when a blur event occurs on the input element. */\nonTouched(): void\nopen(): void\n/** Registers a function called when the control value changes. */\nregisterOnChange(fn: any): void\n/** Registers a function called when the control is touched. */\nregisterOnTouched(fn: any): void\n/**\n * Disables the select. Part of the ControlValueAccessor interface required\n * to integrate with Angular's core forms API.\n */\nsetDisabledState(isDisabled: boolean): void\n/** Sets the \"value\" property on the input element. */\nwriteValue(value: any): void"
+        "children": "errorState: boolean\n@ContentChildren() options: QueryList\nstateChanges: Subject\n@ViewChild() templateRef: TemplateRef\n@ViewChild() valueTextDivRef: ElementRef\n/** Whether the input is disabled. */\n@Input() disabled: boolean\nempty: boolean\nfloatingLabel: boolean\nfocused: boolean\n@Input() multiple: boolean\n@Input() placeholder: string\n@Input() required: boolean\n/** Current selecteds */\nselected: any\n/** The value displayed in the trigger. */\ntriggerValue: string\n@Input() valueKey: any\nclose(): void\n/** Focuses the input. */\nfocus(): void\n/** The registered callback function called when a change event occurs on the input element. */\nonChange(_: any): void\n/** The registered callback function called when a blur event occurs on the input element. */\nonTouched(): void\nopen(): void\n/** Registers a function called when the control value changes. */\nregisterOnChange(fn: any): void\n/** Registers a function called when the control is touched. */\nregisterOnTouched(fn: any): void\n/**\n * Disables the select. Part of the ControlValueAccessor interface required\n * to integrate with Angular's core forms API.\n */\nsetDisabledState(isDisabled: boolean): void\n/** Sets the \"value\" property on the input element. */\nwriteValue(value: any): void"
       }
     ],
     "directiveList": [],
@@ -928,12 +928,12 @@
         "selector": "'[ngTransclude]'",
         "inputs": "",
         "exportAs": "",
-        "children": "getNgTransclude: any\n@Input() ngTransclude: any"
+        "children": "getNgTransclude: null | TemplateRef\n@Input() ngTransclude: any"
       },
       {
         "name": "LyPaper",
         "selector": "`ly-paper, [ly-paper], [ly-text]`",
-        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+        "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\",\n  \"disableRipple\"\n]",
         "exportAs": "",
         "children": "@Input('ly-text') hasText: any"
       },
@@ -1218,11 +1218,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-03-05T08:22:21.705Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-03-06T01:56:31.722Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.3.3-nightly.20190305-jsvi9atn\""
+        "children": "const AUI_VERSION = \"2.5.0\""
       }
     ],
     "functionList": [],
@@ -1283,7 +1283,7 @@
       },
       {
         "name": "LyOverlayContainer",
-        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlayContainer {\n  containerElement: any\n  overlayLen: any\n}"
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyOverlayContainer {\n  containerElement: HTMLElement\n  overlayLen: number\n}"
       },
       {
         "name": "WinResize",
@@ -1315,7 +1315,7 @@
       },
       {
         "name": "LyTheme2",
-        "children": "@Injectable()\nclass LyTheme2 {\n  config: ThemeVariables\n  core: CoreTheme\n  elements: Map\n  initialTheme: string\n  /** Get Theme Variables */\n  variables: any\n  /**\n   * Create a simple style\n   * return className\n   */\n  addSimpleStyle(id: string, css: StyleContainer | any, priority?: undefined | number, parentStyle?: Styles): void\n  /** Add a new dynamic style, use only within @Input() */\n  addStyle(id: string, style?: StyleDeclarationsBlock, el?: any, instance?: string | null, priority?: number | null, parentStyle?: Styles): void\n  /** Add new add a new style sheet */\n  addStyleSheet(styles: any, priority?: undefined | number): void\n  requestAnimationFrame(fn: any): void\n  setTheme(nam: string): void\n  setUpTheme(themeName: string): void\n  /** Create basic style */\n  style(style: StyleDeclarationsBlock, priority?: number | null, parentStyle?: Styles): void\n  /** Toggle right-to-left/left-to-right */\n  toggleDirection(): void\n  updateClass(element: any, renderer: Renderer2, newClass: string, oldClass?: undefined | string): void\n}"
+        "children": "@Injectable()\nclass LyTheme2 {\n  config: ThemeVariables\n  core: CoreTheme\n  elements: Map\n  initialTheme: string\n  /** Get Theme Variables */\n  variables: ThemeVariables\n  /**\n   * Create a simple style\n   * return className\n   */\n  addSimpleStyle(id: string, css: StyleContainer | any, priority?: undefined | number, parentStyle?: Styles): void\n  /** Add a new dynamic style, use only within @Input() */\n  addStyle(id: string, style?: StyleDeclarationsBlock, el?: any, instance?: string | null, priority?: number | null, parentStyle?: Styles): void\n  /** Add new add a new style sheet */\n  addStyleSheet(styles: any, priority?: undefined | number): void\n  requestAnimationFrame(fn: any): void\n  setTheme(nam: string): void\n  setUpTheme(themeName: string): void\n  /** Create basic style */\n  style(style: StyleDeclarationsBlock, priority?: number | null, parentStyle?: Styles): void\n  /** Toggle right-to-left/left-to-right */\n  toggleDirection(): void\n  updateClass(element: any, renderer: Renderer2, newClass: string, oldClass?: undefined | string): void\n}"
       },
       {
         "name": "StylesInDocument",
@@ -1385,16 +1385,16 @@
       {
         "name": "LyTabLabel",
         "selector": "'button[ly-tab-label]'",
-        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+        "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"disabled\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\",\n  \"disableRipple\"\n]",
         "exportAs": "",
-        "children": "/** Button appearance */\n@Input() appearance: any\n/** Button size */\n@Input() size: any\nfocus(): void"
+        "children": "/** Button appearance */\n@Input() appearance: string\n/** Button size */\n@Input() size: LyButtonSize\nfocus(): void"
       },
       {
         "name": "LyTabs",
         "selector": "'ly-tabs'",
-        "inputs": "[\n    'bg', 'elevation', 'shadowColor'\n  ]",
+        "inputs": "[\n  \"bg\",\n  \"elevation\",\n  \"shadowColor\"\n]",
         "exportAs": "'lyTabs'",
-        "children": "@Output() selectedIndexChange: EventEmitter\n@Input() selectedIndexOnChange: any\n@ViewChild() tabContents: ElementRef\n@ViewChild() tabsIndicator: ElementRef\n@ContentChildren() tabsList: QueryList\n@ViewChild() tabsRef: ElementRef\n@Input() alignTabs: any\n@Input() headerPlacement: any\n@Input() indicatorColor: any\n@Input() scrollable: any\n@Input() selectedIndex: any\n@Input() textColor: any\nloadTemplate(tab: LyTab, index: number): void"
+        "children": "@Output() selectedIndexChange: EventEmitter\n@Input() selectedIndexOnChange: any\n@ViewChild() tabContents: ElementRef\n@ViewChild() tabsIndicator: ElementRef\n@ContentChildren() tabsList: QueryList\n@ViewChild() tabsRef: ElementRef\n@Input() alignTabs: 'center' | 'baseline' | 'start' | 'end' | 'stretch'\n@Input() headerPlacement: 'before' | 'after' | 'above' | 'below'\n@Input() indicatorColor: string\n@Input() scrollable: any\n@Input() selectedIndex: number\n@Input() textColor: string\nloadTemplate(tab: LyTab, index: number): void"
       }
     ],
     "directiveList": [
@@ -1512,9 +1512,9 @@
       {
         "name": "LyToolbar",
         "selector": "'ly-toolbar'",
-        "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor'\n  ]",
+        "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\"\n]",
         "exportAs": "",
-        "children": "@Input() dense: any\n@Input() position: any"
+        "children": "@Input() dense: boolean\n@Input() position: position"
       }
     ],
     "variableList": [
@@ -1546,7 +1546,7 @@
         "selector": "'[lyTooltip]'",
         "inputs": "",
         "exportAs": "'lyTooltip'",
-        "children": "@Input() lyTooltipHideDelay: number\n@Input() lyTooltipShowDelay: number\n@Input() placement: Placement\n@Input() xPosition: XPosition\n@Input() yPosition: YPosition\n@Input('lyTooltip') tooltip: any\nhide(delay?: undefined | number): void\nshow(delay?: undefined | number): void\ntoggle(): void"
+        "children": "@Input() lyTooltipHideDelay: number\n@Input() lyTooltipShowDelay: number\n@Input() placement: Placement\n@Input() xPosition: XPosition\n@Input() yPosition: YPosition\n@Input('lyTooltip') tooltip: null | string | TemplateRef\nhide(delay?: undefined | number): void\nshow(delay?: undefined | number): void\ntoggle(): void"
       }
     ],
     "variableList": [
@@ -1572,9 +1572,9 @@
       {
         "name": "LyTypography",
         "selector": "`[lyTyp]`",
-        "inputs": "[\n    'color'\n  ]",
+        "inputs": "[\n  \"color\"\n]",
         "exportAs": "",
-        "children": "@Input() gutter: any\n@Input() gutterBottom: any\n@Input() gutterTop: any\n@Input() lyTyp: any\n/** The text will truncate with an ellipsis. */\n@Input() noWrap: any"
+        "children": "@Input() gutter: boolean\n@Input() gutterBottom: boolean\n@Input() gutterTop: boolean\n@Input() lyTyp: string\n/** The text will truncate with an ellipsis. */\n@Input() noWrap: boolean"
       }
     ],
     "variableList": [

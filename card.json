@@ -4,7 +4,7 @@
     {
       "name": "LyCard",
       "selector": "'ly-card'",
-      "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple',\n  ]",
+      "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\",\n  \"disableRipple\"\n]",
       "exportAs": "",
       "children": ""
     },
@@ -27,7 +27,7 @@
       "selector": "'ly-card-media'",
       "inputs": "",
       "exportAs": "",
-      "children": "@Input() bgImg: any\n/** Aspect ratio */\n@Input() ratio: any"
+      "children": "@Input() bgImg: string\n/** Aspect ratio */\n@Input() ratio: string"
     }
   ],
   "variableList": [

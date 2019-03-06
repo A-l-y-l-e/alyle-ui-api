@@ -4,9 +4,9 @@
     {
       "name": "LyTypography",
       "selector": "`[lyTyp]`",
-      "inputs": "[\n    'color'\n  ]",
+      "inputs": "[\n  \"color\"\n]",
       "exportAs": "",
-      "children": "@Input() gutter: any\n@Input() gutterBottom: any\n@Input() gutterTop: any\n@Input() lyTyp: any\n/** The text will truncate with an ellipsis. */\n@Input() noWrap: any"
+      "children": "@Input() gutter: boolean\n@Input() gutterBottom: boolean\n@Input() gutterTop: boolean\n@Input() lyTyp: string\n/** The text will truncate with an ellipsis. */\n@Input() noWrap: boolean"
     }
   ],
   "variableList": [

@@ -6,7 +6,7 @@
       "selector": "'[lyTooltip]'",
       "inputs": "",
       "exportAs": "'lyTooltip'",
-      "children": "@Input() lyTooltipHideDelay: number\n@Input() lyTooltipShowDelay: number\n@Input() placement: Placement\n@Input() xPosition: XPosition\n@Input() yPosition: YPosition\n@Input('lyTooltip') tooltip: any\nhide(delay?: undefined | number): void\nshow(delay?: undefined | number): void\ntoggle(): void"
+      "children": "@Input() lyTooltipHideDelay: number\n@Input() lyTooltipShowDelay: number\n@Input() placement: Placement\n@Input() xPosition: XPosition\n@Input() yPosition: YPosition\n@Input('lyTooltip') tooltip: null | string | TemplateRef\nhide(delay?: undefined | number): void\nshow(delay?: undefined | number): void\ntoggle(): void"
     }
   ],
   "variableList": [

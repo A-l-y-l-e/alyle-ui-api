@@ -4,9 +4,9 @@
     {
       "name": "LyBadge",
       "selector": "'ly-badge, [lyBadge]'",
-      "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor'\n  ]",
+      "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"disabled\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\"\n]",
       "exportAs": "",
-      "children": "/** The content for the badge */\n@Input('lyBadge') content: any\n/** The color of the badge */\n@Input() lyBadgeBg: any\n/** The position for the badge */\n@Input('lyBadgePosition') position: any"
+      "children": "/** The content for the badge */\n@Input('lyBadge') content: string | number\n/** The color of the badge */\n@Input() lyBadgeBg: string\n/** The position for the badge */\n@Input('lyBadgePosition') position: string"
     }
   ],
   "variableList": [

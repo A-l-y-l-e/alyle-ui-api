@@ -3,7 +3,7 @@
     {
       "name": "LyListItem",
       "selector": "'ly-list-item, a[ly-list-item], button[ly-list-item]'",
-      "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'disabled',\n    'outlined',\n    'elevation',\n    'shadowColor',\n    'disableRipple'\n  ]",
+      "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"disabled\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\",\n  \"disableRipple\"\n]",
       "exportAs": "'lyListItem'",
       "children": ""
     }

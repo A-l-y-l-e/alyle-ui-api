@@ -4,9 +4,9 @@
     {
       "name": "LyAvatar",
       "selector": "'ly-avatar'",
-      "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n  ]",
+      "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\"\n]",
       "exportAs": "",
-      "children": "@Input() size: any"
+      "children": "@Input() size: number"
     }
   ],
   "variableList": [

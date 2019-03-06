@@ -4,9 +4,9 @@
     {
       "name": "LyIcon",
       "selector": "'ly-icon'",
-      "inputs": "[\n    'bg',\n    'color',\n    'raised',\n    'outlined',\n    'elevation',\n    'shadowColor',\n  ]",
+      "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\"\n]",
       "exportAs": "",
-      "children": "@Input() fontIcon: any\n@Input() fontSet: any\n@Input() icon: any"
+      "children": "@Input() fontIcon: string\n@Input() fontSet: string\n@Input() icon: string"
     }
   ],
   "variableList": [
@@ -28,7 +28,7 @@
   "injectableList": [
     {
       "name": "LyIconService",
-      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyIconService {\n  defaultSvgIcon: SVGElement\n  defaultClass: any\n  defaultClassPrefix: any\n  addSvgIconLiteral(key: string, literal: SafeHtml): void\n  getFontClass(key: string): void\n  getSvg(key: string): void\n  /**\n   * Register new font class alias\n   * demo:\n   * For FontAwesome\n   * registerFontClass({\n   *   key: 'fa',\n   *   class: 'fa'\n   *   prefix: 'fa-'\n   * })\n   */\n  registerFontClass(opt: FontClassOptions): void\n  /** Set default className for `ly-icon` */\n  setDefaultClass(className?: undefined | string, prefix?: undefined | string): void\n  setSvg(key: string, url: SafeResourceUrl): void\n}"
+      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyIconService {\n  defaultSvgIcon: SVGElement\n  defaultClass: undefined | string\n  defaultClassPrefix: undefined | string\n  addSvgIconLiteral(key: string, literal: SafeHtml): void\n  getFontClass(key: string): void\n  getSvg(key: string): void\n  /**\n   * Register new font class alias\n   * demo:\n   * For FontAwesome\n   * registerFontClass({\n   *   key: 'fa',\n   *   class: 'fa'\n   *   prefix: 'fa-'\n   * })\n   */\n  registerFontClass(opt: FontClassOptions): void\n  /** Set default className for `ly-icon` */\n  setDefaultClass(className?: undefined | string, prefix?: undefined | string): void\n  setSvg(key: string, url: SafeResourceUrl): void\n}"
     }
   ],
   "interfaceList": [
