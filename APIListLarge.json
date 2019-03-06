@@ -491,7 +491,7 @@
         "selector": "'ly-grid[item], [ly-grid-item], [lyGridItem]'",
         "inputs": "",
         "exportAs": "",
-        "children": "/**\n * Defines the number of grids\n * Support breakpoints\n */\n@Input() col: string | number\n@Input('lyGridItem') gridItemCol: any\n/**\n * Defines the order style property.\n * Support breakpoints\n */\n@Input() order: string | number"
+        "children": "/**\n * Defines the number of grids\n * Support breakpoints\n */\n@Input() col: string | number\n@Input('lyGridItem') gridItemCol: string | number\n/**\n * Defines the order style property.\n * Support breakpoints\n */\n@Input() order: string | number"
       }
     ],
     "typeAliasList": [
@@ -1218,11 +1218,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-03-06T01:56:31.722Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-03-06T08:22:50.646Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.5.0\""
+        "children": "const AUI_VERSION = \"2.5.1-nightly.20190306-jswxprtk\""
       }
     ],
     "functionList": [],

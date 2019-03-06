@@ -13,7 +13,7 @@
       "selector": "'ly-grid[item], [ly-grid-item], [lyGridItem]'",
       "inputs": "",
       "exportAs": "",
-      "children": "/**\n * Defines the number of grids\n * Support breakpoints\n */\n@Input() col: string | number\n@Input('lyGridItem') gridItemCol: any\n/**\n * Defines the order style property.\n * Support breakpoints\n */\n@Input() order: string | number"
+      "children": "/**\n * Defines the number of grids\n * Support breakpoints\n */\n@Input() col: string | number\n@Input('lyGridItem') gridItemCol: string | number\n/**\n * Defines the order style property.\n * Support breakpoints\n */\n@Input() order: string | number"
     }
   ],
   "typeAliasList": [
