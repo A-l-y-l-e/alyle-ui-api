@@ -42,7 +42,7 @@
     },
     {
       "name": "CanBg",
-      "children": "interface CanBg {\n  bg: string\n}"
+      "children": "interface CanBg {\n  /** It is only used for common behavior, therefore, it should not be used for other purposes. */\n  _superHyperInternalPropertyBg: string,\n  bg: string\n}"
     },
     {
       "name": "CanStyleUpdater",
@@ -54,7 +54,7 @@
     },
     {
       "name": "CanColor",
-      "children": "interface CanColor {\n  color: string\n}"
+      "children": "interface CanColor {\n  /** It is only used for common behavior, therefore, it should not be used for other purposes. */\n  _superHyperInternalPropertyColor: string,\n  color: string\n}"
     },
     {
       "name": "CanDisableRipple",
@@ -66,23 +66,23 @@
     },
     {
       "name": "CanDisable",
-      "children": "interface CanDisable {\n  disabled: boolean\n}"
+      "children": "interface CanDisable {\n  /** It is only used for common behavior, therefore, it should not be used for other purposes. */\n  _superHyperInternalPropertyDisabled: boolean,\n  disabled: boolean\n}"
     },
     {
       "name": "CanElevation",
-      "children": "interface CanElevation {\n  elevation: number\n}"
+      "children": "interface CanElevation {\n  /** It is only used for common behavior, therefore, it should not be used for other purposes. */\n  _superHyperInternalPropertyElevation: number,\n  elevation: number\n}"
     },
     {
       "name": "CanOutlined",
-      "children": "interface CanOutlined {\n  outlined: boolean\n}"
+      "children": "interface CanOutlined {\n  /** It is only used for common behavior, therefore, it should not be used for other purposes. */\n  _superHyperInternalPropertyOutlined: boolean,\n  outlined: boolean\n}"
     },
     {
       "name": "CanRaised",
-      "children": "interface CanRaised {\n  raised: boolean\n}"
+      "children": "interface CanRaised {\n  /** It is only used for common behavior, therefore, it should not be used for other purposes. */\n  _superHyperInternalPropertyRaised: boolean,\n  raised: boolean\n}"
     },
     {
       "name": "CanShadowColor",
-      "children": "interface CanShadowColor {\n  shadowColor: string\n}"
+      "children": "interface CanShadowColor {\n  /** It is only used for common behavior, therefore, it should not be used for other purposes. */\n  _superHyperInternalPropertyShadowColor: string,\n  shadowColor: string\n}"
     },
     {
       "name": "FocusStateInfo",
@@ -304,11 +304,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2019-03-12T08:23:12.774Z\""
+      "children": "const AUI_LAST_UPDATE = \"2019-03-13T08:23:24.089Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"2.5.3-nightly.20190312-jt5idcw8\""
+      "children": "const AUI_VERSION = \"2.5.3-nightly.20190313-jt6xtgam\""
     }
   ],
   "functionList": [],
