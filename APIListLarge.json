@@ -1218,11 +1218,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-03-15T08:23:20.969Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-03-16T08:23:12.738Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.5.3-nightly.20190315-jt9sp37v\""
+        "children": "const AUI_VERSION = \"2.5.3-nightly.20190316-jtb84rj9\""
       }
     ],
     "functionList": [],
