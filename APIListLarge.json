@@ -371,6 +371,80 @@
       }
     ]
   },
+  "expansion": {
+    "componentList": [
+      {
+        "name": "LyExpansionPanel",
+        "selector": "'ly-expansion-panel'",
+        "inputs": "[\n  \"bg\",\n  \"color\",\n  \"elevation\",\n  \"shadowColor\"\n]",
+        "exportAs": "'lyExpansionPanel'",
+        "children": "/** An event emitted after the body's collapse animation happens. */\n@Output() afterCollapse: EventEmitter\n/** An event emitted after the body's expansion animation happens. */\n@Output() afterExpand: EventEmitter\n/** Event emitted every time the LyExpansionPanel is closed. */\n@Output() closed: EventEmitter\n/** Event emitted when the LyExpansionPanel is destroyed. */\n@Output() destroyed: EventEmitter\n/** Event emitted every time the LyExpansionPanel is opened. */\n@Output() opened: EventEmitter\n@Input() disabled: boolean\n@Input() expanded: boolean\n@Input() hasToggle: boolean\nclose(): void\nopen(): void\ntoggle(): void"
+      },
+      {
+        "name": "LyExpansionPanelHeader",
+        "selector": "'ly-expansion-panel-header'",
+        "inputs": "",
+        "exportAs": "",
+        "children": ""
+      }
+    ],
+    "directiveList": [
+      {
+        "name": "LyAccordion",
+        "selector": "'ly-accordion'",
+        "inputs": "",
+        "exportAs": "'lyAccordion'",
+        "children": "@Input() appearance: string\n@Input() hasToggle: boolean\n@Input() multiple: boolean\ncloseAll(): void\nopenAll(): void"
+      },
+      {
+        "name": "LyExpansionPanelAction",
+        "selector": "'ly-action-row'",
+        "inputs": "",
+        "exportAs": "",
+        "children": ""
+      },
+      {
+        "name": "LyExpansionPanelContent",
+        "selector": "'ng-template[lyExpansionPanelContent]'",
+        "inputs": "",
+        "exportAs": "",
+        "children": ""
+      },
+      {
+        "name": "LyExpansionPanelDescription",
+        "selector": "'ly-panel-description'",
+        "inputs": "",
+        "exportAs": "",
+        "children": ""
+      },
+      {
+        "name": "LyExpansionPanelTitle",
+        "selector": "'ly-panel-title'",
+        "inputs": "",
+        "exportAs": "",
+        "children": ""
+      }
+    ],
+    "variableList": [
+      {
+        "name": "STYLE_PRIORITY",
+        "children": "const STYLE_PRIORITY = -0.9"
+      }
+    ],
+    "objectLiteralList": [],
+    "typeAliasList": [
+      {
+        "name": "LyExpansionPanelState",
+        "children": "/** LyExpansionPanel's states. */\ntype LyExpansionPanelState = 'expanded' | 'collapsed'"
+      }
+    ],
+    "ngModuleList": [
+      {
+        "name": "LyExpansionModule",
+        "children": "import { LyExpansionModule } from '@alyle/ui/expansion'"
+      }
+    ]
+  },
   "field": {
     "componentList": [
       {
@@ -920,6 +994,13 @@
         "inputs": "",
         "exportAs": "",
         "children": "onclick(): void"
+      },
+      {
+        "name": "LyExpansionIcon",
+        "selector": "'ly-expansion-icon'",
+        "inputs": "",
+        "exportAs": "",
+        "children": "classes: any\n@Input() color: string\n@Input() up: false | true | ''\ntoggle(): void"
       }
     ],
     "directiveList": [
@@ -1043,6 +1124,10 @@
         "children": "interface StyleData {\n  fn: any,\n  /** Class Id */\n  id: string,\n  key: string,\n  styleContainer: any,\n  styleContent: any\n}"
       },
       {
+        "name": "StyleGroup",
+        "children": "interface StyleGroup {\n  $keyframes: Keyframes,\n  /** Prefix name */\n  $name: undefined | string,\n  $priority: undefined | number\n}"
+      },
+      {
         "name": "DefaultVal",
         "children": "interface DefaultVal {\n  default: string\n}"
       },
@@ -1052,15 +1137,11 @@
       },
       {
         "name": "ThemeConfig",
-        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  colorShadow: undefined | string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
+        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  colorShadow: undefined | string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  expansion: ExpansionVariables,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
       },
       {
-        "name": "StyleGroup",
-        "children": "interface StyleGroup {\n  $keyframes: Keyframes,\n  /** Prefix name */\n  $name: undefined | string\n}"
-      },
-      {
-        "name": "StyleMap5",
-        "children": "interface StyleMap5 {\n  /** global theme */\n  classes: any | string,\n  /** requireUpdate */\n  classesWithTheme: undefined | any,\n  css: any | string,\n  id: string | null,\n  /** Only for styles of TypeStyle.one */\n  parentStyle: Styles,\n  priority: number | null,\n  requireUpdate: undefined | false | true,\n  styles: Styles,\n  type: TypeStyle\n}"
+        "name": "ThemeRef",
+        "children": "interface ThemeRef {\n  addStyleSheet\n}"
       },
       {
         "name": "AvatarVariables",
@@ -1073,6 +1154,10 @@
       {
         "name": "CheckboxVariables",
         "children": "interface CheckboxVariables {\n  root: StyleContainer,\n  unchecked: StyleContainer\n}"
+      },
+      {
+        "name": "ExpansionVariables",
+        "children": "interface ExpansionVariables {\n  appearance: any,\n  defaultConfig: undefined | any,\n  root: StyleContainer\n}"
       },
       {
         "name": "RippleVariables",
@@ -1105,20 +1190,12 @@
         "children": "const THEME_VARIABLES = new InjectionToken<PaletteVariables>('ly.theme.variables')"
       },
       {
-        "name": "DEFAULT_BG",
-        "children": "const DEFAULT_BG = \"primary\""
-      },
-      {
         "name": "DEFAULT_VALUE",
         "children": "const DEFAULT_VALUE = \"\""
       },
       {
         "name": "STYLE_PRIORITY",
         "children": "const STYLE_PRIORITY = -1"
-      },
-      {
-        "name": "DEFAULT_COLOR",
-        "children": "const DEFAULT_COLOR = \"primary\""
       },
       {
         "name": "DEFAULT_TAB_INDEX",
@@ -1181,6 +1258,10 @@
         "children": "const LyPaperMixinBase = mixinStyleUpdater(\nmixinBg(\n  mixinColor(\n    mixinRaised(\n      mixinOutlined(\n        mixinElevation(\n          mixinShadowColor(\n            mixinDisableRipple(LyPaperBase))))))))"
       },
       {
+        "name": "_STYLE_MAP",
+        "children": "const _STYLE_MAP = new Map()"
+      },
+      {
         "name": "LY_THEME",
         "children": "const LY_THEME = new InjectionToken<ThemeConfig | ThemeConfig[]>('ly_theme_config')"
       },
@@ -1201,10 +1282,6 @@
         "children": "const REF_REG_EXP = /\\{([\\w-]+)\\}/g"
       },
       {
-        "name": "STYLE_MAP5",
-        "children": "const STYLE_MAP5 = new Map()"
-      },
-      {
         "name": "THEME_MAP",
         "children": "const THEME_MAP = new Map<string, {\n  base: string\n  change: string | null\n}>()"
       },
@@ -1218,11 +1295,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-03-16T08:23:12.738Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-03-17T01:59:10.805Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.5.3-nightly.20190316-jtb84rj9\""
+        "children": "const AUI_VERSION = \"2.6.0\""
       }
     ],
     "functionList": [],
@@ -1256,16 +1333,20 @@
         "children": "type StyleContent = any"
       },
       {
+        "name": "LyClasses",
+        "children": "type LyClasses = Record"
+      },
+      {
+        "name": "StyleDeclarationsBlock",
+        "children": "/** CSS declarations block */\ntype StyleDeclarationsBlock = any | StyleContainer | string | null | undefined"
+      },
+      {
         "name": "PartialThemeVariables",
         "children": "type PartialThemeVariables = RecursivePartial"
       },
       {
         "name": "ThemeVariables",
         "children": "type ThemeVariables = any"
-      },
-      {
-        "name": "StyleDeclarationsBlock",
-        "children": "/** CSS declarations block */\ntype StyleDeclarationsBlock = any | StyleContainer | string | null | undefined"
       }
     ],
     "injectableList": [
@@ -1315,7 +1396,7 @@
       },
       {
         "name": "LyTheme2",
-        "children": "@Injectable()\nclass LyTheme2 {\n  config: ThemeVariables\n  core: CoreTheme\n  elements: Map\n  initialTheme: string\n  /** Get Theme Variables */\n  variables: ThemeVariables\n  /**\n   * Create a simple style\n   * return className\n   */\n  addSimpleStyle(id: string, css: StyleContainer | any, priority?: undefined | number, parentStyle?: Styles): void\n  /** Add a new dynamic style, use only within @Input() */\n  addStyle(id: string, style?: StyleDeclarationsBlock, el?: any, instance?: string | null, priority?: number | null, parentStyle?: Styles): void\n  /** Add new add a new style sheet */\n  addStyleSheet(styles: any, priority?: undefined | number): void\n  requestAnimationFrame(fn: any): void\n  setTheme(nam: string): void\n  setUpTheme(themeName: string): void\n  /** Create basic style */\n  style(style: StyleDeclarationsBlock, priority?: number | null, parentStyle?: Styles): void\n  /** Toggle right-to-left/left-to-right */\n  toggleDirection(): void\n  updateClass(element: any, renderer: Renderer2, newClass: string, oldClass?: undefined | string): void\n}"
+        "children": "@Injectable()\nclass LyTheme2 {\n  config: ThemeVariables\n  core: CoreTheme\n  elements: Map\n  initialTheme: string\n  /** Get Theme Variables */\n  variables: ThemeVariables\n  /**\n   * Create a simple style\n   * return className\n   */\n  addSimpleStyle(id: string, css: StyleContainer | any, priority?: undefined | number, parentStyle?: Styles): void\n  /** Add a new dynamic style, use only within @Input() */\n  addStyle(id: string, style?: StyleDeclarationsBlock, el?: any, instance?: string | null, priority?: number | null, parentStyle?: Styles): void\n  /** Add new add a new style sheet */\n  addStyleSheet(styles: any, priority?: undefined | number): void\n  requestAnimationFrame(fn: any): void\n  setTheme(nam: string): void\n  setUpTheme(themeName: string): void\n  /** Create basic style */\n  style(style: StyleDeclarationsBlock, priority?: number | null, parentStyle?: Styles): void\n  toClassSelector(classes: any): void\n  /** Toggle right-to-left/left-to-right */\n  toggleDirection(): void\n  updateClass(element: any, renderer: Renderer2, newClass: string, oldClass?: undefined | string): void\n}"
       },
       {
         "name": "StylesInDocument",
@@ -1327,6 +1408,10 @@
       {
         "name": "LyOverlayModule",
         "children": "import { LyOverlayModule } from '@alyle/ui'"
+      },
+      {
+        "name": "LyExpansionIconModule",
+        "children": "import { LyExpansionIconModule } from '@alyle/ui'"
       },
       {
         "name": "NgTranscludeModule",
@@ -1369,6 +1454,10 @@
       {
         "name": "DirPosition",
         "children": "enum DirPosition {\n  left = \"left\",\n  right = \"right\"\n}"
+      },
+      {
+        "name": "TypeStyle",
+        "children": "enum TypeStyle {\n  Multiple,\n  OnlyOne\n}"
       }
     ],
     "objectLiteralList": []
@@ -1501,7 +1590,7 @@
     "interfaceList": [
       {
         "name": "IMinimaTheme",
-        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  avatar: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getDirection,\n  pxToRem,\n  accent: object,\n  action: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  disabled: object,\n  drawer: object,\n  paper: object,\n  primary: object,\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
+        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  avatar: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getClasses,\n  getDirection,\n  pxToRem,\n  accent: object,\n  action: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  disabled: object,\n  drawer: object,\n  expansion: object,\n  paper: object,\n  primary: object,\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
       }
     ],
     "objectLiteralList": []

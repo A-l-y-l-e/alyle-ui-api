@@ -371,6 +371,62 @@
       }
     ]
   },
+  "expansion": {
+    "children": [
+      {
+        "name": "LyAccordion",
+        "type": "Directive"
+      },
+      {
+        "name": "STYLE_PRIORITY",
+        "type": "Variable"
+      },
+      {
+        "name": "lyExpansionAnimations",
+        "type": "Object literal"
+      },
+      {
+        "name": "LyExpansionPanel",
+        "type": "Component"
+      },
+      {
+        "name": "LyExpansionPanelBase",
+        "type": "Class"
+      },
+      {
+        "name": "LyExpansionPanelState",
+        "type": "Type alias"
+      },
+      {
+        "name": "LyButtonMixinBase",
+        "type": "Variable"
+      },
+      {
+        "name": "LyExpansionPanelAction",
+        "type": "Directive"
+      },
+      {
+        "name": "LyExpansionPanelContent",
+        "type": "Directive"
+      },
+      {
+        "name": "LyExpansionPanelDescription",
+        "type": "Directive"
+      },
+      {
+        "name": "LyExpansionPanelHeader",
+        "type": "Component"
+      },
+      {
+        "name": "LyExpansionPanelTitle",
+        "type": "Directive"
+      },
+      {
+        "name": "LyExpansionModule",
+        "type": "NgModule"
+      }
+    ]
+  },
   "field": {
     "children": [
       {
@@ -998,10 +1054,6 @@
         "type": "Interface"
       },
       {
-        "name": "DEFAULT_BG",
-        "type": "Variable"
-      },
-      {
         "name": "mixinBg",
         "type": "Function"
       },
@@ -1032,10 +1084,6 @@
       {
         "name": "CanColor",
         "type": "Interface"
-      },
-      {
-        "name": "DEFAULT_COLOR",
-        "type": "Variable"
       },
       {
         "name": "mixinColor",
@@ -1180,6 +1228,18 @@
       {
         "name": "WinScroll",
         "type": "Injectable"
+      },
+      {
+        "name": "getLyThemeVariableUndefinedError",
+        "type": "Function"
+      },
+      {
+        "name": "LyExpansionIcon",
+        "type": "Component"
+      },
+      {
+        "name": "LyExpansionIconModule",
+        "type": "NgModule"
       },
       {
         "name": "FocusStatus",
@@ -1478,6 +1538,38 @@
         "type": "Variable"
       },
       {
+        "name": "TypeStyle",
+        "type": "Enumeration"
+      },
+      {
+        "name": "Keyframes",
+        "type": "Interface"
+      },
+      {
+        "name": "StyleContainer",
+        "type": "Interface"
+      },
+      {
+        "name": "StyleGroup",
+        "type": "Interface"
+      },
+      {
+        "name": "StyleMap5",
+        "type": "Interface"
+      },
+      {
+        "name": "LyClasses",
+        "type": "Type alias"
+      },
+      {
+        "name": "StyleDeclarationsBlock",
+        "type": "Type alias"
+      },
+      {
+        "name": "_STYLE_MAP",
+        "type": "Variable"
+      },
+      {
         "name": "DefaultVal",
         "type": "Interface"
       },
@@ -1514,10 +1606,6 @@
         "type": "Variable"
       },
       {
-        "name": "TypeStyle",
-        "type": "Enumeration"
-      },
-      {
         "name": "LyTheme2",
         "type": "Injectable"
       },
@@ -1526,28 +1614,8 @@
         "type": "Injectable"
       },
       {
-        "name": "Keyframes",
+        "name": "ThemeRef",
         "type": "Interface"
-      },
-      {
-        "name": "StyleContainer",
-        "type": "Interface"
-      },
-      {
-        "name": "StyleGroup",
-        "type": "Interface"
-      },
-      {
-        "name": "StyleMap5",
-        "type": "Interface"
-      },
-      {
-        "name": "OnlyClasses",
-        "type": "Type alias"
-      },
-      {
-        "name": "StyleDeclarationsBlock",
-        "type": "Type alias"
       },
       {
         "name": "BOTTOM",
@@ -1555,10 +1623,6 @@
       },
       {
         "name": "REF_REG_EXP",
-        "type": "Variable"
-      },
-      {
-        "name": "STYLE_MAP5",
         "type": "Variable"
       },
       {
@@ -1655,6 +1719,10 @@
       },
       {
         "name": "CheckboxVariables",
+        "type": "Interface"
+      },
+      {
+        "name": "ExpansionVariables",
         "type": "Interface"
       },
       {
