@@ -307,11 +307,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2019-03-23T08:24:43.639Z\""
+      "children": "const AUI_LAST_UPDATE = \"2019-03-24T08:23:04.605Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"2.6.1-nightly.20190323-jtl89oc9\""
+      "children": "const AUI_VERSION = \"2.6.1-nightly.20190324-jtmnnelb\""
     }
   ],
   "functionList": [],
