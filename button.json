@@ -21,10 +21,6 @@
       "children": "const DEFAULT_DISABLE_RIPPLE = false"
     },
     {
-      "name": "DEFAULT_SIZE",
-      "children": "const DEFAULT_SIZE = \"medium\""
-    },
-    {
       "name": "STYLE_PRIORITY",
       "children": "const STYLE_PRIORITY = -2"
     }

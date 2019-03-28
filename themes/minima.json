@@ -44,7 +44,7 @@
   "interfaceList": [
     {
       "name": "IMinimaTheme",
-      "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  avatar: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getClasses,\n  getDirection,\n  pxToRem,\n  accent: object,\n  action: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  disabled: object,\n  drawer: object,\n  expansion: object,\n  paper: object,\n  primary: object,\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
+      "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  avatar: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getClasses,\n  getDirection,\n  pxToRem,\n  accent: object,\n  action: object,\n  background: object,\n  button: object,\n  disabled: object,\n  drawer: object,\n  expansion: object,\n  paper: object,\n  primary: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
     }
   ],
   "objectLiteralList": []

@@ -86,10 +86,6 @@
         "children": "const DEFAULT_DISABLE_RIPPLE = false"
       },
       {
-        "name": "DEFAULT_SIZE",
-        "children": "const DEFAULT_SIZE = \"medium\""
-      },
-      {
         "name": "STYLE_PRIORITY",
         "children": "const STYLE_PRIORITY = -2"
       }
@@ -1137,7 +1133,7 @@
       },
       {
         "name": "ThemeConfig",
-        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  checkbox: CheckboxVariables,\n  colorShadow: undefined | string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  expansion: ExpansionVariables,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: any,\n  ripple: RippleVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
+        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  card: CardVariables,\n  carousel: CarouselVariables,\n  checkbox: CheckboxVariables,\n  colorShadow: undefined | string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  expansion: ExpansionVariables,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  imgCropper: ImgCropperVariables,\n  menu: MenuVariables,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: RadioVariables,\n  ripple: RippleVariables,\n  select: SelectVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  tabs: TabsVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
       },
       {
         "name": "ThemeRef",
@@ -1149,23 +1145,51 @@
       },
       {
         "name": "ButtonVariables",
-        "children": "interface ButtonVariables {\n  appearance: undefined | any,\n  root: StyleContainer,\n  size: undefined | any\n}"
+        "children": "interface ButtonVariables {\n  appearance: any,\n  defaultConfig: any,\n  root: StyleContainer,\n  size: any\n}"
+      },
+      {
+        "name": "CardVariables",
+        "children": "interface CardVariables {\n  root: StyleContainer\n}"
+      },
+      {
+        "name": "CarouselVariables",
+        "children": "interface CarouselVariables {\n  root: StyleContainer\n}"
       },
       {
         "name": "CheckboxVariables",
-        "children": "interface CheckboxVariables {\n  root: StyleContainer,\n  unchecked: StyleContainer\n}"
+        "children": "interface CheckboxVariables {\n  root: StyleContainer\n}"
       },
       {
         "name": "ExpansionVariables",
         "children": "interface ExpansionVariables {\n  appearance: any,\n  defaultConfig: undefined | any,\n  root: StyleContainer\n}"
       },
       {
+        "name": "ImgCropperVariables",
+        "children": "interface ImgCropperVariables {\n  root: StyleContainer\n}"
+      },
+      {
+        "name": "MenuVariables",
+        "children": "interface MenuVariables {\n  root: StyleContainer\n}"
+      },
+      {
+        "name": "RadioVariables",
+        "children": "interface RadioVariables {\n  root: StyleContainer\n}"
+      },
+      {
         "name": "RippleVariables",
         "children": "interface RippleVariables {\n  duration: number,\n  transition: any\n}"
       },
       {
+        "name": "SelectVariables",
+        "children": "interface SelectVariables {\n  root: StyleContainer\n}"
+      },
+      {
         "name": "SnackBarVariables",
         "children": "interface SnackBarVariables {\n  root: StyleContainer\n}"
+      },
+      {
+        "name": "TabsVariables",
+        "children": "interface TabsVariables {\n  root: StyleContainer\n}"
       },
       {
         "name": "TooltipVariables",
@@ -1295,11 +1319,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-03-27T08:22:40.954Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-03-28T08:23:24.725Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.6.1-nightly.20190327-jtqxygcb\""
+        "children": "const AUI_VERSION = \"2.6.1-nightly.20190328-jtsdf8s7\""
       }
     ],
     "functionList": [],
@@ -1590,7 +1614,7 @@
     "interfaceList": [
       {
         "name": "IMinimaTheme",
-        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  avatar: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getClasses,\n  getDirection,\n  pxToRem,\n  accent: object,\n  action: object,\n  background: object,\n  button: object,\n  checkbox: object,\n  disabled: object,\n  drawer: object,\n  expansion: object,\n  paper: object,\n  primary: object,\n  radio: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
+        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  avatar: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getClasses,\n  getDirection,\n  pxToRem,\n  accent: object,\n  action: object,\n  background: object,\n  button: object,\n  disabled: object,\n  drawer: object,\n  expansion: object,\n  paper: object,\n  primary: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
       }
     ],
     "objectLiteralList": []

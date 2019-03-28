@@ -86,10 +86,6 @@
         "type": "Variable"
       },
       {
-        "name": "DEFAULT_SIZE",
-        "type": "Variable"
-      },
-      {
         "name": "LyButtonMixinBase",
         "type": "Variable"
       },
@@ -663,10 +659,6 @@
       },
       {
         "name": "STYLE_PRIORITY",
-        "type": "Variable"
-      },
-      {
-        "name": "menuItemStyles",
         "type": "Variable"
       },
       {
@@ -1718,6 +1710,14 @@
         "type": "Interface"
       },
       {
+        "name": "CardVariables",
+        "type": "Interface"
+      },
+      {
+        "name": "CarouselVariables",
+        "type": "Interface"
+      },
+      {
         "name": "CheckboxVariables",
         "type": "Interface"
       },
@@ -1726,11 +1726,31 @@
         "type": "Interface"
       },
       {
+        "name": "ImgCropperVariables",
+        "type": "Interface"
+      },
+      {
+        "name": "MenuVariables",
+        "type": "Interface"
+      },
+      {
+        "name": "RadioVariables",
+        "type": "Interface"
+      },
+      {
         "name": "RippleVariables",
         "type": "Interface"
       },
       {
+        "name": "SelectVariables",
+        "type": "Interface"
+      },
+      {
         "name": "SnackBarVariables",
+        "type": "Interface"
+      },
+      {
+        "name": "TabsVariables",
         "type": "Interface"
       },
       {
