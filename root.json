@@ -335,11 +335,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2019-03-29T08:24:52.715Z\""
+      "children": "const AUI_LAST_UPDATE = \"2019-03-30T08:24:10.784Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"2.6.1-nightly.20190329-jttswzcd\""
+      "children": "const AUI_VERSION = \"2.6.1-nightly.20190330-jtv8bxnl\""
     }
   ],
   "functionList": [],
