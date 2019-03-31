@@ -1726,6 +1726,10 @@
         "type": "Interface"
       },
       {
+        "name": "FieldVariables",
+        "type": "Interface"
+      },
+      {
         "name": "ImgCropperVariables",
         "type": "Interface"
       },
@@ -1919,10 +1923,6 @@
       },
       {
         "name": "animations",
-        "type": "Object literal"
-      },
-      {
-        "name": "field",
         "type": "Object literal"
       },
       {
