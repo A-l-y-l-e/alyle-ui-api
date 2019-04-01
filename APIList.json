@@ -1722,6 +1722,10 @@
         "type": "Interface"
       },
       {
+        "name": "DialogVariables",
+        "type": "Interface"
+      },
+      {
         "name": "ExpansionVariables",
         "type": "Interface"
       },
@@ -1731,6 +1735,10 @@
       },
       {
         "name": "ImgCropperVariables",
+        "type": "Interface"
+      },
+      {
+        "name": "ListVariables",
         "type": "Interface"
       },
       {
@@ -1755,6 +1763,14 @@
       },
       {
         "name": "TabsVariables",
+        "type": "Interface"
+      },
+      {
+        "name": "ToolbarAppearance",
+        "type": "Interface"
+      },
+      {
+        "name": "ToolbarVariables",
         "type": "Interface"
       },
       {
@@ -1860,10 +1876,6 @@
       {
         "name": "LyTabsClassesService",
         "type": "Injectable"
-      },
-      {
-        "name": "tabsStyles",
-        "type": "Function"
       },
       {
         "name": "LyTabsModule",

@@ -6,7 +6,7 @@
       "selector": "'ly-toolbar'",
       "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\"\n]",
       "exportAs": "",
-      "children": "@Input() dense: boolean\n@Input() position: position"
+      "children": "@Input() appearance: string\n@Input() dense: boolean\n@Input() position: position"
     }
   ],
   "variableList": [

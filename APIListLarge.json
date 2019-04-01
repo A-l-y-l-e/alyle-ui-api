@@ -941,7 +941,7 @@
         "selector": "'ng-template[ly-snack-bar]'",
         "inputs": "",
         "exportAs": "'lySnackBar'",
-        "children": "@Output() afterDismissed: EventEmitter\n@Input() duration: any\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\n/** Dismiss snackBar */\ndismiss(): void\nopen(): void"
+        "children": "@Output() afterDismissed: EventEmitter\nclasses: any\n@Input() duration: any\n@Input() horizontalPosition: any\n@Input() verticalPosition: YPosition\n/** Dismiss snackBar */\ndismiss(): void\nopen(): void"
       }
     ],
     "interfaceList": [
@@ -1133,7 +1133,7 @@
       },
       {
         "name": "ThemeConfig",
-        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  card: CardVariables,\n  carousel: CarouselVariables,\n  checkbox: CheckboxVariables,\n  colorShadow: undefined | string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  expansion: ExpansionVariables,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  imgCropper: ImgCropperVariables,\n  menu: MenuVariables,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: RadioVariables,\n  ripple: RippleVariables,\n  select: SelectVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  tabs: TabsVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
+        "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: undefined | any,\n  button: ButtonVariables,\n  card: CardVariables,\n  carousel: CarouselVariables,\n  checkbox: CheckboxVariables,\n  dialog: DialogVariables,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  expansion: ExpansionVariables,\n  field: FieldVariables,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  imgCropper: ImgCropperVariables,\n  list: ListVariables,\n  menu: MenuVariables,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: RadioVariables,\n  ripple: RippleVariables,\n  select: SelectVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  tabs: TabsVariables,\n  text: any,\n  toolbar: ToolbarVariables,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
       },
       {
         "name": "ThemeRef",
@@ -1160,6 +1160,10 @@
         "children": "interface CheckboxVariables {\n  root: StyleContainer\n}"
       },
       {
+        "name": "DialogVariables",
+        "children": "interface DialogVariables {\n  root: StyleContainer\n}"
+      },
+      {
         "name": "ExpansionVariables",
         "children": "interface ExpansionVariables {\n  appearance: any,\n  defaultConfig: undefined | any,\n  root: StyleContainer\n}"
       },
@@ -1170,6 +1174,10 @@
       {
         "name": "ImgCropperVariables",
         "children": "interface ImgCropperVariables {\n  root: StyleContainer\n}"
+      },
+      {
+        "name": "ListVariables",
+        "children": "interface ListVariables {\n  root: StyleContainer\n}"
       },
       {
         "name": "MenuVariables",
@@ -1194,6 +1202,14 @@
       {
         "name": "TabsVariables",
         "children": "interface TabsVariables {\n  root: StyleContainer\n}"
+      },
+      {
+        "name": "ToolbarAppearance",
+        "children": "interface ToolbarAppearance {\n  dense: StyleContainer\n}"
+      },
+      {
+        "name": "ToolbarVariables",
+        "children": "interface ToolbarVariables {\n  appearance: ToolbarAppearance,\n  defaultConfig: undefined | any,\n  root: StyleContainer\n}"
       },
       {
         "name": "TooltipVariables",
@@ -1323,11 +1339,11 @@
       },
       {
         "name": "AUI_LAST_UPDATE",
-        "children": "const AUI_LAST_UPDATE = \"2019-03-31T08:31:49.923Z\""
+        "children": "const AUI_LAST_UPDATE = \"2019-04-01T08:24:03.355Z\""
       },
       {
         "name": "AUI_VERSION",
-        "children": "const AUI_VERSION = \"2.6.1-nightly.20190331-jtwo1mlh\""
+        "children": "const AUI_VERSION = \"2.6.1-nightly.20190401-jty37h9a\""
       }
     ],
     "functionList": [],
@@ -1562,7 +1578,7 @@
     "injectableList": [
       {
         "name": "LyTabsClassesService",
-        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyTabsClassesService {\n  classes: any\n}"
+        "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyTabsClassesService {\n  \n}"
       }
     ],
     "ngModuleList": [
@@ -1618,7 +1634,7 @@
     "interfaceList": [
       {
         "name": "IMinimaTheme",
-        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  avatar: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getClasses,\n  getDirection,\n  pxToRem,\n  accent: object,\n  action: object,\n  background: object,\n  button: object,\n  disabled: object,\n  drawer: object,\n  expansion: object,\n  paper: object,\n  primary: object,\n  snackBar: object,\n  text: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
+        "children": "interface IMinimaTheme {\n  constructor,\n  animations: any,\n  avatar: any,\n  badge: any,\n  bar: string,\n  breakpoints: any,\n  colorShadow: string,\n  direction: Dir,\n  divider: string,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  menu: any,\n  name: string,\n  ripple: any,\n  shadow: string,\n  zIndex: any,\n  colorOf,\n  getBreakpoint,\n  getClasses,\n  getDirection,\n  pxToRem,\n  accent: object,\n  action: object,\n  background: object,\n  button: object,\n  disabled: object,\n  drawer: object,\n  expansion: object,\n  paper: object,\n  primary: object,\n  snackBar: object,\n  text: object,\n  toolbar: object,\n  tooltip: object,\n  typography: object,\n  warn: object\n}"
       }
     ],
     "objectLiteralList": []
@@ -1631,7 +1647,7 @@
         "selector": "'ly-toolbar'",
         "inputs": "[\n  \"bg\",\n  \"color\",\n  \"raised\",\n  \"outlined\",\n  \"elevation\",\n  \"shadowColor\"\n]",
         "exportAs": "",
-        "children": "@Input() dense: boolean\n@Input() position: position"
+        "children": "@Input() appearance: string\n@Input() dense: boolean\n@Input() position: position"
       }
     ],
     "variableList": [

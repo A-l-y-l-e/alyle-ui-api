@@ -70,7 +70,7 @@
   "injectableList": [
     {
       "name": "LyTabsClassesService",
-      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyTabsClassesService {\n  classes: any\n}"
+      "children": "@Injectable({\n  providedIn: 'root'\n})\nclass LyTabsClassesService {\n  \n}"
     }
   ],
   "ngModuleList": [

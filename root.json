@@ -149,7 +149,7 @@
     },
     {
       "name": "ThemeConfig",
-      "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: any,\n  button: ButtonVariables,\n  card: CardVariables,\n  carousel: CarouselVariables,\n  checkbox: CheckboxVariables,\n  colorShadow: undefined | string,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  expansion: ExpansionVariables,\n  field: any,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  imgCropper: ImgCropperVariables,\n  menu: MenuVariables,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: RadioVariables,\n  ripple: RippleVariables,\n  select: SelectVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  tabs: TabsVariables,\n  text: any,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
+      "children": "interface ThemeConfig {\n  accent: any,\n  animations: any,\n  avatar: AvatarVariables,\n  background: any,\n  badge: undefined | any,\n  button: ButtonVariables,\n  card: CardVariables,\n  carousel: CarouselVariables,\n  checkbox: CheckboxVariables,\n  dialog: DialogVariables,\n  direction: Dir,\n  disabled: any,\n  /** color for divider */\n  divider: string,\n  drawer: any,\n  expansion: ExpansionVariables,\n  field: FieldVariables,\n  hover: string,\n  icon: any,\n  iconButton: any,\n  imgCropper: ImgCropperVariables,\n  list: ListVariables,\n  menu: MenuVariables,\n  name: string,\n  paper: any,\n  primary: any,\n  radio: RadioVariables,\n  ripple: RippleVariables,\n  select: SelectVariables,\n  shadow: string,\n  snackBar: SnackBarVariables,\n  tabs: TabsVariables,\n  text: any,\n  toolbar: ToolbarVariables,\n  tooltip: TooltipVariables,\n  typography: TypographyVariables,\n  warn: any,\n  zIndex: any\n}"
     },
     {
       "name": "ThemeRef",
@@ -176,6 +176,10 @@
       "children": "interface CheckboxVariables {\n  root: StyleContainer\n}"
     },
     {
+      "name": "DialogVariables",
+      "children": "interface DialogVariables {\n  root: StyleContainer\n}"
+    },
+    {
       "name": "ExpansionVariables",
       "children": "interface ExpansionVariables {\n  appearance: any,\n  defaultConfig: undefined | any,\n  root: StyleContainer\n}"
     },
@@ -186,6 +190,10 @@
     {
       "name": "ImgCropperVariables",
       "children": "interface ImgCropperVariables {\n  root: StyleContainer\n}"
+    },
+    {
+      "name": "ListVariables",
+      "children": "interface ListVariables {\n  root: StyleContainer\n}"
     },
     {
       "name": "MenuVariables",
@@ -210,6 +218,14 @@
     {
       "name": "TabsVariables",
       "children": "interface TabsVariables {\n  root: StyleContainer\n}"
+    },
+    {
+      "name": "ToolbarAppearance",
+      "children": "interface ToolbarAppearance {\n  dense: StyleContainer\n}"
+    },
+    {
+      "name": "ToolbarVariables",
+      "children": "interface ToolbarVariables {\n  appearance: ToolbarAppearance,\n  defaultConfig: undefined | any,\n  root: StyleContainer\n}"
     },
     {
       "name": "TooltipVariables",
@@ -339,11 +355,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2019-03-31T08:31:49.923Z\""
+      "children": "const AUI_LAST_UPDATE = \"2019-04-01T08:24:03.355Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"2.6.1-nightly.20190331-jtwo1mlh\""
+      "children": "const AUI_VERSION = \"2.6.1-nightly.20190401-jty37h9a\""
     }
   ],
   "functionList": [],
