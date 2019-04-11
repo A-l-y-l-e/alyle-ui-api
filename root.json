@@ -355,11 +355,11 @@
     },
     {
       "name": "AUI_LAST_UPDATE",
-      "children": "const AUI_LAST_UPDATE = \"2019-04-10T08:23:07.098Z\""
+      "children": "const AUI_LAST_UPDATE = \"2019-04-11T08:23:11.507Z\""
     },
     {
       "name": "AUI_VERSION",
-      "children": "const AUI_VERSION = \"2.6.1-nightly.20190410-juay4xuk\""
+      "children": "const AUI_VERSION = \"2.6.1-nightly.20190411-jucdkvx0\""
     }
   ],
   "functionList": [],
