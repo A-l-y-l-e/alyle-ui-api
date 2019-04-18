@@ -1290,6 +1290,10 @@
         "type": "Variable"
       },
       {
+        "name": "noopHammerInstance",
+        "type": "Object literal"
+      },
+      {
         "name": "NgTranscludeDirective",
         "type": "Directive"
       },
